@@ -8,22 +8,92 @@
   <link rel="canonical" href="https://jessicacostapsi.com/">
   <meta name="theme-color" content="#FFD93D">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Jessica Costa PSI">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://jessicacostapsi.com/">
   <meta property="og:title" content="Jessica Costa PSI | Psicologia Infantil - Descomplique a Infância">
   <meta property="og:description" content="Psicóloga infantojuvenil especializada em TCC, ABA e neurodivergências. Atendimento no Recreio dos Bandeirantes, Rio de Janeiro.">
-  <meta property="og:image" content="https://jessicacostapsi.com/img/og-image.jpg">
+  <meta property="og:image" content="https://jessicacostapsi.com/img/og-image.svg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jessica Costa PSI | Psicologia Infantil">
   <meta name="twitter:description" content="Psicóloga infantojuvenil. TCC + ABA. Recreio dos Bandeirantes - RJ.">
-  <meta name="twitter:image" content="https://jessicacostapsi.com/img/og-image.jpg">
+  <meta name="twitter:image" content="https://jessicacostapsi.com/img/og-image.svg">
   <title>Jessica Costa PSI | Psicologia Infantil - Descomplique a Infância</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://jessicacostapsi.com/#person",
+        "name": "Jessica Costa",
+        "jobTitle": "Psicóloga Infantojuvenil",
+        "description": "Psicóloga infantojuvenil especializada em TCC, ABA e neurodivergências (TEA, TDAH).",
+        "identifier": "CRP 05/56789",
+        "url": "https://jessicacostapsi.com/",
+        "image": "https://jessicacostapsi.com/img/og-image.svg",
+        "sameAs": [
+          "https://www.tiktok.com/@jessicacostapsi",
+          "https://www.linkedin.com/in/jessicacostapsi"
+        ],
+        "knowsAbout": [
+          "Terapia Cognitivo-Comportamental",
+          "Análise do Comportamento Aplicada",
+          "Transtorno do Espectro Autista",
+          "TDAH",
+          "Neurodivergências",
+          "Desenvolvimento Infantil",
+          "Orientação Parental"
+        ]
+      },
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://jessicacostapsi.com/#business",
+        "name": "Jessica Costa PSI",
+        "description": "Atendimento psicológico infantojuvenil com base em TCC e ABA.",
+        "url": "https://jessicacostapsi.com/",
+        "telephone": "+55-21-97808-2882",
+        "email": "psiporjessica@gmail.com",
+        "image": "https://jessicacostapsi.com/img/og-image.svg",
+        "priceRange": "$$",
+        "medicalSpecialty": "Psychiatric",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Miguel Antônio Fernandes, 1333 — Vertice Mall",
+          "addressLocality": "Recreio dos Bandeirantes",
+          "addressRegion": "RJ",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Rio de Janeiro" },
+          { "@type": "City", "name": "São Paulo" }
+        ],
+        "founder": { "@id": "https://jessicacostapsi.com/#person" },
+        "sameAs": [
+          "https://www.tiktok.com/@jessicacostapsi",
+          "https://www.linkedin.com/in/jessicacostapsi"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jessicacostapsi.com/#website",
+        "url": "https://jessicacostapsi.com/",
+        "name": "Jessica Costa PSI",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://jessicacostapsi.com/#person" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -43,7 +113,7 @@
         <a href="colunistas.html">Colunistas</a>
         <a href="#contato">Contato</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" type="button">
         <span></span>
         <span></span>
         <span></span>
@@ -67,7 +137,7 @@
         <h1>Descomplique a <span class="highlight">Infância</span> ✨🐝</h1>
         <p>Atendimento especializado para crianças e adolescentes neurodivergentes. TCC, ABA e Orientação Parental baseados em evidências científicas.</p>
         <div class="hero-buttons">
-          <a href="https://wa.me/5521978082882" target="_blank" class="btn btn-primary">📅 Agende sua Consulta</a>
+          <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📅 Agende sua Consulta</a>
           <a href="#biografia" class="btn btn-outline">👤 Conheça meu Trabalho</a>
         </div>
         <div class="hero-badges">
@@ -268,7 +338,7 @@
             <span class="icon">📱</span>
             <div>
               <h4>WhatsApp</h4>
-              <p><a href="https://wa.me/5521978082882" target="_blank">(21) 97808-2882</a></p>
+              <p><a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer">(21) 97808-2882</a></p>
             </div>
           </div>
           <div class="contato-info-item">
@@ -313,7 +383,7 @@
 
           <!-- Mapa -->
           <div class="map-container">
-            <iframe src="https://www.google.com/maps?q=Vertice+Mall+Av+Miguel+Antonio+Fernandes+1333+Recreio+dos+Bandeirantes+Rio+de+Janeiro&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps?q=Vertice+Mall+Av+Miguel+Antonio+Fernandes+1333+Recreio+dos+Bandeirantes+Rio+de+Janeiro&output=embed" title="Mapa do consultório no Vértice Mall, Recreio dos Bandeirantes" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
 
@@ -368,7 +438,7 @@
       <h2>Vamos Descomplicar a Infância Juntos?</h2>
       <p>Agende uma consulta e descubra como posso ajudar sua família a enfrentar os desafios do desenvolvimento infantil com acolhimento e ciência.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/5521978082882" target="_blank" class="btn btn-primary">📱 Agendar pelo WhatsApp</a>
+        <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📱 Agendar pelo WhatsApp</a>
         <a href="mailto:psiporjessica@gmail.com" class="btn btn-outline">✉️ Enviar E-mail</a>
         <a href="#contato" class="btn btn-outline">📋 Formulário de Contato</a>
       </div>
@@ -387,8 +457,8 @@
           <p style="margin-top:4px; color:var(--primary); font-weight:600; font-size:0.9rem;">Descomplique a infância ✨</p>
           <p style="margin-top:12px;">Psicologia infantil especializada em neurodivergências. TCC, ABA e muito carinho.</p>
           <div class="footer-social">
-            <a href="https://www.tiktok.com/@jessicacostapsi" target="_blank" aria-label="TikTok">🎵</a>
-            <a href="https://www.linkedin.com/in/jessicacostapsi" target="_blank" aria-label="LinkedIn">💼</a>
+            <a href="https://www.tiktok.com/@jessicacostapsi" target="_blank" rel="noopener noreferrer" aria-label="TikTok">🎵</a>
+            <a href="https://www.linkedin.com/in/jessicacostapsi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
           </div>
         </div>
         <div class="footer-links">
@@ -409,15 +479,21 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 Jessica Costa PSI. Todos os direitos reservados. | CRP 05/56789</p>
+        <p class="footer-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="mailto:psiporjessica@gmail.com">Encarregado de Dados (DPO)</a></p>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp Flutuante -->
-  <a href="https://wa.me/5521978082882" target="_blank" class="whatsapp-float" aria-label="WhatsApp">💬</a>
+  <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">💬</a>
 
   <!-- Botão Voltar ao Topo -->
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" type="button">↑</button>
+
+  <!-- Cloudflare Web Analytics (privacy-friendly, sem cookies, LGPD-friendly).
+       Para ativar: gere o beacon token em https://one.dash.cloudflare.com/?to=/:account/web-analytics
+       e descomente a linha abaixo substituindo REPLACE_WITH_BEACON_TOKEN. -->
+  <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_BEACON_TOKEN"}'></script> -->
 
   <script src="js/main.js"></script>
 </body>

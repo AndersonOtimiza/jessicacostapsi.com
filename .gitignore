@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code (segredos locais)
+.claude/settings.local.json
+.claude/.credentials.json
+
+# Cloudflare Wrangler (cache de deploy)
+.wrangler/
+wrangler.log
+
+# Node (caso futuramente entre)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.*.local
+
+# Build / temporários
+dist/
+build/
+tmp/
+*.log

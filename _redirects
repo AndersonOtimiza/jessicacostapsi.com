@@ -1,0 +1,14 @@
+# Redirects e fallback para SPA-like / 404 customizado
+# Sintaxe: <origem>  <destino>  <status>
+
+# Compatibilidade com slugs antigos / variacoes de URL
+/home          /                     301
+/sobre         /biografia.html       301
+/about         /biografia.html       301
+/contato       /#contato             301
+/contact       /#contato             301
+/whatsapp      https://wa.me/5521978082882  302
+
+# Catch-all 404 (Cloudflare Pages serve 404.html automaticamente quando existe,
+# mas declaramos explicito para garantir status correto em recursos errados)
+/*             /404.html             404

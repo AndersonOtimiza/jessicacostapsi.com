@@ -1282,3 +1282,16 @@ h4 { font-size: 1.1rem; }
   .diferenciais { flex-direction: column; }
   .cta-buttons { flex-direction: column; align-items: center; }
 }
+
+/* Rodape: linha legal (LGPD / DPO) */
+.footer-legal {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+.footer-legal a {
+  color: inherit;
+  text-decoration: underline;
+}
+.footer-legal a:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Jessica Costa PSI - Psicologia Infantil",
+  "short_name": "Jessica Costa PSI",
+  "description": "Psicologa infantojuvenil. TCC, ABA e neurodivergencias. Recreio - RJ.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFBEA",
+  "theme_color": "#FFD93D",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

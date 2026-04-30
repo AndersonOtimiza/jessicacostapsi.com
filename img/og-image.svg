@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF8DC"/>
+      <stop offset="100%" stop-color="#FFD93D"/>
+    </linearGradient>
+    <radialGradient id="bodyGrad" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="100%" stop-color="#F5B400"/>
+    </radialGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#cfeaff" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="6" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- fundo -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- favo decorativo discreto (canto superior direito) -->
+  <g opacity="0.18" fill="#F5B400">
+    <polygon points="1100,40 1140,60 1140,100 1100,120 1060,100 1060,60"/>
+    <polygon points="1160,80 1200,100 1200,140 1160,160 1120,140 1120,100"/>
+    <polygon points="1100,140 1140,160 1140,200 1100,220 1060,200 1060,160"/>
+    <polygon points="1040,80 1080,100 1080,140 1040,160 1000,140 1000,100"/>
+  </g>
+  <!-- favo decorativo (canto inferior esquerdo) -->
+  <g opacity="0.14" fill="#F5B400">
+    <polygon points="60,500 100,520 100,560 60,580 20,560 20,520"/>
+    <polygon points="120,540 160,560 160,600 120,620 80,600 80,560"/>
+    <polygon points="60,580 100,600 100,640 60,660 20,640 20,600"/>
+  </g>
+
+  <!-- trajetória pontilhada da abelha -->
+  <path d="M 120 480 Q 350 280 600 350 T 1080 200" stroke="#F5B400" stroke-width="4"
+        stroke-dasharray="2 14" stroke-linecap="round" fill="none" opacity="0.55"/>
+
+  <!-- ABELHA grande -->
+  <g transform="translate(820,260)" filter="url(#shadow)">
+    <!-- asas -->
+    <ellipse cx="-40" cy="-70" rx="55" ry="38" fill="url(#wing)" stroke="#9ec9e8" stroke-width="2" transform="rotate(-25 -40 -70)"/>
+    <ellipse cx="40" cy="-70" rx="55" ry="38" fill="url(#wing)" stroke="#9ec9e8" stroke-width="2" transform="rotate(25 40 -70)"/>
+
+    <!-- corpo -->
+    <ellipse cx="0" cy="0" rx="120" ry="95" fill="url(#bodyGrad)" stroke="#3a2a00" stroke-width="6"/>
+
+    <!-- listras pretas -->
+    <path d="M -75 -55 Q 0 -75 75 -55 L 75 -25 Q 0 -45 -75 -25 Z" fill="#222"/>
+    <path d="M -85 5 Q 0 -15 85 5 L 85 35 Q 0 15 -85 35 Z" fill="#222"/>
+    <path d="M -65 60 Q 0 78 65 60 L 55 85 Q 0 95 -55 85 Z" fill="#222"/>
+
+    <!-- ferrão -->
+    <polygon points="115,15 150,5 115,30" fill="#3a2a00"/>
+
+    <!-- antenas -->
+    <path d="M -55 -85 Q -75 -125 -90 -135" stroke="#3a2a00" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M -25 -95 Q -35 -135 -45 -150" stroke="#3a2a00" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="-90" cy="-138" r="7" fill="#3a2a00"/>
+    <circle cx="-45" cy="-152" r="7" fill="#3a2a00"/>
+
+    <!-- olho -->
+    <ellipse cx="-55" cy="-25" rx="14" ry="18" fill="#fff"/>
+    <circle cx="-55" cy="-20" r="9" fill="#222"/>
+    <circle cx="-52" cy="-23" r="3" fill="#fff"/>
+
+    <!-- sorriso -->
+    <path d="M -45 15 Q -25 30 -5 15" stroke="#3a2a00" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- bochecha rosa -->
+    <ellipse cx="-30" cy="5" rx="12" ry="7" fill="#ff8aa3" opacity="0.55"/>
+  </g>
+
+  <!-- TEXTO -->
+  <g font-family="Poppins, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="80" y="200" font-size="76" font-weight="800" fill="#2b2200">Jessica Costa <tspan fill="#8B6F00">PSI</tspan></text>
+    <text x="80" y="270" font-size="42" font-weight="600" fill="#3a2a00">Descomplique a Infância</text>
+    <text x="80" y="330" font-size="26" font-weight="500" fill="#5a4500" opacity="0.9">
+      Psicologia infantojuvenil · TCC + ABA · Neurodivergências
+    </text>
+
+    <!-- pílula CTA -->
+    <g transform="translate(80,400)">
+      <rect rx="32" ry="32" width="360" height="64" fill="#2b2200"/>
+      <text x="32" y="42" font-size="24" font-weight="600" fill="#FFD93D">📱 (21) 97808-2882</text>
+    </g>
+    <text x="80" y="510" font-size="22" font-weight="500" fill="#3a2a00">jessicacostapsi.com</text>
+    <text x="80" y="545" font-size="20" font-weight="400" fill="#5a4500" opacity="0.85">Recreio dos Bandeirantes — Rio de Janeiro</text>
+  </g>
+</svg>
