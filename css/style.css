@@ -302,6 +302,7 @@ h4 { font-size: 1.1rem; }
   opacity: 0.6;
   pointer-events: none;
   z-index: 1;
+  scale: -1 1;
 }
 
 .bee-1 { top: 15%; left: 30%; animation: float-bee-1 12s ease-in-out infinite; font-size: 1.2rem; opacity: 0.5; }
@@ -1057,6 +1058,147 @@ h4 { font-size: 1.1rem; }
 
 .filosofia-intro strong {
   color: var(--text);
+}
+
+/* === Blog Card Links === */
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.blog-card-link:hover .blog-card {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* === Artigo Page === */
+.artigo-categoria {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text);
+  padding: 6px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.artigo-meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
+.artigo-conteudo {
+  padding: 60px 0 40px;
+}
+
+.container-artigo {
+  max-width: 780px;
+}
+
+.artigo-destaque {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text);
+  border-left: 4px solid var(--primary);
+  padding-left: 20px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.artigo-conteudo h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.artigo-conteudo h3 {
+  font-size: 1.15rem;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.artigo-conteudo p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.artigo-conteudo ul {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+.artigo-conteudo li {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.artigo-conteudo li strong {
+  color: var(--text);
+}
+
+.artigo-conteudo blockquote {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  padding: 24px 28px;
+  margin: 32px 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.artigo-conteudo blockquote cite {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.artigo-autor {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--primary-light);
+  border-radius: var(--radius);
+  margin-top: 48px;
+}
+
+.artigo-autor-foto {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light), #fce4b8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.artigo-autor strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.artigo-autor p {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-bottom: 0;
 }
 
 /* === Responsivo === */

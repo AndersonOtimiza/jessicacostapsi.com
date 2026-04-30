@@ -85,37 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var formData = new FormData(contactForm);
 
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(function (response) {
-        if (response.ok) {
-          if (formSuccess) formSuccess.classList.add('show');
-          contactForm.reset();
-          setTimeout(function () {
-            formSuccess.classList.remove('show');
-          }, 5000);
-        } else {
-          // Fallback: abrir mailto
-          var nome = formData.get('nome') || '';
-          var email = formData.get('email') || '';
-          var assunto = formData.get('assunto') || '';
-          var mensagem = formData.get('mensagem') || '';
-          var mailtoUrl = 'mailto:psiporjessica@gmail.com'
-            + '?subject=' + encodeURIComponent(assunto + ' - ' + nome)
-            + '&body=' + encodeURIComponent(
-              'Nome: ' + nome + '\n'
-              + 'Email: ' + email + '\n'
-              + 'Telefone: ' + (formData.get('telefone') || '') + '\n\n'
-              + mensagem
-            );
-          window.location.href = mailtoUrl;
-        }
-      })
-      .catch(function () {
-        // Fallback para mailto se Formspree não funcionar
+      function fallbackMailto() {
         var nome = formData.get('nome') || '';
         var email = formData.get('email') || '';
         var assunto = formData.get('assunto') || '';
@@ -129,9 +99,71 @@ document.addEventListener('DOMContentLoaded', function () {
             + mensagem
           );
         window.location.href = mailtoUrl;
-      });
+      }
+
+      // Formspree ainda não configurado — pula o POST e abre direto o mailto.
+      if (!contactForm.action || contactForm.action.indexOf('YOUR_FORM_ID') !== -1) {
+        fallbackMailto();
+        return;
+      }
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (response) {
+        if (response.ok) {
+          if (formSuccess) formSuccess.classList.add('show');
+          contactForm.reset();
+          setTimeout(function () {
+            formSuccess.classList.remove('show');
+          }, 5000);
+        } else {
+          fallbackMailto();
+        }
+      })
+      .catch(fallbackMailto);
     });
   }
+
+  // === Mensagem padrão nos links do WhatsApp ===
+  // Identifica que o visitante veio do site e, quando possível, de qual página/artigo.
+  (function () {
+    function buildWhatsAppMessage() {
+      var path = (window.location.pathname || '').toLowerCase();
+      var origem = 'Site Jessica Costa PSI';
+
+      if (path.indexOf('/artigos/') !== -1) {
+        var h1 = document.querySelector('h1');
+        var titulo = h1 ? h1.textContent.trim() : (document.title || '').split('-')[0].trim();
+        return 'Olá, Jessica! Vim pelo ' + origem + ', li o artigo "' + titulo + '" e gostaria de mais informações sobre os atendimentos.';
+      }
+      if (path.indexOf('biografia') !== -1) {
+        return 'Olá, Jessica! Vim pelo ' + origem + ' (página Biografia) e gostaria de agendar uma consulta.';
+      }
+      if (path.indexOf('blog') !== -1) {
+        return 'Olá, Jessica! Vim pelo ' + origem + ' (página Blog) e gostaria de mais informações sobre os atendimentos.';
+      }
+      if (path.indexOf('colunistas') !== -1) {
+        return 'Olá, Jessica! Vim pelo ' + origem + ' (página Colunistas) e gostaria de mais informações.';
+      }
+      return 'Olá, Jessica! Vim pelo ' + origem + ' e gostaria de agendar uma consulta.';
+    }
+
+    var mensagem = encodeURIComponent(buildWhatsAppMessage());
+    var links = document.querySelectorAll('a[href*="wa.me/"], a[href*="api.whatsapp.com/send"]');
+    links.forEach(function (link) {
+      try {
+        var url = new URL(link.href);
+        url.searchParams.set('text', decodeURIComponent(mensagem));
+        link.href = url.toString();
+      } catch (e) {
+        var sep = link.href.indexOf('?') === -1 ? '?' : '&';
+        link.href = link.href + sep + 'text=' + mensagem;
+      }
+    });
+  })();
 
   // === Animação de entrada (Intersection Observer) ===
   var observerOptions = {
