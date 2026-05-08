@@ -65,6 +65,9 @@ MCPs úteis disponíveis: **Google Search Console** (`mcp__gsc__*`) para indexa�
 
 Localizadas em `.claude/` da raiz do projeto. Removíveis individualmente.
 
+### Subagente admin (no workspace pai, restrito a este projeto)
+- **`jessicacostapsi-admin`** — vive em [../../.claude/agents/jessicacostapsi-admin.md](../../.claude/agents/jessicacostapsi-admin.md). É o especialista que o `ecosystem-admin` invoca para qualquer tarefa neste diretório. Escopo restrito a `Projetos para Clientes/Jessica Costa Psi/` — **isolado das convenções Otimiza**.
+
 ### Skills (`.claude/skills/`)
 - **deploy-cloudflare** — deploy seguro com pré-checks (sitemap, links quebrados, status git). Uso: `/deploy-cloudflare`. Desinstalar: `rm -rf .claude/skills/deploy-cloudflare`.
 - **gerar-sitemap** — regenera `sitemap.xml` a partir dos HTMLs presentes. Uso: `/gerar-sitemap`. Desinstalar: `rm -rf .claude/skills/gerar-sitemap`.
@@ -84,3 +87,37 @@ Ver "Próximos passos" no fim do diagnóstico inicial. Criar via `/schedule` qua
 
 ## Memória persistente
 Memória global do projeto (entre sessões) em `~/.claude/projects/v--Projetos-Jessica-Costa-Psi/memory/` — gerenciada pelo sistema `auto memory`, não duplicar aqui.
+
+## TODO editorial / produção (auditoria SEO 2026-05-04)
+
+Itens pendentes que dependem de decisão da Jessica Costa ou ação no painel Cloudflare. Correções mecânicas (canonical, sitemap, Article schema, copyright 2026, `_redirects` cleanup) já aplicadas em 22 arquivos — revisar com `git diff` antes de deploy.
+
+### Editorial (decisão da cliente via Anderson)
+- [ ] **Encurtar 11 titles >60 chars** (sugestões prontas — remover sufixo ` - Jessica Costa PSI`):
+  - `tdah-em-adultos.html` (93 chars; mais grave) → "TDAH em Adultos: Como Identificar os Traços"
+  - `diagnostico-de-tea.html` (80) → "Diagnóstico de TEA: Primeiros Passos para a Família"
+  - `telas-e-desenvolvimento-infantil.html` (81) → "Telas e Desenvolvimento Infantil: O Equilíbrio"
+  - `ansiedade-infantil.html` (76) → "Ansiedade Infantil: Sinais que os Pais Devem Conhecer"
+  - `habilidades-sociais.html` (75) → "Habilidades Sociais: Como Seu Filho Faz Amigos"
+  - `tdah-na-escola.html` (73) → "TDAH na Escola: Ajude Seu Filho a se Concentrar"
+  - `rotina-e-previsibilidade.html` (72) → "Rotina e Previsibilidade: Aliadas do Desenvolvimento"
+  - `seletividade-alimentar.html` (71) → "Seletividade Alimentar em Crianças Neurodivergentes"
+  - `o-papel-do-brincar.html` (66) · `parentalidade-positiva.html` (66) · `como-falar-sobre-emocoes.html` (66) → remover sufixo
+- [ ] **Aplicar `noindex, follow` em `colunistas.html`** até ter colunistas reais (hoje é thin content: 3 cards "Em breve").
+- [ ] **Internal linking** nos 13 artigos (12 cross-links sugeridos — clusters TEA, TDAH, regulação emocional, parentalidade). Texto natural no corpo, não lista no fim.
+- [ ] **Encurtar description do `tdah-em-adultos.html`** de 155 → ~140 chars (folga, opcional).
+
+### Produção (Anderson — painel Cloudflare + design)
+- [ ] **Desligar Bot Fight Mode** na zona `jessicacostapsi.com` (zone `528d39b71b15a717ff05a77cd7c217ad`) — bloqueia Googlebot/Bingbot hoje (403 + challenge).
+- [ ] **Confirmar deploy ativo**: `wrangler pages deployment list --project-name=jessicacostapsi` — robots/sitemap/og retornam 404 em prod apesar de existirem no repo.
+- [ ] **Gerar `img/og-image.png` raster 1200×630** (Facebook/LinkedIn rejeitam SVG).
+- [ ] **Ativar Cloudflare Web Analytics**: criar beacon token + descomentar snippet em 5 páginas (index, biografia, blog, colunistas, privacidade).
+- [ ] **Rotacionar token Cloudflare** ainda em `.claude/settings.local.json` (ver README.md).
+
+### Validação pós-deploy
+- [ ] `curl -I https://jessicacostapsi.com/robots.txt` → 200
+- [ ] `curl -I https://jessicacostapsi.com/sitemap.xml` → 200
+- [ ] `curl -I https://jessicacostapsi.com/img/og-image.svg` → 200
+- [ ] `curl -sI -A "Googlebot/2.1" https://jessicacostapsi.com/` → 200 (não 403/challenge)
+- [ ] `curl -s https://jessicacostapsi.com/sitemap.xml | grep -c '<url>'` → 19
+- [ ] GSC: rodar `inspect_url_enhanced` em `/`, `/biografia`, 1 artigo. Resubmeter sitemap.
