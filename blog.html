@@ -29,6 +29,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD: Blog + Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://jessicacostapsi.com/blog#blog",
+        "url": "https://jessicacostapsi.com/blog",
+        "name": "Blog Jessica Costa PSI",
+        "description": "Artigos sobre desenvolvimento infantil, neurodivergências (TEA, TDAH), parentalidade positiva e regulação emocional.",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://jessicacostapsi.com/#person" },
+        "author": { "@id": "https://jessicacostapsi.com/#person" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://jessicacostapsi.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://jessicacostapsi.com/blog" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
