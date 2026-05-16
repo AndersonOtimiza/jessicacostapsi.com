@@ -108,7 +108,7 @@ Itens pendentes que dependem de decisão da Jessica Costa ou ação no painel Cl
 - [ ] **Encurtar description do `tdah-em-adultos.html`** de 155 → ~140 chars (folga, opcional).
 
 ### Produção (Anderson — painel Cloudflare + design)
-- [ ] **Desligar Bot Fight Mode** na zona `jessicacostapsi.com` (zone `528d39b71b15a717ff05a77cd7c217ad`) — bloqueia Googlebot/Bingbot hoje (403 + challenge).
+- [x] ~~**Desligar Bot Fight Mode** na zona `jessicacostapsi.com` (zone `528d39b71b15a717ff05a77cd7c217ad`) — bloqueia Googlebot/Bingbot hoje (403 + challenge).~~ ✅ Verificado 2026-05-16 via API: `fight_mode:false` + toda a stack de Bot Management off (ai_bots/content_bots/crawler protection disabled, cf_robots_variant off).
 - [ ] **Confirmar deploy ativo**: `wrangler pages deployment list --project-name=jessicacostapsi` — robots/sitemap/og retornam 404 em prod apesar de existirem no repo.
 - [ ] **Gerar `img/og-image.png` raster 1200×630** (Facebook/LinkedIn rejeitam SVG).
 - [ ] **Ativar Cloudflare Web Analytics**: criar beacon token + descomentar snippet em 5 páginas (index, biografia, blog, colunistas, privacidade).
