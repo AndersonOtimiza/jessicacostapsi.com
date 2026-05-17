@@ -13,6 +13,6 @@
     "d1:seed:remote": "wrangler d1 execute jessicacostapsi-cursos --remote --file=migrations/0002_seed.sql"
   },
   "devDependencies": {
-    "wrangler": "^3.90.0"
+    "wrangler": "^4.92.0"
   }
 }
