@@ -5,7 +5,8 @@
 /home          /                     301
 /sobre         /biografia.html       301
 /about         /biografia.html       301
-/manifesto     /manifesto.html       301
+# (removido: /manifesto -> /manifesto.html causava loop com o auto-pretty-URL
+# do Cloudflare Pages. O Pages ja serve /manifesto.html no path /manifesto.)
 /contato       /#contato             301
 /contact       /#contato             301
 /colunistas       /                  301
