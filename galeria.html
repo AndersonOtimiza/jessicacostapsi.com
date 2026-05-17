@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
-  <meta name="description" content="Psicóloga especialista em TDAH infantojuvenil no Rio de Janeiro. Atendimento TCC + avaliação neuropsicológica (CONNERS, NEPSY, WISC) no Recreio dos Bandeirantes e online.">
+  <meta name="description" content="Galeria do consultório de Jessica Costa Psi no Recreio dos Bandeirantes — ambiente acolhedor, retratos e bastidores da clínica infantojuvenil.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://jessicacostapsi.com/psicologa-tdah-rj">
+  <link rel="canonical" href="https://jessicacostapsi.com/galeria">
   <meta name="theme-color" content="#FFD93D">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon.svg">
@@ -14,18 +14,18 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Jessica Costa PSI">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:url" content="https://jessicacostapsi.com/psicologa-tdah-rj">
-  <meta property="og:title" content="Psicóloga TDAH RJ - Especialista Infantojuvenil - Jessica Costa Psi">
-  <meta property="og:description" content="TCC + avaliação neuropsicológica para crianças e adolescentes com TDAH. Recreio + online.">
-  <meta property="og:image" content="https://jessicacostapsi.com/img/og/tdah-em-meninas.png">
+  <meta property="og:url" content="https://jessicacostapsi.com/galeria">
+  <meta property="og:title" content="Galeria | Jessica Costa Psi">
+  <meta property="og:description" content="Conheça o ambiente do consultório e os bastidores da clínica infantojuvenil de Jessica Costa — Recreio dos Bandeirantes (RJ).">
+  <meta property="og:image" content="https://jessicacostapsi.com/img/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Psicóloga TDAH RJ - Especialista Infantojuvenil">
-  <meta name="twitter:description" content="TCC + avaliação para crianças com TDAH - Recreio + Online.">
-  <meta name="twitter:image" content="https://jessicacostapsi.com/img/og/tdah-em-meninas.png">
-  <title>Psicóloga TDAH RJ - Especialista Infantojuvenil</title>
+  <meta name="twitter:title" content="Galeria | Jessica Costa Psi">
+  <meta name="twitter:description" content="Conheça o ambiente do consultório e os bastidores da clínica infantojuvenil de Jessica Costa — Recreio dos Bandeirantes (RJ).">
+  <meta name="twitter:image" content="https://jessicacostapsi.com/img/og-image.png">
+  <title>Galeria | Jessica Costa Psi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,50 +33,191 @@
   <link rel="stylesheet" href="css/v2.css">
   <link rel="stylesheet" href="css/github.css">
 
+  <!-- Schema.org JSON-LD: ImageGallery + Person autor linkado à home -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalCondition",
-        "@id": "https://jessicacostapsi.com/psicologa-tdah-rj#tdah",
-        "name": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
-        "alternateName": "TDAH",
-        "code": { "@type": "MedicalCode", "code": "F90.0", "codingSystem": "CID-10" },
-        "possibleTreatment": [
-          { "@type": "MedicalTherapy", "name": "Terapia Cognitivo-Comportamental (TCC)" },
-          { "@type": "MedicalTherapy", "name": "Treino de Funções Executivas" },
-          { "@type": "MedicalTherapy", "name": "Avaliação Neuropsicológica" },
-          { "@type": "MedicalTherapy", "name": "Acompanhamento Multidisciplinar (psiquiatra + escola)" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://jessicacostapsi.com/psicologa-tdah-rj#service",
-        "serviceType": "Atendimento Psicológico para TDAH",
-        "name": "Psicóloga especialista em TDAH infantojuvenil no Rio de Janeiro",
-        "description": "Atendimento de crianças e adolescentes com Transtorno do Déficit de Atenção e Hiperatividade usando TCC, treino de funções executivas e avaliação neuropsicológica completa.",
-        "provider": { "@id": "https://jessicacostapsi.com/#business" },
-        "areaServed": [
-          { "@type": "Place", "name": "Recreio dos Bandeirantes, RJ" },
-          { "@type": "Place", "name": "Barra da Tijuca, RJ" },
-          { "@type": "City", "name": "Rio de Janeiro" },
-          { "@type": "Place", "name": "Brasil (online)" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://jessicacostapsi.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Psicóloga TDAH RJ", "item": "https://jessicacostapsi.com/psicologa-tdah-rj" }
-        ]
-      }
+    "@type": "ImageGallery",
+    "@id": "https://jessicacostapsi.com/galeria#gallery",
+    "name": "Galeria — Jessica Costa Psi",
+    "description": "Galeria do consultório, retratos e bastidores da clínica infantojuvenil de Jessica Costa no Recreio dos Bandeirantes (RJ).",
+    "url": "https://jessicacostapsi.com/galeria",
+    "inLanguage": "pt-BR",
+    "author": { "@id": "https://jessicacostapsi.com/#person" },
+    "publisher": { "@id": "https://jessicacostapsi.com/#person" },
+    "mainEntityOfPage": "https://jessicacostapsi.com/galeria",
+    "image": [
+      "https://jessicacostapsi.com/img/consultorio-vertice-mall.webp",
+      "https://jessicacostapsi.com/img/jessica-costa-biografia.webp",
+      "https://jessicacostapsi.com/img/jessica-costa-retrato.webp",
+      "https://jessicacostapsi.com/img/jessica-hero.webp",
+      "https://jessicacostapsi.com/img/jessica-costa-avatar.webp"
     ]
   }
   </script>
+
+  <!-- ===== Estilos escopados (não editar css/style.css para não vazar) ===== -->
+  <style>
+    .galeria-hero {
+      background: linear-gradient(135deg, var(--primary-light), #fce4b8);
+      padding: 96px 0 64px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .galeria-hero .eyebrow {
+      display: inline-block;
+      padding: 6px 16px;
+      background: #fff;
+      border-radius: var(--radius-pill);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .galeria-hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin: 0 0 20px;
+    }
+    .galeria-hero .lede {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #444;
+    }
+
+    .galeria-body { padding: 64px 0 80px; background: #fff; }
+
+    .galeria-section { margin-bottom: 72px; }
+    .galeria-section:last-child { margin-bottom: 0; }
+
+    .galeria-section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0e6d2;
+    }
+    .galeria-section-icon {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .galeria-section-icon svg { width: 24px; height: 24px; }
+    .galeria-section-text { flex: 1 1 auto; }
+    .galeria-section h2 {
+      font-size: 1.55rem;
+      line-height: 1.25;
+      margin: 0 0 4px;
+      color: #1a1a1a;
+    }
+    .galeria-section-sub {
+      margin: 0;
+      color: var(--text-light);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    /* Grid responsivo: 1 col mobile, 2 col tablet, 3 col desktop */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .galeria-figure {
+      margin: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #f8f3e6;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: block;
+    }
+    .galeria-figure:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .galeria-figure a {
+      display: block;
+      line-height: 0;
+      color: inherit;
+      text-decoration: none;
+    }
+    .galeria-figure img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+    /* Algumas figuras (ambiente) ficam melhor em 4:3 */
+    .galeria-figure--landscape img { aspect-ratio: 4 / 3; }
+
+    .galeria-figure figcaption {
+      padding: 14px 16px 16px;
+      font-size: 0.92rem;
+      line-height: 1.45;
+      color: var(--text-light);
+      background: #fff;
+    }
+
+    /* Estado vazio: categoria sem fotos ainda */
+    .galeria-empty {
+      padding: 32px 24px;
+      border: 1px dashed #e0d4b4;
+      border-radius: var(--radius);
+      background: #fffdf6;
+      color: var(--text-light);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .galeria-empty strong { color: var(--primary-dark); font-weight: 600; }
+
+    /* CTA final */
+    .galeria-cta {
+      padding: 64px 0 88px;
+      background: #fefcf7;
+      text-align: center;
+    }
+    .galeria-cta h2 { font-size: 1.6rem; margin: 0 0 12px; }
+    .galeria-cta p { color: #555; max-width: 560px; margin: 0 auto 24px; }
+
+    @media (max-width: 600px) {
+      .galeria-hero { padding: 72px 0 48px; }
+      .galeria-section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .galeria-section-icon { width: 40px; height: 40px; flex-basis: 40px; }
+    }
+  </style>
 </head>
 <body>
 
+  <!--
+    ============================================================================
+    GALERIA — página dedicada
+    ============================================================================
+    Estrutura: 4 categorias (consultório/ambiente · materiais lúdicos ·
+    Jessica em atendimento/retratos · eventos/palestras).
+
+    Hoje só temos fotos publicáveis em 2 das 4 categorias (ambiente + retratos).
+    As outras 2 (materiais lúdicos + eventos) ficam marcadas com .galeria-empty
+    até a Jessica liberar fotos vindas de `Designer/Fotos/` (não versionado).
+
+    NÃO mexer em css/style.css — todo o CSS desta página é escopado no <style>
+    acima, exatamente como manifesto.html faz.
+    ============================================================================
+  -->
+
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="logo">
@@ -90,7 +231,7 @@
         <a href="index.html#depoimentos">Depoimentos</a>
         <a href="blog.html">Blog</a>
         <a href="avaliacao-neuropsicologica-infantil.html">Avaliação</a>
-        <a href="galeria.html">Galeria</a>
+        <a href="galeria.html" class="active">Galeria</a>
         <a href="index.html#contato">Contato</a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Mudar para tema escuro" aria-pressed="false" title="Alternar tema">
@@ -103,167 +244,196 @@
     </div>
   </header>
 
-  <section class="bio-hero">
+  <!-- HERO -->
+  <section class="galeria-hero">
     <div class="container">
-      <div class="sobre-content">
-        <div class="sobre-text">
-          <span class="hero-badge">TDAH · Neurodivergência</span>
-          <h1>Psicóloga Especialista em <span class="highlight">TDAH</span> no Rio de Janeiro</h1>
-          <p style="margin-top:16px; font-size:1.15rem; line-height:1.7;">Atendimento de crianças e adolescentes com <strong>Transtorno do Déficit de Atenção e Hiperatividade</strong> usando <strong>Terapia Cognitivo-Comportamental (TCC)</strong> e <strong>treino de funções executivas</strong>. Avaliação neuropsicológica completa com instrumentos validados (CONNERS-3, NEPSY-II, WISC-IV).</p>
-          <p style="margin-top:16px; font-size:1rem; line-height:1.7;">Atendo no Recreio dos Bandeirantes e online. Trabalho integrado com escola, psiquiatra e fonoaudiólogo quando necessário. <strong>CRP 05/56789</strong>.</p>
-          <div style="margin-top:24px;">
-            <a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Suspeita%20de%20TDAH%20na%20minha%20fam%C3%ADlia.%20Quero%20conversar." target="_blank" rel="noopener noreferrer" class="btn btn-primary"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Conversar sobre TDAH</a>
-            <a href="avaliacao-neuropsicologica-infantil.html" class="btn btn-outline" style="margin-left:8px;"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 10h6M9 14h6M9 18h4"/></svg> Avaliação Neuropsicológica</a>
+      <span class="eyebrow">Conhecer o espaço</span>
+      <h1>Galeria</h1>
+      <p class="lede">O consultório, os materiais que entram na sessão, e um pouco de mim no dia a dia da clínica. Uma sessão começa antes da porta abrir — começa quando a criança e a família se sentem em um lugar que cabe nelas.</p>
+    </div>
+  </section>
+
+  <!-- CORPO -->
+  <section class="galeria-body">
+    <div class="container">
+
+      <!-- ====================================================================
+           SEÇÃO 1 · Consultório / ambiente
+           ==================================================================== -->
+      <section class="galeria-section" aria-labelledby="cat-consultorio">
+        <header class="galeria-section-header">
+          <span class="galeria-section-icon" aria-hidden="true">
+            <!-- Ícone: casa com coração (ambiente acolhedor) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11 12 4l9 7"/>
+              <path d="M5 10v10h14V10"/>
+              <path d="M12 19c-2.2-1.5-4-3-4-5a2 2 0 0 1 4-1 2 2 0 0 1 4 1c0 2-1.8 3.5-4 5Z"/>
+            </svg>
+          </span>
+          <div class="galeria-section-text">
+            <h2 id="cat-consultorio">Consultório e ambiente</h2>
+            <p class="galeria-section-sub">Vertice Mall, Recreio dos Bandeirantes — uma sala pensada para crianças e adolescentes.</p>
           </div>
-        </div>
-        <div>
-          <img src="img/jessica-costa-retrato.webp" srcset="img/jessica-costa-retrato.webp 1x, img/jessica-costa-retrato@2x.webp 2x" alt="Jessica Costa Psi, psicóloga especialista em TDAH infantojuvenil, em seu consultório no Recreio" width="800" height="800" loading="lazy" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:var(--radius); display:block;">
-        </div>
-      </div>
-    </div>
-  </section>
+        </header>
 
-  <!-- AS 3 APRESENTACOES DO TDAH -->
-  <section class="especialidades">
-    <div class="container">
-      <h2>As 3 apresentações do TDAH</h2>
-      <p class="section-subtitle">TDAH não é só "criança agitada". Existem três apresentações distintas, e a mais comum em meninas costuma ser invisível para a escola.</p>
-      <div class="cards-grid cards-grid-3">
-        <div class="card">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
-          <h3>Predominantemente hiperativo-impulsiva</h3>
-          <p>A apresentação mais conhecida: não consegue ficar parado, fala demais, age sem pensar, interrompe. A escola normalmente sinaliza cedo porque atrapalha a turma.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4a5 5 0 0 1 10 1 4 4 0 0 1 1 7 4 4 0 0 1-7 2 3 3 0 0 1-5-2 4 4 0 0 1 1-8Z"/><circle cx="6" cy="19" r="1.5"/><circle cx="3" cy="21.5" r="0.8"/></svg></div>
-          <h3>Predominantemente desatenta</h3>
-          <p>A mais comum em meninas. Sonha acordada, parece distraída, "no mundo da lua". <strong>Invisível para o sistema escolar</strong> — não atrapalha, não chama atenção. Diagnóstico costuma chegar tarde.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h12a3 3 0 1 0-3-3"/><path d="M3 14h16a3 3 0 1 1-3 3"/><path d="M3 19h8"/></svg></div>
-          <h3>Combinada</h3>
-          <p>Mistura das duas apresentações. Costuma ter mais prejuízo funcional e demandar acompanhamento multimodal (psicoterapia + medicação + escola adaptada).</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="galeria-grid">
+          <figure class="galeria-figure galeria-figure--landscape">
+            <a href="img/consultorio-vertice-mall.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+              <img
+                src="img/consultorio-vertice-mall.webp"
+                alt="Sala do consultório de Jessica Costa Psi no Vertice Mall, Recreio dos Bandeirantes — ambiente lúdico e acolhedor para atendimento infantojuvenil"
+                loading="lazy"
+                decoding="async"
+                width="1200" height="900">
+            </a>
+            <figcaption>Sala de atendimento — Vertice Mall, Recreio dos Bandeirantes (RJ).</figcaption>
+          </figure>
 
-  <!-- ABORDAGEM -->
-  <section class="especialidades" style="background:#fefcf7;">
-    <div class="container">
-      <h2>Como trabalho TDAH na clínica</h2>
-      <div class="cards-grid cards-grid-2">
-        <div class="card">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 0V5a3 3 0 0 0-3 0Z"/><path d="M15 5a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 0"/></svg></div>
-          <h3>TCC adaptada para TDAH</h3>
-          <p>Trabalho regulação emocional, manejo de impulsividade, organização de pensamentos automáticos, técnicas de enfrentamento de procrastinação e construção de autoestima — central porque crianças com TDAH carregam muito sentimento de "esforço não rende".</p>
+          <figure class="galeria-figure">
+            <a href="img/jessica-costa-biografia@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+              <img
+                src="img/jessica-costa-biografia.webp"
+                srcset="img/jessica-costa-biografia.webp 1x, img/jessica-costa-biografia@2x.webp 2x"
+                alt="Detalhe do consultório com mural infantil de flores ao fundo, decoração lúdica preparada para crianças"
+                loading="lazy"
+                decoding="async"
+                width="800" height="1000">
+            </a>
+            <figcaption>Mural infantil — referência visual que ajuda a criança a se ambientar.</figcaption>
+          </figure>
         </div>
-        <div class="card">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 10h6M9 14h6M9 18h4"/></svg></div>
-          <h3>Treino de funções executivas</h3>
-          <p>Decomposição de tarefas em passos pequenos, rotinas visuais, técnicas de gestão de tempo adaptadas à idade, estratégias de memória de trabalho. Mudo a ESTRATÉGIA, não a criança — é assim que se vive bem com cérebro TDAH.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M5 20V9l7-5 7 5v11"/><path d="M10 20v-5h4v5"/><path d="M9 12h.01M15 12h.01"/></svg></div>
-          <h3>Adaptações escolares</h3>
-          <p>Trabalho com a escola para implementar adaptações pedagógicas conforme Lei Brasileira de Inclusão (LBI 13.146/2015): tempo estendido em provas, ambiente menos estimulante, materiais adaptados, intervalos previstos.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 14 2 2 4-4 3 3-6 6-3-3"/><path d="m12 14-2 2-4-4-3 3 6 6 3-3"/><path d="M3 11 8 6h4l4 3"/><path d="M21 11 16 6h-4"/></svg></div>
-          <h3>Orientação parental contínua</h3>
-          <p>Famílias TDAH precisam aprender a mudar AMBIENTE, não só comportamento da criança. Trabalho com pais comunicação assertiva, manejo de crises, rotinas de casa e fortalecimento do vínculo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- TDAH NA FAMILIA -->
-  <section class="bio-hero">
-    <div class="container">
-      <div style="max-width:760px; margin:0 auto; text-align:center;">
-        <h2>TDAH tem componente genético forte</h2>
-        <p style="font-size:1.05rem; line-height:1.8;"><strong>É comum pais descobrirem o próprio TDAH depois que o filho é avaliado.</strong> Tenho parentes próximos com TDAH e cresci entre rotinas que precisavam ser reinventadas, conversas que mudavam de tópico no meio, e o sentimento de "esforço não rende". Diagnóstico não é rótulo — é mapa. E quando os adultos da casa se conhecem, a criança evolui mais rápido.</p>
-        <p style="margin-top:24px;"><a href="artigos/tdah-em-adultos.html" class="btn btn-outline">Ler sobre TDAH em adultos →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ARTIGOS CLUSTER -->
-  <section class="especialidades" style="background:#fefcf7;">
-    <div class="container">
-      <h2>Leitura recomendada sobre TDAH</h2>
-      <p class="section-subtitle">Conteúdos que escrevo para famílias entenderem o TDAH em diferentes idades e perfis.</p>
-      <div class="cards-grid cards-grid-2">
-        <a href="artigos/tdah-em-meninas.html" class="blog-card-link">
-          <div class="blog-card">
-            <img class="blog-card-img" src="img/og/tdah-em-meninas.png" alt="TDAH em Meninas" width="800" height="450" loading="lazy" style="width:100%;height:180px;object-fit:cover;">
-            <div class="blog-card-content">
-              <h3>TDAH em Meninas: Por Que o Diagnóstico Chega Tarde</h3>
-              <p>Como o TDAH se apresenta diferente em meninas e adolescentes, e por que tantas só descobrem na vida adulta.</p>
-              <span class="read-more">Ler artigo →</span>
-            </div>
+      <!-- ====================================================================
+           SEÇÃO 2 · Materiais lúdicos e instrumentos de avaliação
+           Estado: SEM FOTOS publicáveis ainda (Designer/Fotos/ não versionado).
+           Mantida visível com placeholder honesto — converter assim que a
+           Jessica liberar 4–6 fotos editadas e otimizadas.
+           ==================================================================== -->
+      <section class="galeria-section" aria-labelledby="cat-materiais">
+        <header class="galeria-section-header">
+          <span class="galeria-section-icon" aria-hidden="true">
+            <!-- Ícone: blocos lúdicos / peças de jogo -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="8" height="8" rx="1.5"/>
+              <rect x="13" y="3" width="8" height="8" rx="1.5"/>
+              <rect x="3" y="13" width="8" height="8" rx="1.5"/>
+              <path d="M17 13v4M15 15h4"/>
+              <circle cx="17" cy="19" r="0.8" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="galeria-section-text">
+            <h2 id="cat-materiais">Materiais lúdicos e instrumentos</h2>
+            <p class="galeria-section-sub">Recursos que apoiam a ludoterapia, a avaliação neuropsicológica e o trabalho com regulação emocional.</p>
           </div>
-        </a>
-        <a href="artigos/tdah-em-adultos.html" class="blog-card-link">
-          <div class="blog-card">
-            <img class="blog-card-img" src="img/og/tdah-em-adultos.png" alt="TDAH em Adultos" width="800" height="450" loading="lazy" style="width:100%;height:180px;object-fit:cover;">
-            <div class="blog-card-content">
-              <h3>TDAH em Adultos: Como Identificar os Traços</h3>
-              <p>Por que tantos adultos só descobrem o TDAH agora — desatenção, hiperatividade interna, disfunção executiva e sensibilidade à rejeição.</p>
-              <span class="read-more">Ler artigo →</span>
-            </div>
+        </header>
+
+        <div class="galeria-empty">
+          <p><strong>Em preparação.</strong> Em breve, fotos dos materiais e instrumentos usados em sessão — selecionados pela Jessica para entrarem aqui com cuidado e contexto.</p>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SEÇÃO 3 · Jessica em atendimento / retratos
+           ==================================================================== -->
+      <section class="galeria-section" aria-labelledby="cat-retratos">
+        <header class="galeria-section-header">
+          <span class="galeria-section-icon" aria-hidden="true">
+            <!-- Ícone: silhueta + estetoscópio simplificado (profissional de saúde) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3.5"/>
+              <path d="M5 20a7 7 0 0 1 14 0"/>
+            </svg>
+          </span>
+          <div class="galeria-section-text">
+            <h2 id="cat-retratos">Jessica em atendimento</h2>
+            <p class="galeria-section-sub">Retratos profissionais e momentos no dia a dia da clínica.</p>
           </div>
-        </a>
-        <a href="artigos/tdah-na-escola.html" class="blog-card-link">
-          <div class="blog-card">
-            <img class="blog-card-img" src="img/og/tdah-na-escola.png" alt="TDAH na Escola" width="800" height="450" loading="lazy" style="width:100%;height:180px;object-fit:cover;">
-            <div class="blog-card-content">
-              <h3>TDAH na Escola: Ajude Seu Filho a se Concentrar</h3>
-              <p>Estratégias práticas para crianças com TDAH na sala de aula, e como o laudo apoia adaptações pedagógicas.</p>
-              <span class="read-more">Ler artigo →</span>
-            </div>
+        </header>
+
+        <div class="galeria-grid">
+          <figure class="galeria-figure">
+            <a href="img/jessica-hero@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+              <img
+                src="img/jessica-hero.webp"
+                srcset="img/jessica-hero.webp 1x, img/jessica-hero@2x.webp 2x"
+                alt="Jessica Costa Psi sorrindo, retrato profissional usado na home do site"
+                loading="lazy"
+                decoding="async"
+                width="800" height="1000">
+            </a>
+            <figcaption>Jessica Costa — psicóloga infantojuvenil, CRP 05/56789.</figcaption>
+          </figure>
+
+          <figure class="galeria-figure">
+            <a href="img/jessica-costa-retrato@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+              <img
+                src="img/jessica-costa-retrato.webp"
+                srcset="img/jessica-costa-retrato.webp 1x, img/jessica-costa-retrato@2x.webp 2x"
+                alt="Retrato profissional de Jessica Costa, psicóloga infantojuvenil em Recreio dos Bandeirantes"
+                loading="lazy"
+                decoding="async"
+                width="800" height="1000">
+            </a>
+            <figcaption>Retrato profissional — sessão de fotos institucional.</figcaption>
+          </figure>
+
+          <figure class="galeria-figure">
+            <a href="img/jessica-costa-avatar@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+              <img
+                src="img/jessica-costa-avatar.webp"
+                srcset="img/jessica-costa-avatar.webp 1x, img/jessica-costa-avatar@2x.webp 2x"
+                alt="Avatar de Jessica Costa Psi em enquadramento fechado para redes sociais"
+                loading="lazy"
+                decoding="async"
+                width="800" height="1000">
+            </a>
+            <figcaption>Headshot para canais sociais e perfis verificados.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SEÇÃO 4 · Eventos / palestras
+           Estado: SEM FOTOS publicáveis ainda. Placeholder honesto até a
+           Jessica liberar registros editados.
+           ==================================================================== -->
+      <section class="galeria-section" aria-labelledby="cat-eventos">
+        <header class="galeria-section-header">
+          <span class="galeria-section-icon" aria-hidden="true">
+            <!-- Ícone: microfone (palestras / eventos) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="3" width="6" height="12" rx="3"/>
+              <path d="M5 11a7 7 0 0 0 14 0"/>
+              <path d="M12 18v3"/>
+              <path d="M9 21h6"/>
+            </svg>
+          </span>
+          <div class="galeria-section-text">
+            <h2 id="cat-eventos">Eventos e palestras</h2>
+            <p class="galeria-section-sub">Encontros com escolas, pediatras e famílias — formação continuada e divulgação científica.</p>
           </div>
-        </a>
-        <a href="artigos/como-funciona-avaliacao-neuropsicologica.html" class="blog-card-link">
-          <div class="blog-card">
-            <img class="blog-card-img" src="img/og/como-funciona-avaliacao-neuropsicologica.png" alt="Avaliação Neuropsicológica" width="800" height="450" loading="lazy" style="width:100%;height:180px;object-fit:cover;">
-            <div class="blog-card-content">
-              <h3>Como Funciona a Avaliação Neuropsicológica</h3>
-              <p>Guia passo-a-passo do processo de testagem para investigar TDAH: WISC, NEPSY, CONNERS e instrumentos complementares.</p>
-              <span class="read-more">Ler artigo →</span>
-            </div>
-          </div>
-        </a>
-      </div>
+        </header>
+
+        <div class="galeria-empty">
+          <p><strong>Em preparação.</strong> Os registros das próximas palestras e formações da Jessica para escolas e equipes de saúde entram aqui assim que estiverem prontos para publicação.</p>
+        </div>
+      </section>
+
     </div>
   </section>
 
-  <!-- CTA LANDING -->
-  <section class="lead-cta-section">
+  <!-- CTA DISCRETO -->
+  <section class="galeria-cta">
     <div class="container">
-      <h2>Suspeita de TDAH na sua família?</h2>
-      <p class="lcta-sub">Deixe seu contato — converso pessoalmente com você sobre próximos passos.</p>
-      <form class="lcta-form" data-lead-form data-lead-source="jessica-tdah-landing" data-lead-type="avaliacao-neuropsicologica" novalidate>
-        <div class="lcta-row">
-          <input class="lcta-input" type="text" name="name" placeholder="Seu nome" aria-label="Seu nome" required autocomplete="name">
-          <input class="lcta-input" type="tel" name="phone" placeholder="WhatsApp com DDD" aria-label="WhatsApp com DDD" required autocomplete="tel" inputmode="tel">
-        </div>
-        <div class="lcta-row">
-          <input class="lcta-input" type="email" name="email" placeholder="E-mail (opcional)" aria-label="E-mail (opcional)" autocomplete="email">
-          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança" aria-label="Idade da criança">
-        </div>
-        <select class="lcta-input lcta-select" name="motivo">
-          <option value="avaliacao-neuropsicologica">Quero avaliação neuropsicológica</option>
-          <option value="primeira-consulta">Já tenho diagnóstico — quero acompanhamento</option>
-          <option value="duvida">Tirar dúvida sobre TDAH</option>
-        </select>
-        <button class="lcta-btn" type="submit"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.5A8 8 0 1 1 21 12Z"/></svg> Falar com Jessica sobre TDAH</button>
-        <div class="lcta-msg" style="display:none;"></div>
-        <p class="lcta-disclaimer">Ao enviar, você concorda com a <a href="privacidade.html">Política de Privacidade</a>. Você será direcionado(a) ao WhatsApp.</p>
-      </form>
+      <h2>Quer conhecer o consultório pessoalmente?</h2>
+      <p>Posso te receber para uma conversa inicial — sem compromisso, no horário que cabe na sua rotina.</p>
+      <a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Vi%20a%20galeria%20no%20site%20e%20gostaria%20de%20conhecer%20o%20consult%C3%B3rio." target="_blank" rel="noopener noreferrer" class="btn btn-primary"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.5A8 8 0 1 1 21 12Z"/></svg> Falar pelo WhatsApp</a>
+      <a href="biografia.html" class="btn btn-outline" style="margin-left:8px;">Conhecer minha trajetória</a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer footer-mega">
     <div class="container">
 
@@ -384,7 +554,6 @@
               <li><a href="artigos/quanto-custa-avaliacao-neuropsicologica.html">Quanto Custa a Avaliação</a></li>
               <li><a href="#" data-placeholder="true">Triagem inicial (formulário)</a></li>
               <li><a href="#" data-placeholder="true">Material para pais (e-book)</a></li>
-              <li><a href="#" data-placeholder="true">Indicações de leitura</a></li>
             </ul>
           </div>
 
@@ -540,6 +709,14 @@
       });
     })();
   </script>
+
+  <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.5A8 8 0 1 1 21 12Z"/></svg></a>
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" type="button">↑</button>
+
+  <!-- Cloudflare Web Analytics (privacy-friendly, sem cookies, LGPD-friendly).
+       Para ativar: gere o beacon token em https://one.dash.cloudflare.com/?to=/:account/web-analytics
+       e descomente a linha abaixo substituindo REPLACE_WITH_BEACON_TOKEN. -->
+  <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_BEACON_TOKEN"}'></script> -->
 
   <script src="js/main.js"></script>
   <script src="js/lead-form.js" defer></script>

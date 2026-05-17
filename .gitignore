@@ -31,3 +31,7 @@ dist/
 build/
 tmp/
 *.log
+
+# Material bruto de design (fotos/vídeos da cliente)
+# Assets pesados (full-res JPG, .mov do iCloud) — não vão pro repo nem pro CF Pages
+Designer/

@@ -13,6 +13,15 @@ Site estático da psicóloga infantojuvenil **Jessica Costa** (CRP 05/56789, Rec
 - [js/main.js](js/main.js) — sticky header, menu mobile, observer de animação, fallback mailto, mensagem dinâmica WhatsApp por página
 - [robots.txt](robots.txt) / [sitemap.xml](sitemap.xml) — base SEO
 
+## Material bruto (`Designer/` — não versionada)
+
+Pasta local com assets brutos enviados pela cliente (exportados do iCloud/iPhone). **Ignorada pelo git** (`.gitignore` → `Designer/`) por serem arquivos pesados (fotos full-res ~8 MB, vídeos `.mov` ~30-60 MB). Não vão pro repo nem pro build do CF Pages.
+
+- `Designer/Fotos/` — fotos `.jpg` de sessões (set/2025, out/2025, abr/2026). Fonte para selecionar/otimizar retratos e imagens institucionais do site (converter pra WebP ≤200KB antes de mover pra `img/`).
+- `Designer/Vídeos/` — vídeos `.mov`. Fonte bruta para reels/clips curtos. Se forem ao site, transcodar pra MP4 H.264 + comprimir.
+
+Convenção de nomes herdada do iPhone (`Foto DD-MM-AAAA, HH MM SS.jpg`); manter como veio até a seleção final.
+
 ## Comandos
 
 ### Deploy (Cloudflare Pages)

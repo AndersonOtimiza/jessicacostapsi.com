@@ -23,7 +23,7 @@
   --ocean-800: #075985;
   --ocean-900: #0C4A6E;
 
-  /* 🌱 Menta (CTA WhatsApp) */
+  /* Menta (CTA WhatsApp) */
   --mint-400: #34D399;
   --mint-500: #10B981;
   --mint-600: #059669;
@@ -586,8 +586,9 @@ a:hover { color: var(--ocean-900); }
 
 .shark-bee-showcase .lead {
   color: rgba(255, 255, 255, 0.78);
-  max-width: 60ch;
-  font-size: 1.1rem;
+  max-width: 62ch;
+  font-size: 1.35rem;
+  line-height: 1.6;
   margin-bottom: 48px;
 }
 
@@ -620,12 +621,13 @@ a:hover { color: var(--ocean-900); }
 
 .creature-card h3 {
   color: white;
-  font-size: 1.6rem;
-  margin-bottom: 12px;
+  font-size: 1.95rem;
+  margin-bottom: 14px;
 }
 
 .creature-card p {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
   line-height: 1.7;
   margin-bottom: 16px;
 }
@@ -638,11 +640,11 @@ a:hover { color: var(--ocean-900); }
 }
 
 .creature-card .tag {
-  padding: 4px 12px;
+  padding: 6px 14px;
   background: rgba(255, 255, 255, 0.10);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-pill);
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -1173,3 +1175,11 @@ a:hover { color: var(--ocean-900); }
   .hero-trust-row { padding: 14px 20px; font-size: 0.85rem; }
   .hero-trust-row .sep { display: none; }
 }
+
+/* ============================================================
+   Footer MEGA — bloco migrado para css/github.css (secao 19) em
+   2026-05-17, usando tokens --gh-* (paleta Primer light/dark) para
+   coerencia com o redesign. Mantemos este comentario como pista
+   historica; nao adicionar regras .footer-mega-* aqui.
+   ============================================================ */
+

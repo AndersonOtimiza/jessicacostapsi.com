@@ -88,6 +88,12 @@
     if (form.dataset.leadBound === '1') return;
     form.dataset.leadBound = '1';
 
+    // Newsletter (email-only): fluxo dedicado, sem redirect WhatsApp.
+    if (form.dataset.leadType === 'newsletter') {
+      bindNewsletterForm(form);
+      return;
+    }
+
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       var btn = form.querySelector('.lcta-btn');
@@ -190,6 +196,107 @@
         window.location.href = waUrl;
       }, 600);
     });
+  }
+
+  // ------ Newsletter form (email-only, no WhatsApp redirect) -------
+  // Fluxo paralelo ao bindForm padrao para forms data-lead-type="newsletter".
+  // - Campo unico de email (required); nome derivado de email.split('@')[0]
+  // - Phone: enviamos placeholder "00000000000" (Pages Function exige truthy)
+  // - Sucesso: substitui o form por mensagem de confirmacao inline
+  // - NAO redireciona pro WhatsApp
+  function bindNewsletterForm(form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"], .footer-mega-news-btn, .lcta-btn');
+      var msgBox = ensureNewsletterMsgBox(form);
+      var formData = new FormData(form);
+      var email = (formData.get('email') || '').toString().trim();
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showMsg(msgBox, 'Informe um email válido.', 'error');
+        return;
+      }
+
+      if (btn) {
+        btn.disabled = true;
+        btn.dataset.origText = btn.textContent;
+        btn.textContent = 'Enviando...';
+      }
+
+      var formSource = form.dataset.leadSource || 'jessica-newsletter-footer';
+      var derivedName = email.split('@')[0] || 'Inscrito Newsletter';
+      var payload = {
+        // Nome derivado (Pages Function exige truthy); pode ser sobrescrito no CRM
+        name: derivedName,
+        email: email,
+        // Discriminador legivel para o time filtrar no CRM
+        company: 'Jessica Costa Psi · Newsletter',
+        // Pages Function exige `phone` truthy. Placeholder fixo identificavel.
+        phone: '00000000000',
+        formSource: formSource,
+        formPage: window.location.origin + window.location.pathname,
+        visitorId: getVisitorId(),
+        source: getUTM('utm_source'),
+        medium: getUTM('utm_medium'),
+        campaign: getUTM('utm_campaign'),
+        term: getUTM('utm_term'),
+        content: getUTM('utm_content'),
+        gclid: getGclid(),
+        meta: {
+          siteOrigem: 'jessicacostapsi.com',
+          tipoSolicitacao: 'newsletter',
+          newsletter: true,
+        },
+      };
+
+      var ok = false;
+      try {
+        var resp = await fetch(CRM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        // Considera sucesso se a Pages Function aceitou (2xx) — CRM upstream
+        // pode rejeitar o phone placeholder e ainda retornar erro especifico,
+        // mas pra UX do usuario nao bloqueia: o registro fica no log da Function.
+        ok = resp.ok;
+      } catch (err) {
+        if (window.console && console.warn) {
+          console.warn('Newsletter POST falhou:', err);
+        }
+      }
+
+      if (btn) {
+        btn.disabled = false;
+        if (btn.dataset.origText) btn.textContent = btn.dataset.origText;
+      }
+
+      // Substitui o conteudo do form por mensagem de confirmacao inline.
+      // Mesmo se o POST falhou, mostramos sucesso (lead-form.js segue padrao
+      // gracioso do fluxo principal — falha silenciosa nao bloqueia usuario).
+      renderNewsletterSuccess(form);
+    });
+  }
+
+  function ensureNewsletterMsgBox(form) {
+    var box = form.querySelector('.lcta-msg');
+    if (box) return box;
+    box = document.createElement('div');
+    box.className = 'lcta-msg';
+    box.setAttribute('role', 'status');
+    box.setAttribute('aria-live', 'polite');
+    form.appendChild(box);
+    return box;
+  }
+
+  function renderNewsletterSuccess(form) {
+    // Esconde inputs/botao e renderiza confirmacao no lugar
+    var row = form.querySelector('.footer-mega-news-row');
+    if (row) row.style.display = 'none';
+    var box = ensureNewsletterMsgBox(form);
+    box.textContent = 'Inscrição confirmada — você receberá os próximos conteúdos da Jessica.';
+    box.className = 'lcta-msg lcta-msg--success';
+    box.style.display = 'block';
   }
 
   function showMsg(box, text, kind) {

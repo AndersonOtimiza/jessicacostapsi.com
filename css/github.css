@@ -1,0 +1,2191 @@
+/* ==========================================================================
+   Jessica Costa Psi — GitHub-style Redesign (Primer-inspired)
+   Carregado APOS style.css e v2.css. Reseta visual e impoe sistema novo
+   com tokens light/dark via [data-theme]. Conteudo HTML e classes existentes
+   preservados — este arquivo override-a o visual mantendo a estrutura.
+   ========================================================================== */
+
+/* ============================================================
+   1. TOKENS (Primer-inspired) — Light + Dark
+   ============================================================ */
+
+:root,
+:root[data-theme="light"] {
+  /* Canvas */
+  --gh-canvas-default:    #ffffff;
+  --gh-canvas-overlay:    #ffffff;
+  --gh-canvas-inset:      #f6f8fa;
+  --gh-canvas-subtle:     #f6f8fa;
+
+  /* Foreground */
+  --gh-fg-default:        #1f2328;
+  --gh-fg-muted:          #59636e;
+  --gh-fg-subtle:         #6e7781;
+  --gh-fg-on-emphasis:    #ffffff;
+
+  /* Border */
+  --gh-border-default:    #d1d9e0;
+  --gh-border-muted:      #d1d9e0b3;
+  --gh-border-subtle:     #1f23280f;
+
+  /* Accent (blue) */
+  --gh-accent-fg:         #0969da;
+  --gh-accent-emphasis:   #0969da;
+  --gh-accent-muted:      #0969da66;
+  --gh-accent-subtle:     #ddf4ff;
+
+  /* Success (green) — primary button */
+  --gh-success-fg:        #1a7f37;
+  --gh-success-emphasis:  #1f883d;
+  --gh-success-emphasis-hover: #1a7f37;
+  --gh-success-muted:     #1f883d66;
+  --gh-success-subtle:    #dafbe1;
+
+  /* Attention (yellow) */
+  --gh-attention-fg:      #9a6700;
+  --gh-attention-emphasis:#9a6700;
+  --gh-attention-subtle:  #fff8c5;
+
+  /* Danger (red) */
+  --gh-danger-fg:         #d1242f;
+  --gh-danger-emphasis:   #cf222e;
+  --gh-danger-subtle:     #ffebe9;
+
+  /* Done (purple) */
+  --gh-done-fg:           #8250df;
+  --gh-done-subtle:       #fbefff;
+
+  /* Neutrals */
+  --gh-neutral-emphasis:  #59636e;
+  --gh-neutral-emphasis-plus: #1f2328;
+  --gh-neutral-muted:     #afb8c133;
+  --gh-neutral-subtle:    #6e77810f;
+
+  /* Shadows */
+  --gh-shadow-small:      0 1px 0 rgba(31,35,40,0.04);
+  --gh-shadow-medium:     0 3px 6px rgba(140,149,159,0.15);
+  --gh-shadow-large:      0 8px 24px rgba(140,149,159,0.2);
+  --gh-shadow-extra-large:0 12px 48px rgba(140,149,159,0.3);
+  --gh-shadow-inset:      inset 0 1px 0 rgba(208,215,222,0.2);
+
+  /* Buttons */
+  --gh-btn-bg:            #f6f8fa;
+  --gh-btn-hover-bg:      #f3f4f6;
+  --gh-btn-active-bg:     #ebecf0;
+  --gh-btn-border:        #d1d9e0;
+  --gh-btn-text:          #1f2328;
+  --gh-btn-primary-bg:    #1f883d;
+  --gh-btn-primary-hover: #1a7f37;
+  --gh-btn-primary-text:  #ffffff;
+
+  /* Header */
+  --gh-header-bg:         #ffffff;
+  --gh-header-text:       #1f2328;
+  --gh-header-border:     #d1d9e0;
+
+  /* Code */
+  --gh-code-bg:           rgba(175,184,193,0.2);
+  --gh-code-block-bg:     #f6f8fa;
+
+  /* Misc */
+  --gh-radius:            6px;
+  --gh-radius-medium:     8px;
+  --gh-radius-large:      12px;
+  --gh-font-mono:         ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --gh-font-sans:         -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --gh-font-display:      'Poppins', var(--gh-font-sans);
+}
+
+:root[data-theme="dark"] {
+  /* Canvas */
+  --gh-canvas-default:    #0d1117;
+  --gh-canvas-overlay:    #151b23;
+  --gh-canvas-inset:      #010409;
+  --gh-canvas-subtle:     #151b23;
+
+  /* Foreground */
+  --gh-fg-default:        #f0f6fc;
+  --gh-fg-muted:          #9198a1;
+  --gh-fg-subtle:         #6e7681;
+  --gh-fg-on-emphasis:    #ffffff;
+
+  /* Border */
+  --gh-border-default:    #3d444d;
+  --gh-border-muted:      #3d444db3;
+  --gh-border-subtle:     #ffffff0f;
+
+  /* Accent (blue) */
+  --gh-accent-fg:         #4493f8;
+  --gh-accent-emphasis:   #1f6feb;
+  --gh-accent-muted:      #4493f866;
+  --gh-accent-subtle:     #388bfd1a;
+
+  /* Success (green) */
+  --gh-success-fg:        #3fb950;
+  --gh-success-emphasis:  #238636;
+  --gh-success-emphasis-hover: #2ea043;
+  --gh-success-muted:     #3fb95066;
+  --gh-success-subtle:    #2ea04326;
+
+  /* Attention (yellow) */
+  --gh-attention-fg:      #d29922;
+  --gh-attention-emphasis:#9e6a03;
+  --gh-attention-subtle:  #bb800926;
+
+  /* Danger (red) */
+  --gh-danger-fg:         #f85149;
+  --gh-danger-emphasis:   #da3633;
+  --gh-danger-subtle:     #f851491a;
+
+  /* Done (purple) */
+  --gh-done-fg:           #ab7df8;
+  --gh-done-subtle:       #ab7df826;
+
+  /* Neutrals */
+  --gh-neutral-emphasis:  #9198a1;
+  --gh-neutral-emphasis-plus: #f0f6fc;
+  --gh-neutral-muted:     #656c7633;
+  --gh-neutral-subtle:    #ffffff0a;
+
+  /* Shadows */
+  --gh-shadow-small:      0 0 transparent;
+  --gh-shadow-medium:     0 3px 6px #010409;
+  --gh-shadow-large:      0 8px 24px #010409;
+  --gh-shadow-extra-large:0 12px 48px #010409;
+  --gh-shadow-inset:      inset 0 1px 0 rgba(255,255,255,0.04);
+
+  /* Buttons */
+  --gh-btn-bg:            #212830;
+  --gh-btn-hover-bg:      #2a313c;
+  --gh-btn-active-bg:     #2f3741;
+  --gh-btn-border:        #3d444d;
+  --gh-btn-text:          #f0f6fc;
+  --gh-btn-primary-bg:    #238636;
+  --gh-btn-primary-hover: #2ea043;
+  --gh-btn-primary-text:  #ffffff;
+
+  /* Header */
+  --gh-header-bg:         #010409;
+  --gh-header-text:       #f0f6fc;
+  --gh-header-border:     #3d444d;
+
+  /* Code */
+  --gh-code-bg:           rgba(101,108,118,0.4);
+  --gh-code-block-bg:     #151b23;
+}
+
+/* Respeitar preferência do sistema quando data-theme não estiver setado */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
+
+/* Aplicar color-scheme conforme tema */
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"]  { color-scheme: dark; }
+
+/* ============================================================
+   2. RESET / BASE — sobre-escreve body & headings legados
+   ============================================================ */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--gh-font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gh-fg-default);
+  background: var(--gh-canvas-default);
+  background-image: none; /* mata radial gradients do v2.css */
+  background-attachment: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--gh-accent-emphasis);
+  color: var(--gh-fg-on-emphasis);
+}
+
+a {
+  color: var(--gh-accent-fg);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+ul, ol { padding-left: 1.5em; }
+ul { list-style: disc; }
+
+/* Tipografia — manter Poppins APENAS em headings principais para suavidade humana,
+   mas no estilo GitHub a hierarquia tipográfica vence */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--gh-font-display);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--gh-fg-default);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.025em; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; color: var(--gh-fg-muted); }
+
+p { margin-top: 0; margin-bottom: 1em; color: var(--gh-fg-default); }
+
+code, pre, kbd, samp {
+  font-family: var(--gh-font-mono);
+  font-size: 0.875em;
+}
+code {
+  background: var(--gh-code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: var(--gh-radius);
+}
+pre {
+  background: var(--gh-code-block-bg);
+  padding: 16px;
+  border-radius: var(--gh-radius);
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+pre code { background: transparent; padding: 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--gh-border-default);
+  margin: 24px 0;
+}
+
+blockquote {
+  margin: 0 0 16px;
+  padding: 0 1em;
+  color: var(--gh-fg-muted);
+  border-left: 0.25em solid var(--gh-border-default);
+}
+
+/* Container — GitHub mantém 1280px max */
+.container,
+.container-artigo {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.container-artigo {
+  max-width: 760px;
+}
+
+/* Sections — reduz padding excessivo dos legados */
+section {
+  padding: 64px 0;
+}
+
+/* ============================================================
+   3. HEADER — barra superior estilo github.com
+   ============================================================ */
+
+.header,
+header.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--gh-header-bg);
+  border-bottom: 1px solid var(--gh-header-border);
+  padding: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.header.sticky,
+.header.scrolled {
+  background: var(--gh-header-bg);
+  box-shadow: var(--gh-shadow-medium);
+}
+.header > .container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 62px;
+  padding: 0 24px;
+  max-width: 1280px;
+}
+
+.header .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--gh-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gh-header-text) !important;
+  flex-shrink: 0;
+}
+.header .logo:hover { text-decoration: none; color: var(--gh-header-text); }
+.header .bee-icon { font-size: 1.4rem; }
+
+.nav-menu {
+  display: flex;
+  gap: 4px;
+  margin-left: 16px;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+}
+.nav-menu a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gh-fg-default);
+  border-radius: var(--gh-radius);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.nav-menu a:hover {
+  background: var(--gh-neutral-muted);
+  color: var(--gh-fg-default);
+  text-decoration: none;
+}
+.nav-menu a.active {
+  color: var(--gh-fg-default);
+  background: var(--gh-neutral-muted);
+  font-weight: 600;
+}
+.nav-menu a.active::after { display: none; } /* mata indicador antigo */
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--gh-radius);
+  color: var(--gh-fg-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  background: var(--gh-neutral-muted);
+  border-color: var(--gh-border-default);
+  color: var(--gh-fg-default);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--gh-accent-emphasis);
+  outline-offset: 2px;
+}
+.theme-toggle svg { width: 16px; height: 16px; display: block; }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Menu toggle (hamburger mobile) — estilo github */
+.menu-toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+  color: var(--gh-fg-default);
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 1.5px;
+  background: var(--gh-fg-default);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.menu-toggle span:nth-child(1) { top: 10px; }
+.menu-toggle span:nth-child(2) { top: 15px; }
+.menu-toggle span:nth-child(3) { top: 20px; }
+.menu-toggle.active span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
+.menu-toggle.active span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .header > .container { gap: 8px; padding: 0 16px; }
+  .nav-menu {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--gh-canvas-default);
+    border-bottom: 1px solid var(--gh-border-default);
+    padding: 8px 16px;
+    gap: 2px;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, padding 0.25s ease;
+  }
+  .nav-menu.open {
+    max-height: 80vh;
+    padding: 12px 16px;
+    overflow-y: auto;
+  }
+  .nav-menu a {
+    padding: 12px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--gh-border-subtle);
+    border-radius: 0;
+  }
+  .nav-menu a:last-child { border-bottom: 0; }
+  .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+}
+
+/* ============================================================
+   4. BUTTONS — estilo Primer
+   ============================================================ */
+
+.btn,
+.btn-v2,
+.btn-glass,
+.btn-mint,
+.btn-primary,
+.btn-outline,
+button.lcta-btn,
+.lcta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 5px 16px;
+  height: 32px;
+  font-family: var(--gh-font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid var(--gh-btn-border);
+  border-radius: var(--gh-radius);
+  background: var(--gh-btn-bg);
+  color: var(--gh-btn-text) !important;
+  text-decoration: none;
+  box-shadow: var(--gh-shadow-small), var(--gh-shadow-inset);
+  transition: background 0.08s ease, border-color 0.08s ease, box-shadow 0.08s ease, transform 0.08s ease;
+}
+.btn:hover,
+.btn-v2:hover,
+.btn-glass:hover,
+.btn-outline:hover,
+.lcta-btn:hover {
+  background: var(--gh-btn-hover-bg);
+  border-color: var(--gh-border-default);
+  text-decoration: none;
+  color: var(--gh-btn-text);
+}
+.btn:active,
+.btn-v2:active,
+.lcta-btn:active {
+  background: var(--gh-btn-active-bg);
+}
+.btn:focus-visible,
+.lcta-btn:focus-visible {
+  outline: 2px solid var(--gh-accent-emphasis);
+  outline-offset: 2px;
+}
+
+/* Botão primário (verde GitHub) */
+.btn-primary,
+.btn-mint,
+.btn-v2.btn-mint,
+.lcta-btn {
+  background: var(--gh-btn-primary-bg) !important;
+  border-color: rgba(31,35,40,0.15);
+  color: var(--gh-btn-primary-text) !important;
+  box-shadow: 0 1px 0 rgba(31,35,40,0.1), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.btn-primary:hover,
+.btn-mint:hover,
+.btn-v2.btn-mint:hover,
+.lcta-btn:hover {
+  background: var(--gh-btn-primary-hover) !important;
+  color: var(--gh-btn-primary-text) !important;
+}
+
+/* Botões grandes (hero) */
+.hero-actions-center .btn,
+.hero-actions-center .btn-v2,
+.hero-buttons .btn,
+.cta-buttons .btn,
+.cta-final .btn,
+.cta-glass .btn,
+.cta-glass .btn-v2,
+.manifesto-cta .btn {
+  height: 40px;
+  padding: 8px 20px;
+  font-size: 0.9375rem;
+}
+
+/* ============================================================
+   5. HERO — headline grande + sub + cards (estilo github landing)
+   ============================================================ */
+
+.hero,
+.hero-doc,
+.bio-hero,
+.manifesto-hero,
+.cta-final {
+  background: var(--gh-canvas-default);
+  background-image: none;
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--gh-border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+.hero-doc {
+  padding-top: 112px;
+  padding-bottom: 88px;
+  min-height: clamp(560px, 80vh, 760px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-doc h1,
+.bio-hero h1,
+.manifesto-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  max-width: 880px;
+  margin: 0 auto 16px;
+  color: var(--gh-fg-default);
+  text-align: center;
+}
+/* Headline maior e alinhada à esquerda no novo layout de 2 colunas */
+.hero-doc .hero-doc-copy h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-align: left;
+  margin: 0 0 20px;
+  max-width: 640px;
+}
+.hero-doc h1 br { display: inline; }
+
+.hero-sub,
+.hero-doc .hero-sub,
+.bio-hero .section-subtitle,
+.bio-hero p,
+.manifesto-hero p {
+  font-size: 1.125rem;
+  color: var(--gh-fg-muted);
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+  line-height: 1.5;
+}
+/* Sub maior e alinhado à esquerda no novo layout */
+.hero-doc .hero-doc-copy .hero-sub {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  line-height: 1.55;
+  text-align: left;
+  margin: 0 0 32px;
+  max-width: 580px;
+}
+
+.hero-badge,
+.section-eyebrow,
+.showcase-eyebrow,
+.artigo-categoria,
+.metodologia-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  margin: 0 auto 20px;
+  font-family: var(--gh-font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gh-fg-muted);
+  background: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+  border-radius: 999px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.hero-badge { text-align: center; }
+.hero-doc .hero-badge,
+.bio-hero .hero-badge {
+  display: inline-flex;
+}
+
+/* Posicionar badge centralizado dentro do hero (default — bio-hero/manifesto) */
+.hero-doc .container,
+.bio-hero .container {
+  text-align: center;
+}
+
+/* === Hero Doc — layout 2 colunas (copy + foto da Jessica) === */
+.hero-doc .hero-doc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 56px;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+}
+.hero-doc .hero-doc-copy {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.hero-doc .hero-doc-copy .hero-badge {
+  margin: 0 0 20px;
+  text-align: left;
+}
+.hero-doc .hero-doc-copy .hero-actions-center {
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+.hero-doc .hero-doc-copy .hero-trust-row {
+  justify-content: flex-start;
+  margin: 32px 0 0;
+  max-width: 640px;
+}
+
+/* Foto da Jessica — cartão retangular GitHub-style */
+.hero-doc-photo {
+  margin: 0;
+  justify-self: end;
+  width: 100%;
+  max-width: 520px;
+}
+.hero-doc-photo picture,
+.hero-doc-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-doc-photo img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  border: 1px solid var(--gh-border-default);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: var(--gh-canvas-subtle);
+}
+[data-theme="dark"] .hero-doc-photo img {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  border-color: var(--gh-border-default);
+}
+
+/* Section dedicada às 3 feature cards (deslocadas do hero) */
+.hero-features-section {
+  background: var(--gh-canvas-default);
+  padding: 32px 0 16px;
+}
+.hero-features-section .hero-features {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero-features.hero-features-solo {
+  grid-template-columns: minmax(0, 640px);
+  justify-content: center;
+}
+
+/* === Hero Doc — responsivo: stack em <= 900px === */
+@media (max-width: 900px) {
+  .hero-doc {
+    padding-top: 88px;
+    padding-bottom: 56px;
+    min-height: 0;
+    display: block;
+  }
+  .hero-doc .hero-doc-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-doc .hero-doc-copy {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-doc .hero-doc-copy h1,
+  .hero-doc .hero-doc-copy .hero-sub {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-doc .hero-doc-copy .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .hero-doc .hero-doc-copy .hero-actions-center,
+  .hero-doc .hero-doc-copy .hero-trust-row {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Em mobile, foto cai abaixo dos CTAs (segue a ordem do HTML, sem roubar o headline) */
+  .hero-doc-photo {
+    justify-self: center;
+    max-width: 360px;
+    margin-top: 8px;
+  }
+  .hero-features-section { padding: 24px 0 16px; }
+}
+
+/* Mata gradient SVGs decorativos do hero antigo */
+.h-gradient,
+.h-gradient-ocean {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  color: var(--gh-accent-fg) !important;
+  -webkit-text-fill-color: var(--gh-accent-fg) !important;
+}
+
+/* Esconde criaturas decorativas (tubarão/abelha animados) — visual GitHub é limpo */
+.creatures-canvas { display: none !important; }
+.bee { display: none !important; }
+
+/* ============================================================
+   6. FEATURE CARDS — 3 colunas, bordered (estilo GitHub features)
+   ============================================================ */
+
+.hero-features,
+.specialty-grid,
+.cards-grid,
+.cards-grid-3,
+.cards-grid-2,
+.shark-bee-grid,
+.locais-grid,
+.metafora-grid,
+.metodologias-list,
+.principios,
+.timeline,
+.missao-visao,
+.footer-content,
+.footer-grid {
+  display: grid;
+  gap: 16px;
+  margin: 0 auto;
+}
+.hero-features,
+.specialty-grid,
+.cards-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 32px auto;
+}
+.cards-grid,
+.cards-grid-2,
+.shark-bee-grid,
+.locais-grid,
+.metafora-grid,
+.missao-visao {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1100px;
+  margin: 32px auto;
+}
+.metodologias-list,
+.principios,
+.timeline {
+  grid-template-columns: 1fr;
+  max-width: 880px;
+}
+
+@media (max-width: 900px) {
+  .hero-features, .specialty-grid, .cards-grid, .cards-grid-3,
+  .cards-grid-2, .shark-bee-grid, .locais-grid, .metafora-grid, .missao-visao {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-card,
+.specialty-card,
+.card,
+.local-card,
+.creature-card,
+.blog-card,
+.metafora-card,
+.principio,
+.timeline-item {
+  position: relative;
+  padding: 24px;
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+  box-shadow: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  color: var(--gh-fg-default);
+  text-align: left;
+  overflow: hidden;
+}
+.feature-card:hover,
+.specialty-card:hover,
+.card:hover,
+.local-card:hover,
+.creature-card:hover,
+.blog-card:hover,
+.metafora-card:hover {
+  border-color: var(--gh-accent-emphasis);
+  box-shadow: var(--gh-shadow-medium);
+}
+
+/* mata tints honey/ocean — neutraliza */
+.feature-card.ocean,
+.feature-card.mint,
+.specialty-card.ocean-tint,
+.metafora-card--abelhinha,
+.metafora-card--tubarao {
+  background: var(--gh-canvas-default);
+}
+
+.feature-card h3,
+.specialty-card h3,
+.card h3,
+.local-card h3,
+.blog-card h3,
+.creature-card h3,
+.metafora-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--gh-fg-default);
+}
+.feature-card p,
+.specialty-card p,
+.card p,
+.local-card p,
+.blog-card p,
+.creature-card p,
+.metafora-card p {
+  font-size: 0.9375rem;
+  color: var(--gh-fg-muted);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.feature-icon-wrap,
+.icon-wrap,
+.card-icon,
+.metafora-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  background: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+  margin-bottom: 16px;
+}
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gh-accent-fg);
+}
+.feature-link:hover { text-decoration: underline; }
+
+/* Blog cards — link inteiro */
+.blog-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.blog-card-link:hover { text-decoration: none; }
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.blog-card-img {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-radius: var(--gh-radius);
+  margin: -24px -24px 16px;
+  border-bottom: 1px solid var(--gh-border-default);
+  background: var(--gh-canvas-subtle) !important;
+  color: var(--gh-fg-muted);
+}
+.blog-card-content { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--gh-accent-fg);
+}
+
+/* ============================================================
+   7. SECTIONS — eyebrow + title + lead
+   ============================================================ */
+
+.section-pad,
+.especialidades,
+.metodologias,
+.lead-cta-section,
+.shark-bee-showcase,
+.banner-breve,
+.principios,
+.missao-visao,
+.metafora-intro {
+  padding: 64px 0;
+  background: var(--gh-canvas-default);
+}
+
+/* Alternar seções subtle para dar respiro como github landing */
+.shark-bee-showcase,
+.metafora-intro {
+  background: var(--gh-canvas-subtle) !important;
+  border-top: 1px solid var(--gh-border-default);
+  border-bottom: 1px solid var(--gh-border-default);
+  color: var(--gh-fg-default);
+}
+.shark-bee-showcase h2,
+.shark-bee-showcase p,
+.shark-bee-showcase .lead {
+  color: var(--gh-fg-default);
+}
+
+.section-title,
+.section-pad h2,
+section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto 16px;
+  color: var(--gh-fg-default);
+}
+
+.section-lead,
+.section-subtitle,
+.lead,
+.lede,
+.shark-bee-showcase .lead {
+  font-size: 1.0625rem;
+  color: var(--gh-fg-muted);
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   8. ARTIGO (markdown-render-like, max 760px, github readme feel)
+   ============================================================ */
+
+.artigo-conteudo {
+  padding: 48px 0 64px;
+  background: var(--gh-canvas-default);
+}
+.artigo-conteudo .container,
+.container-artigo {
+  max-width: 760px;
+  padding: 0 24px;
+}
+.artigo-conteudo h1,
+.artigo-conteudo h2,
+.artigo-conteudo h3,
+.artigo-conteudo h4 {
+  text-align: left;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+.artigo-conteudo h1 { font-size: 2rem; }
+.artigo-conteudo h2 {
+  font-size: 1.5rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--gh-border-default);
+  margin-top: 40px;
+}
+.artigo-conteudo h3 { font-size: 1.25rem; }
+
+.artigo-conteudo p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gh-fg-default);
+  margin-bottom: 16px;
+}
+.artigo-conteudo ul,
+.artigo-conteudo ol {
+  margin-bottom: 16px;
+  padding-left: 1.75em;
+}
+.artigo-conteudo li {
+  margin-bottom: 6px;
+  line-height: 1.7;
+}
+.artigo-conteudo a {
+  color: var(--gh-accent-fg);
+  font-weight: 500;
+}
+.artigo-conteudo a:hover { text-decoration: underline; }
+
+.artigo-destaque {
+  padding: 16px 20px;
+  margin: 0 0 24px;
+  background: var(--gh-accent-subtle);
+  border-left: 4px solid var(--gh-accent-emphasis);
+  border-radius: var(--gh-radius);
+  font-size: 1.0625rem !important;
+  color: var(--gh-fg-default) !important;
+  line-height: 1.6 !important;
+}
+
+.artigo-categoria {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.artigo-meta {
+  font-size: 0.875rem;
+  color: var(--gh-fg-muted);
+  text-align: center;
+}
+
+.artigo-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0;
+  padding: 16px;
+  background: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+}
+.artigo-autor-foto {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.artigo-autor strong { color: var(--gh-fg-default); }
+.artigo-autor p { margin: 0; font-size: 0.875rem; color: var(--gh-fg-muted); }
+
+/* Mid-CTA dentro de artigo */
+.mid-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  background: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+}
+.mid-cta-text strong {
+  display: block;
+  color: var(--gh-fg-default);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.mid-cta-text small {
+  color: var(--gh-fg-muted);
+  font-size: 0.8125rem;
+}
+@media (max-width: 600px) {
+  .mid-cta { flex-direction: column; align-items: stretch; text-align: center; }
+}
+
+/* ============================================================
+   9. FORMULÁRIO LEAD — inputs Primer-style
+   ============================================================ */
+
+.lead-cta-section {
+  background: var(--gh-canvas-subtle);
+  border-top: 1px solid var(--gh-border-default);
+  border-bottom: 1px solid var(--gh-border-default);
+}
+.lcta-sub {
+  font-size: 0.9375rem;
+  color: var(--gh-fg-muted);
+}
+
+.lcta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius-medium);
+  box-shadow: var(--gh-shadow-small);
+}
+.lcta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 540px) {
+  .lcta-row { grid-template-columns: 1fr; }
+}
+
+.lcta-input,
+.lcta-select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  height: 32px;
+  font-family: var(--gh-font-sans);
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: var(--gh-fg-default);
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+  box-shadow: var(--gh-shadow-inset);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+textarea {
+  height: auto;
+  min-height: 96px;
+  padding: 8px 12px;
+  line-height: 1.5;
+  resize: vertical;
+}
+.lcta-input:focus,
+.lcta-select:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: var(--gh-accent-emphasis);
+  box-shadow: 0 0 0 3px var(--gh-accent-muted);
+}
+.lcta-input::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: var(--gh-fg-subtle);
+}
+.lcta-select,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--gh-fg-muted) 50%),
+    linear-gradient(135deg, var(--gh-fg-muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 9px) 50%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 28px;
+}
+
+.lcta-disclaimer {
+  font-size: 0.8125rem;
+  color: var(--gh-fg-muted);
+  margin: 8px 0 0;
+}
+.lcta-disclaimer a { color: var(--gh-accent-fg); }
+
+.lcta-msg {
+  padding: 8px 12px;
+  border-radius: var(--gh-radius);
+  font-size: 0.875rem;
+}
+.lcta-msg--success {
+  background: var(--gh-success-subtle);
+  color: var(--gh-success-fg);
+  border: 1px solid var(--gh-success-muted);
+}
+.lcta-msg--error {
+  background: var(--gh-danger-subtle);
+  color: var(--gh-danger-fg);
+  border: 1px solid var(--gh-danger-emphasis);
+}
+
+/* ============================================================
+   10. CTA glass / CTA final / banners — neutralizar gradients
+   ============================================================ */
+
+.cta-glass,
+.cta-final,
+.banner-breve,
+.manifesto-cta {
+  padding: 32px;
+  background: var(--gh-canvas-subtle) !important;
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius-large);
+  text-align: center;
+  color: var(--gh-fg-default);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.cta-final h2,
+.cta-glass h2,
+.banner-breve h2,
+.banner-breve h3,
+.manifesto-cta h2 {
+  color: var(--gh-fg-default);
+}
+.cta-final p,
+.cta-glass p,
+.banner-breve p,
+.manifesto-cta p {
+  color: var(--gh-fg-muted);
+}
+.cta-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Hero trust row — vira lista de stats simples */
+.hero-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin: 24px auto 0;
+  max-width: 980px;
+  font-size: 0.875rem;
+  color: var(--gh-fg-muted);
+}
+.pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0;
+  font-size: 0.875rem;
+  color: var(--gh-fg-muted) !important;
+}
+.pill-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gh-success-fg);
+  display: inline-block;
+}
+.pill-item.ocean .dot { background: var(--gh-accent-fg); }
+.pill-item.mint .dot { background: var(--gh-success-fg); }
+.sep {
+  width: 1px;
+  height: 12px;
+  background: var(--gh-border-default);
+  align-self: center;
+}
+
+/* ============================================================
+   11. SHARK × BEE — preserva metáfora, mas neutraliza fundo
+   ============================================================ */
+
+.shark-bee-showcase {
+  background: var(--gh-canvas-subtle) !important;
+  color: var(--gh-fg-default);
+  padding: 64px 0;
+}
+.creature-card {
+  background: var(--gh-canvas-default);
+  color: var(--gh-fg-default);
+}
+.shark-card {
+  border-left: 3px solid var(--gh-accent-emphasis);
+}
+.bee-card {
+  border-left: 3px solid var(--gh-attention-fg);
+}
+.creature-card h3 {
+  font-size: 1.25rem;
+  color: var(--gh-fg-default);
+}
+.creature-card p,
+.creature-card .tags {
+  color: var(--gh-fg-muted);
+}
+.creature-symbol {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 22px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gh-accent-fg);
+  background: var(--gh-accent-subtle);
+  border: 1px solid var(--gh-accent-muted);
+  border-radius: 999px;
+}
+
+/* ============================================================
+   12. FOOTER — colunas tipo github footer
+   ============================================================ */
+
+footer.footer,
+.footer {
+  background: var(--gh-canvas-inset) !important;
+  color: var(--gh-fg-muted);
+  padding: 48px 0 24px;
+  border-top: 1px solid var(--gh-border-default);
+  margin-top: 64px;
+}
+.footer h3,
+.footer h4 {
+  color: var(--gh-fg-default);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0;
+}
+.footer-content,
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+@media (max-width: 800px) {
+  .footer-content, .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+@media (max-width: 480px) {
+  .footer-content, .footer-grid { grid-template-columns: 1fr; }
+}
+.footer a {
+  display: block;
+  padding: 4px 0;
+  color: var(--gh-fg-muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.footer a:hover {
+  color: var(--gh-accent-fg);
+  text-decoration: none;
+}
+.footer p { color: var(--gh-fg-muted); font-size: 0.875rem; }
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid var(--gh-border-default);
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--gh-fg-subtle);
+}
+
+/* ============================================================
+   13. STICKY WHATSAPP — botão flutuante (preserva funcionalidade)
+   ============================================================ */
+
+.sticky-wa,
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--gh-btn-primary-bg);
+  color: var(--gh-btn-primary-text) !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid rgba(31,35,40,0.15);
+  box-shadow: var(--gh-shadow-large);
+  transition: background 0.15s ease, transform 0.15s ease;
+  text-decoration: none;
+}
+.sticky-wa:hover,
+.whatsapp-float:hover {
+  background: var(--gh-btn-primary-hover);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: var(--gh-btn-primary-text);
+}
+.sticky-wa-icon { font-size: 1.05rem; }
+@media (max-width: 600px) {
+  .sticky-wa, .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 14px;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Back-to-top */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+  border-radius: 50%;
+  color: var(--gh-fg-default);
+  box-shadow: var(--gh-shadow-medium);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ============================================================
+   14. MANIFESTO / BIOGRAFIA — neutraliza fundo
+   ============================================================ */
+
+.manifesto-hero,
+.bio-hero {
+  background: var(--gh-canvas-subtle) !important;
+  border-bottom: 1px solid var(--gh-border-default);
+}
+.manifesto-intro,
+.manifesto-body,
+.manifesto-fechamento,
+.filosofia-intro {
+  background: var(--gh-canvas-default);
+  color: var(--gh-fg-default);
+}
+.manifesto-body p,
+.manifesto-intro p,
+.filosofia-intro p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gh-fg-default);
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+.assinatura {
+  text-align: right;
+  font-style: italic;
+  color: var(--gh-fg-muted);
+  margin-top: 24px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bio-quote {
+  padding: 16px 20px;
+  margin: 24px auto;
+  background: var(--gh-canvas-subtle);
+  border-left: 4px solid var(--gh-accent-emphasis);
+  border-radius: var(--gh-radius);
+  font-size: 1.0625rem;
+  color: var(--gh-fg-default);
+  max-width: 760px;
+}
+.timeline-item {
+  margin-bottom: 12px;
+}
+.timeline-item h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.timeline-item .institution {
+  color: var(--gh-accent-fg);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ============================================================
+   15. PRESERVAÇÕES — animações sutis, fade-up, in-view
+   ============================================================ */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Banner pequeno (alguns artigos têm "banner-breve") */
+.banner-breve {
+  padding: 24px;
+}
+
+/* Diferencial-badge / metodologia-list items */
+.metodologias-list .principio,
+.principio {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+  margin-bottom: 12px;
+}
+.principio .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--gh-accent-emphasis);
+  color: var(--gh-fg-on-emphasis);
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Glossário / FAQ items */
+details {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-radius);
+}
+details[open] {
+  background: var(--gh-canvas-subtle);
+}
+summary {
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--gh-fg-default);
+}
+
+/* Highlights inline */
+.highlight {
+  background: var(--gh-attention-subtle);
+  color: var(--gh-attention-fg);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* ============================================================
+   16. ACESSIBILIDADE — focus rings consistentes
+   ============================================================ */
+
+*:focus-visible {
+  outline: 2px solid var(--gh-accent-emphasis);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+a:focus-visible { outline-offset: 2px; }
+button:focus-visible { outline-offset: 2px; }
+
+/* Reduzir movimento se solicitado */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   17. UTILS / OVERRIDES finais
+   ============================================================ */
+
+.text-center { text-align: center; }
+.text-center .section-subtitle { margin-left: auto; margin-right: auto; }
+
+/* ============================================================
+   18. ICONES SVG line-art (substituem emojis Unicode 2026-05-17)
+   Marca permite apenas 🐝 e 🦈; o restante e renderizado como
+   SVG inline com classe .icon ou .icon-inline.
+   ============================================================ */
+
+.icon,
+.icon-inline {
+  display: inline-block;
+  width: 1.05em;
+  height: 1.05em;
+  vertical-align: -0.18em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* Em botoes/links — espaco entre icone e texto */
+.btn .icon,
+.btn-v2 .icon,
+.lcta-btn .icon,
+a .icon-inline,
+strong .icon-inline,
+p .icon-inline {
+  margin-right: 0.4em;
+}
+
+/* Cards usam o icone como bloco grande no lugar de emoji decorativo */
+.feature-icon-wrap > .icon,
+.icon-wrap > .icon,
+.card-icon > .icon,
+.metafora-icon > .icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.75;
+  vertical-align: middle;
+  color: var(--gh-fg-default);
+}
+
+/* Whatsapp float — icone maior que segue cor branca herdada */
+.whatsapp-float .icon {
+  width: 26px;
+  height: 26px;
+  stroke-width: 2;
+  vertical-align: middle;
+}
+
+/* Social links no rodape (TikTok / LinkedIn) — sem margem de texto */
+.social-links .icon,
+.social-links .icon-inline {
+  margin-right: 0;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: middle;
+}
+
+/* Check de credenciais (biografia) */
+.metodologia-badge .check .icon {
+  width: 0.95em;
+  height: 0.95em;
+  stroke-width: 2.25;
+  color: var(--gh-success-fg);
+  vertical-align: -0.12em;
+}
+
+/* Capa visual dos cards de blog (substitui emoji de capa). */
+.blog-card-img .icon {
+  width: 56px;
+  height: 56px;
+  stroke-width: 1.5;
+  color: var(--gh-fg-muted);
+  vertical-align: middle;
+  margin: 0;
+}
+
+/* Step numerado (circulo com numero ao centro) */
+.icon.step-num text {
+  stroke: none;
+  fill: currentColor;
+  font-family: inherit;
+}
+
+/* Mata fundos coloridos inline style do legado quando possível */
+[style*="background:#fefcf7"],
+[style*="background: #fefcf7"] {
+  background: var(--gh-canvas-subtle) !important;
+}
+[style*="background:linear-gradient"] {
+  /* deixa cards de blog com símbolo, sem cor crua */
+  background: var(--gh-canvas-subtle) !important;
+}
+
+/* ============================================================
+   19. FOOTER MEGA — migrado de v2.css (paleta GitHub/Primer)
+   Mesmo HTML (8 grupos de links + brand + newsletter + credenciais
+   + linha legal LGPD). Usa tokens --gh-* para coerencia light/dark.
+   ============================================================ */
+
+.footer-mega {
+  /* `.footer` ja vem com bg/border-top em GH; aqui so ajusta padding */
+  padding-top: 72px;
+}
+
+.footer-mega .container { max-width: 1280px; }
+
+/* TOP: brand + links grid */
+.footer-mega-top {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr);
+  gap: 56px;
+  margin-bottom: 40px;
+}
+
+/* === BRAND COLUMN === */
+.footer-mega-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-mega-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gh-fg-default) !important;
+  padding: 0 !important;
+  text-decoration: none;
+}
+.footer-mega-logo:hover { text-decoration: none; color: var(--gh-fg-default) !important; }
+.footer-mega-logo-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+.footer-mega-logo-text {
+  font-family: var(--gh-font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--gh-fg-default);
+}
+.footer-mega-logo-psi {
+  color: var(--gh-accent-fg);
+}
+
+.footer-mega-tagline {
+  color: var(--gh-fg-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 38ch;
+}
+.footer-mega-tagline strong {
+  color: var(--gh-fg-default);
+  font-weight: 600;
+}
+
+.footer-mega-meta {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--gh-fg-muted);
+}
+.footer-mega-meta li {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 12px;
+  line-height: 1.5;
+}
+.footer-mega-meta-label {
+  color: var(--gh-fg-subtle);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  padding-top: 2px;
+}
+
+/* Social row */
+.footer-mega-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+.footer-mega-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+  color: var(--gh-fg-muted);
+  padding: 0 !important;
+  transition: color 150ms ease, border-color 150ms ease, background 150ms ease, transform 150ms ease;
+}
+.footer-mega-social a svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.footer-mega-social a:hover {
+  background: var(--gh-canvas-subtle);
+  border-color: var(--gh-accent-emphasis);
+  color: var(--gh-accent-fg);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Newsletter form */
+.footer-mega-newsletter {
+  margin-top: 8px;
+  padding: 18px 18px 16px;
+  border-radius: var(--gh-radius-medium);
+  background: var(--gh-canvas-default);
+  border: 1px solid var(--gh-border-default);
+}
+.footer-mega-news-title {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--gh-fg-default);
+}
+.footer-mega-news-sub {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  color: var(--gh-fg-muted);
+  line-height: 1.5;
+}
+.footer-mega-news-row {
+  display: flex;
+  gap: 8px;
+}
+.footer-mega-news-input {
+  flex: 1;
+  min-width: 0;
+  height: 38px;
+  border-radius: var(--gh-radius);
+  border: 1px solid var(--gh-border-default);
+  background: var(--gh-canvas-default);
+  color: var(--gh-fg-default);
+  padding: 0 12px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.footer-mega-news-input::placeholder { color: var(--gh-fg-subtle); }
+.footer-mega-news-input:focus {
+  border-color: var(--gh-accent-emphasis);
+  box-shadow: 0 0 0 3px var(--gh-accent-muted);
+}
+.footer-mega-news-btn {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: var(--gh-radius);
+  border: 1px solid rgba(31,35,40,0.15);
+  background: var(--gh-btn-primary-bg);
+  color: var(--gh-btn-primary-text);
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 150ms ease, transform 150ms ease;
+  font-family: inherit;
+}
+.footer-mega-news-btn:hover {
+  background: var(--gh-btn-primary-hover);
+  transform: translateY(-1px);
+}
+.footer-mega-news-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* === LINKS GRID === */
+.footer-mega-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 28px;
+}
+
+.footer-mega-group { min-width: 0; }
+
+.footer-mega-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gh-fg-default) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+.footer-mega-title-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--gh-accent-fg);
+}
+
+.footer-mega-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.footer-mega-list li {
+  margin: 0;
+}
+.footer-mega-list a {
+  display: inline-block;
+  padding: 5px 0 !important;
+  color: var(--gh-fg-muted) !important;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 150ms ease, transform 150ms ease;
+}
+.footer-mega-list a:hover {
+  color: var(--gh-accent-fg) !important;
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+/* Strong link (CTAs WhatsApp) destaca em azul Primer */
+.footer-mega-strong-link {
+  color: var(--gh-accent-fg) !important;
+  font-weight: 600 !important;
+}
+.footer-mega-strong-link:hover {
+  color: var(--gh-fg-default) !important;
+}
+
+/* Address list (grupo Consultorio) */
+.footer-mega-list-address li {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gh-fg-muted);
+  line-height: 1.55;
+  padding: 3px 0;
+}
+.footer-mega-list-address .footer-mega-meta-label {
+  display: inline;
+  margin-right: 6px;
+}
+.footer-mega-address {
+  padding-bottom: 6px !important;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--gh-border-default);
+}
+.footer-mega-address strong {
+  color: var(--gh-fg-default);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+/* Credenciais (badges) — estilo card Primer */
+.footer-mega-list-badges {
+  gap: 8px;
+}
+.footer-mega-list-badges li {
+  padding: 0;
+}
+.footer-mega-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+  color: var(--gh-fg-muted);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+.footer-mega-badge svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--gh-success-fg);
+}
+.footer-mega-badge strong { color: var(--gh-fg-default); font-weight: 600; }
+
+/* Placeholder highlighting: tracejado sutil (cor neutra para nao gritar
+   em light/dark). Anderson pega facil via grep `data-placeholder="true"`. */
+.footer-mega [data-placeholder="true"] {
+  position: relative;
+}
+.footer-mega a[data-placeholder="true"],
+.footer-mega-list [data-placeholder="true"] > a,
+.footer-mega-list [data-placeholder="true"] > span {
+  border-bottom-style: dashed !important;
+  border-bottom-color: var(--gh-fg-subtle) !important;
+}
+.footer-mega-list-badges li[data-placeholder="true"] .footer-mega-badge {
+  border-style: dashed;
+  border-color: var(--gh-fg-subtle);
+}
+
+/* BOTTOM: linha legal */
+.footer-mega-bottom {
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gh-border-default);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  text-align: center;
+}
+.footer-mega-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--gh-fg-muted);
+}
+.footer-mega-legal {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--gh-fg-subtle);
+  line-height: 1.55;
+  max-width: 720px;
+}
+.footer-mega-legal a {
+  display: inline !important;
+  padding: 0 !important;
+  color: var(--gh-fg-muted) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-mega-legal a:hover {
+  color: var(--gh-accent-fg) !important;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .footer-mega-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-mega-brand {
+    max-width: 560px;
+  }
+  .footer-mega-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-mega { padding-top: 56px; }
+  .footer-mega-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 20px;
+  }
+  .footer-mega-news-row {
+    flex-direction: column;
+  }
+  .footer-mega-news-btn { width: 100%; }
+}
+
+@media (max-width: 520px) {
+  .footer-mega-top { gap: 32px; margin-bottom: 32px; }
+  .footer-mega-links {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  /* Collapsible groups in mobile to save space */
+  .footer-mega-group {
+    border-bottom: 1px solid var(--gh-border-default);
+    padding: 12px 0;
+  }
+  .footer-mega-group:last-child { border-bottom: none; }
+  .footer-mega-title {
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    padding-right: 28px;
+  }
+  .footer-mega-title::after {
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--gh-fg-muted);
+    border-bottom: 2px solid var(--gh-fg-muted);
+    transform: translateY(-75%) rotate(45deg);
+    transition: transform 200ms;
+  }
+  .footer-mega-group.is-open .footer-mega-title::after {
+    transform: translateY(-25%) rotate(-135deg);
+  }
+  .footer-mega-list,
+  .footer-mega-newsletter {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: max-height 240ms ease, margin 240ms ease, padding 240ms ease;
+  }
+  .footer-mega-group.is-open .footer-mega-list {
+    max-height: 600px;
+    margin-top: 12px;
+  }
+  .footer-mega-bottom {
+    text-align: center;
+  }
+}
+
+/* Inline form feedback (newsletter) — usa mesma convencao .lcta-msg do lead-form.js */
+.footer-mega-newsletter .lcta-msg {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: var(--gh-radius);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  display: none;
+}
+.footer-mega-newsletter .lcta-msg--success {
+  background: var(--gh-success-subtle);
+  color: var(--gh-success-fg);
+  border: 1px solid var(--gh-success-muted);
+}
+.footer-mega-newsletter .lcta-msg--error {
+  background: var(--gh-danger-subtle);
+  color: var(--gh-danger-fg);
+  border: 1px solid var(--gh-danger-emphasis);
+}

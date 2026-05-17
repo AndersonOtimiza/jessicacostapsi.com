@@ -2,6 +2,62 @@
    Jessica Costa PSI - JavaScript Principal
    ======================================== */
 
+// === Theme Toggle (light/dark) ===
+// O atributo data-theme ja foi setado pelo script inline anti-FOUC no <head>.
+// Aqui apenas vinculamos o botao e persistimos a preferencia.
+(function () {
+  function getStoredTheme() {
+    try { return localStorage.getItem('theme'); } catch (e) { return null; }
+  }
+  function setStoredTheme(theme) {
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+  }
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    var toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(function (btn) {
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro');
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    });
+  }
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme') || 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    setStoredTheme(next);
+    applyTheme(next);
+  }
+  function init() {
+    // Garante consistencia mesmo se o inline script tiver falhado
+    var current = document.documentElement.getAttribute('data-theme');
+    if (!current) {
+      var stored = getStoredTheme();
+      current = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      applyTheme(current);
+    } else {
+      applyTheme(current);
+    }
+    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+      btn.addEventListener('click', toggleTheme);
+    });
+    // Sincroniza com mudancas do sistema quando nao ha preferencia salva
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var listener = function (e) {
+        if (!getStoredTheme()) {
+          applyTheme(e.matches ? 'dark' : 'light');
+        }
+      };
+      if (mq.addEventListener) mq.addEventListener('change', listener);
+      else if (mq.addListener) mq.addListener(listener);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
 
   // === Sticky Header ===

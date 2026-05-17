@@ -22,8 +22,13 @@ export async function onRequestPost({ request, env }) {
     return jsonResp({ success: false, error: 'Invalid JSON body' }, 400);
   }
 
-  // Sanity check minimo
-  if (!body.name || !body.phone || !body.formSource) {
+  const isNewsletter =
+    body?.meta?.newsletter === true ||
+    body?.meta?.tipoSolicitacao === 'newsletter' ||
+    (typeof body?.formSource === 'string' && body.formSource.includes('newsletter'));
+
+  // Sanity check minimo (newsletter dispensa phone)
+  if (!body.name || !body.formSource || (!isNewsletter && !body.phone)) {
     return jsonResp({ success: false, error: 'Missing required fields' }, 400);
   }
 
@@ -40,6 +45,11 @@ export async function onRequestPost({ request, env }) {
       ip: request.headers.get('cf-connecting-ip') || undefined,
     },
   };
+
+  // Newsletter: nao envia phone placeholder upstream; CRM trata como inscricao
+  if (isNewsletter && (!enrichedBody.phone || enrichedBody.phone === '00000000000')) {
+    delete enrichedBody.phone;
+  }
 
   const crmUrl = env?.CRM_LEAD_URL || CRM_DEFAULT;
 
