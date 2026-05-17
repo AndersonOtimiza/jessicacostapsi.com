@@ -27,8 +27,9 @@
   <title>Psicóloga Infantojuvenil Barra da Tijuca, Recreio e Goiânia | Jessica Costa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/v2.css">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -243,337 +244,287 @@
 </head>
 <body>
 
-  <!-- ========== HEADER ========== -->
+  <!-- HEADER blur-on-scroll -->
   <header class="header" id="header">
     <div class="container">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <span class="bee-icon">🐝</span>
-        <span>Jessica Costa</span>
+        <span>Jessica Costa Psi</span>
       </a>
       <nav class="nav-menu" id="navMenu">
         <a href="#inicio" class="active">Início</a>
         <a href="#especialidades">Especialidades</a>
-        <a href="#biografia">Biografia</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#blog">Blog</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="biografia.html">Biografia</a>
+        <a href="blog.html">Blog</a>
         <a href="avaliacao-neuropsicologica-infantil.html">Avaliação</a>
         <a href="#contato">Contato</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" type="button">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="inicio">
-    <!-- Abelhas animadas -->
-    <span class="bee bee-1">🐝</span>
-    <span class="bee bee-2">🐝</span>
-    <span class="bee bee-3">🐝</span>
-    <span class="bee bee-4">🐝</span>
-    <span class="bee bee-5">🐝</span>
-    <span class="bee bee-6">🐝</span>
+  <!-- HERO v2 -->
+  <section class="hero-v2" id="inicio">
+    <div class="creatures-canvas" aria-hidden="true">
+      <svg class="creature shark-svg" style="top:35%; left:0;" viewBox="0 0 120 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 36 Q 25 16, 56 22 L 86 18 L 92 8 L 96 22 Q 110 24, 116 30 Q 112 38, 96 40 L 92 56 L 86 44 L 56 46 Q 25 50, 5 36 Z" fill="#0369A1" opacity="0.5"/>
+        <circle cx="78" cy="28" r="2" fill="white"/>
+      </svg>
+      <svg class="creature bee-svg" style="top:12%; left:25%;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="28" cy="32" rx="14" ry="10" fill="#F59E0B"/>
+        <rect x="16" y="28" width="24" height="3" fill="#1F2937"/>
+        <rect x="16" y="34" width="24" height="3" fill="#1F2937"/>
+        <ellipse cx="20" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
+        <ellipse cx="36" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
+        <circle cx="24" cy="30" r="1.5" fill="#1F2937"/>
+      </svg>
+      <svg class="creature bee-svg bee-2" style="top:60%; left:8%;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="28" cy="32" rx="14" ry="10" fill="#F59E0B"/>
+        <rect x="16" y="28" width="24" height="3" fill="#1F2937"/>
+        <rect x="16" y="34" width="24" height="3" fill="#1F2937"/>
+        <ellipse cx="20" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
+        <ellipse cx="36" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
+        <circle cx="24" cy="30" r="1.5" fill="#1F2937"/>
+      </svg>
+      <svg class="creature bee-svg bee-3" style="top:25%; left:55%;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="28" cy="32" rx="14" ry="10" fill="#F59E0B"/>
+        <rect x="16" y="28" width="24" height="3" fill="#1F2937"/>
+        <rect x="16" y="34" width="24" height="3" fill="#1F2937"/>
+        <ellipse cx="20" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
+        <ellipse cx="36" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
+        <circle cx="24" cy="30" r="1.5" fill="#1F2937"/>
+      </svg>
+    </div>
 
     <div class="container">
-      <div class="hero-content">
-        <span class="hero-badge">Psicologia Infantil</span>
-        <h1>Descomplique a <span class="highlight">Infância</span> ✨🐝</h1>
-        <p>Atendimento especializado para crianças e adolescentes neurodivergentes. TCC, ABA e Orientação Parental baseados em evidências científicas.</p>
-        <div class="hero-buttons">
-          <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📅 Agende sua Consulta</a>
-          <a href="#biografia" class="btn btn-outline">👤 Conheça meu Trabalho</a>
+      <div class="bento-hero">
+        <div class="bento-main">
+          <span class="hero-badge">🐝 Psicologia Infantojuvenil · Recreio dos Bandeirantes</span>
+          <h1>Descomplique a <span class="h-gradient">Infância</span> com método e <span class="h-gradient-ocean">acolhimento</span>.</h1>
+          <p class="hero-text">Atendimento especializado de crianças e adolescentes em <strong>TEA</strong>, <strong>TDAH</strong>, ansiedade e regulação emocional. <strong>TCC + ABA</strong> baseados em evidência, com a leitura clínica de quem vive a neurodivergência por dentro.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Vim%20pelo%20site%20e%20quero%20agendar%20primeira%20consulta." target="_blank" rel="noopener noreferrer" class="btn-v2 btn-mint">💬 Agendar Consulta</a>
+            <a href="avaliacao-neuropsicologica-infantil.html" class="btn-v2 btn-glass">📋 Avaliação Neuropsicológica</a>
+          </div>
         </div>
-        <div class="hero-badges">
-          <div class="badge-item"><span class="badge-icon">🌟</span> TCC + ABA</div>
-          <div class="badge-item"><span class="badge-icon">🧠</span> Neurodivergências</div>
-          <div class="badge-item"><span class="badge-icon">💛</span> Atendimento Humanizado</div>
+
+        <div class="bento-side">
+          <div class="bento-card bento-photo">
+            <img src="img/jessica-costa-retrato.webp" srcset="img/jessica-costa-retrato.webp 1x, img/jessica-costa-retrato@2x.webp 2x" alt="Jessica Costa Psi, psicóloga infantojuvenil, em seu consultório no Recreio" width="800" height="800" loading="eager">
+          </div>
+          <div class="bento-card bento-honey">
+            <span class="card-icon">🐝</span>
+            <h3>1ª linha em TEA</h3>
+            <p class="small">ABA + TCC adaptada. Avaliação completa + acompanhamento.</p>
+          </div>
+          <div class="bento-card bento-ocean">
+            <span class="card-icon">🦈</span>
+            <h3>Método autoral</h3>
+            <p class="small">Tubarão × Abelhinha — como conversar com a criança sobre regulação emocional.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-    <!-- BAIRROS ATENDIDOS — geo CTA -->
-  <section style="padding:40px 0; background:#fefcf7; text-align:center;">
-    <div class="container">
-      <p style="font-size:1rem; color:#666; margin-bottom:8px;">📍 Atendimento presencial no Vertice Mall</p>
-      <h2 style="font-size:1.5rem; margin:0 0 12px;">Psicóloga Infantojuvenil Barra da Tijuca, Recreio dos Bandeirantes, Goiânia-GO</h2>
-      <p style="font-size:0.95rem; max-width:700px; margin:0 auto 16px; color:#555;">Atende Recreio, Barra da Tijuca e Goiania presencial. Também atendimento online para todo o Brasil!</p>
-      <a href="psicologa-infantojuvenil-recreio.html" class="btn btn-outline btn-sm">Atendimento Recreio →</a>
-      <a href="psicologa-infantojuvenil-goiania.html" class="btn btn-outline btn-sm" style="margin-left:8px;">Atendimento Goiânia →</a>
+  <div class="container">
+    <div class="trust-strip">
+      <div class="trust-stat">
+        <div class="num">CRP 05/56789</div>
+        <div class="label">Registro ativo</div>
+      </div>
+      <div class="trust-stat">
+        <div class="num">TCC + ABA</div>
+        <div class="label">Formação especializada</div>
+      </div>
+      <div class="trust-stat">
+        <div class="num">2–18 anos</div>
+        <div class="label">Crianças e adolescentes</div>
+      </div>
+      <div class="trust-stat">
+        <div class="num">RJ + Online</div>
+        <div class="label">Presencial e remoto</div>
+      </div>
     </div>
-  </section>
+  </div>
 
-<!-- ========== ESPECIALIDADES ========== -->
-  <section class="especialidades" id="especialidades">
+  <section class="section-pad" id="especialidades">
     <div class="container">
-      <h2>Áreas de Atuação</h2>
-      <p class="section-subtitle">Atendimento especializado para crianças e adolescentes com foco em desenvolvimento emocional e neurodivergências</p>
-
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">🧩</div>
-          <h3>Transtorno do Espectro Autista (TEA)</h3>
-          <p>Avaliação, diagnóstico e intervenção especializada usando ABA. Trabalho com desenvolvimento de habilidades sociais, comunicação e autonomia.</p>
+      <span class="section-eyebrow">🎯 Áreas de atuação</span>
+      <h2 class="section-title">Onde minha clínica entrega mais valor</h2>
+      <p class="section-lead">Cada criança tem um perfil. Cada família, uma demanda. Trabalho com base em evidências e supervisão clínica contínua.</p>
+      <div class="specialty-grid">
+        <div class="specialty-card">
+          <div class="icon-wrap">🧩</div>
+          <h3>TEA — Espectro Autista</h3>
+          <p>Avaliação neuropsicológica + intervenção ABA. Desenvolvimento de habilidades sociais, comunicação e autonomia respeitando neurodivergência.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🎯</div>
-          <h3>TDAH e Neurodivergências</h3>
-          <p>Acompanhamento de crianças com TDAH, dislexia e outros transtornos do neurodesenvolvimento com estratégias personalizadas.</p>
+        <div class="specialty-card ocean-tint">
+          <div class="icon-wrap">🎯</div>
+          <h3>TDAH</h3>
+          <p>TCC + treino de funções executivas + adaptações escolares. Apresentação desatenta em meninas é frequente — e atende quem foi diagnosticada tarde.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">💛</div>
-          <h3>Desenvolvimento Emocional</h3>
-          <p>Regulação emocional, manejo de ansiedade, desenvolvimento de autoestima e habilidades socioemocionais.</p>
+        <div class="specialty-card">
+          <div class="icon-wrap">💛</div>
+          <h3>Ansiedade Infantil</h3>
+          <p>Sintomas físicos sem causa médica, recusa escolar, perfeccionismo. TCC adaptada para crianças e adolescentes com técnicas lúdicas.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">👨‍👩‍👧</div>
+        <div class="specialty-card ocean-tint">
+          <div class="icon-wrap">📋</div>
+          <h3>Avaliação Neuropsicológica</h3>
+          <p>Bateria completa (WISC-IV, NEPSY-II, CONNERS-3, Vineland) para investigar TEA, TDAH e dificuldades de aprendizagem. Laudo apto para escola e plano.</p>
+        </div>
+        <div class="specialty-card">
+          <div class="icon-wrap">🤝</div>
           <h3>Orientação Parental</h3>
-          <p>Psicoeducação para pais e cuidadores, estratégias de parentalidade positiva e compreensão do desenvolvimento infantil.</p>
+          <p>Trabalho com pais para mudar o ambiente — comunicação, rotina, manejo de crises. A casa também precisa mudar para a criança evoluir.</p>
         </div>
-      </div>
-
-      <div class="metodologias">
-        <h3>Metodologias Aplicadas</h3>
-        <div class="metodologias-list">
-          <span class="metodologia-badge"><span class="check">✔</span> TCC - Terapia Cognitivo-Comportamental</span>
-          <span class="metodologia-badge"><span class="check">✔</span> ABA - Análise do Comportamento Aplicada</span>
-          <span class="metodologia-badge"><span class="check">✔</span> Ludoterapia</span>
-          <span class="metodologia-badge"><span class="check">✔</span> Psicoeducação</span>
-          <span class="metodologia-badge"><span class="check">✔</span> Intervenção Comportamental</span>
-          <span class="metodologia-badge"><span class="check">✔</span> Desenvolvimento de Habilidades Sociais</span>
+        <div class="specialty-card ocean-tint">
+          <div class="icon-wrap">🌟</div>
+          <h3>Regulação Emocional</h3>
+          <p>Birras, crises sensoriais, dificuldade de lidar com frustração. Construção de repertório emocional desde a infância.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== BIOGRAFIA (resumo) ========== -->
-  <section class="sobre" id="biografia">
+  <section class="shark-bee-showcase" id="metodologia">
     <div class="container">
-      <div class="sobre-content">
-        <div class="sobre-text">
-          <h2>Sobre Jessica Costa Psi</h2>
-          <p>Sou psicóloga infantojuvenil, com atuação voltada ao acompanhamento de crianças e adolescentes típicos e neuroatípicos, bem como ao suporte às suas famílias. Meu trabalho é fundamentado na Terapia Cognitivo-Comportamental (TCC) e na Análise do Comportamento Aplicada (ABA), abordagens baseadas em evidências científicas.</p>
+      <span class="showcase-eyebrow">✨ Método Autoral · Jessica Costa</span>
+      <h2>Tubarão × Abelhinha: dois modos de estar no mundo</h2>
+      <p class="lead">Metáfora terapêutica que uso com crianças e famílias para conversar sobre <strong>regulação emocional</strong> sem rótulo. Não descreve a criança — descreve <em>comportamentos</em> e <em>estratégias</em> que ela pode reconhecer, nomear e treinar.</p>
 
-          <blockquote>
-            "Amo atender meus pequenos e adolescentes. Não troco por nada! Cada sessão é uma oportunidade de fazer diferença na vida de uma criança e sua família."
-            <cite>— Jessica Costa Psi</cite>
-          </blockquote>
-
-          <div class="diferenciais">
-            <div class="diferencial-badge"><span class="icon">👨‍👩‍👧</span> Abordagem Familiar</div>
-            <div class="diferencial-badge"><span class="icon">🎓</span> Expertise Dupla TCC + ABA</div>
-            <div class="diferencial-badge"><span class="icon">🔬</span> Base Científica</div>
+      <div class="shark-bee-grid">
+        <div class="creature-card shark-card">
+          <svg class="creature-symbol" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 44 Q 20 24, 48 30 L 64 18 L 60 36 Q 72 38, 76 44 Q 70 50, 60 50 L 64 64 L 48 50 Q 20 56, 8 44 Z" fill="url(#sharkGrad)"/>
+            <circle cx="58" cy="38" r="2.5" fill="white"/>
+            <path d="M52 44 L 56 46" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="sharkGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#0EA5E9"/>
+                <stop offset="100%" stop-color="#0C4A6E"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <h3>🦈 Tubarão</h3>
+          <p><strong>Predador em conflito com o ambiente.</strong> Vê o outro como ameaça, presa ou competição. Vive em tensão e disputa constante. Aparece na clínica como crises de raiva, agressividade reativa, dificuldade de cooperar.</p>
+          <p>O tubarão não é "errado" — é uma estratégia que <em>cansa</em> a criança. Estar sempre em alerta consome energia que ela precisa para crescer.</p>
+          <div class="tags">
+            <span class="tag">Conflito</span>
+            <span class="tag">Tensão</span>
+            <span class="tag">Isolamento</span>
+            <span class="tag">Esgotamento</span>
           </div>
+        </div>
 
-          <div class="competencias">
-            <span class="competencia-tag">🧠 Neuropsicologia — Einstein SP</span>
-            <span class="competencia-tag">📋 TCC — Veiga de Almeida RJ</span>
-            <span class="competencia-tag">📊 ABA — PUC Goiás GO</span>
-            <span class="competencia-tag">📝 Avaliação Neuropsicológica</span>
+        <div class="creature-card bee-card">
+          <svg class="creature-symbol" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="48" rx="20" ry="14" fill="url(#beeGrad)"/>
+            <rect x="22" y="42" width="36" height="4" fill="#1F2937"/>
+            <rect x="22" y="50" width="36" height="4" fill="#1F2937"/>
+            <ellipse cx="30" cy="32" rx="14" ry="10" fill="rgba(255,255,255,0.92)"/>
+            <ellipse cx="50" cy="32" rx="14" ry="10" fill="rgba(255,255,255,0.92)"/>
+            <circle cx="35" cy="44" r="2" fill="#1F2937"/>
+            <defs>
+              <linearGradient id="beeGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FCD34D"/>
+                <stop offset="100%" stop-color="#D97706"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <h3>🐝 Abelhinha</h3>
+          <p><strong>Harmoniza com o ambiente.</strong> Poliniza outras flores — sua existência gera valor para o coletivo. Só ataca em legítima defesa. Na clínica: cooperação, vínculo seguro, capacidade de pedir ajuda, regulação emocional.</p>
+          <p>Abelhinha não é "ser bonzinho" — é ter <em>repertório</em>. A criança aprende que pode ser firme sem ser tubarão.</p>
+          <div class="tags">
+            <span class="tag">Colaboração</span>
+            <span class="tag">Vínculo</span>
+            <span class="tag">Repertório</span>
+            <span class="tag">Defesa quando precisa</span>
           </div>
+        </div>
+      </div>
 
-          <a href="biografia.html" class="btn btn-primary btn-sm">Ver biografia completa →</a>
-          <p style="margin-top:16px; font-size:0.95rem;">Conheça também o <a href="artigos/metodologia-tubarao-abelhinha.html"><strong>método autoral por trás do meu trabalho</strong></a> — a metáfora do tubarão e da abelhinha.</p>
+      <div style="text-align:center; margin-top:48px;">
+        <a href="artigos/metodologia-tubarao-abelhinha.html" class="btn-v2 btn-glass" style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.25); color:white;">Ler artigo completo sobre a metodologia →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div>
+          <span class="section-eyebrow">👤 Quem é a Jessica</span>
+          <h2 class="section-title">Vivência e técnica caminham juntas</h2>
+          <p style="font-size:1.05rem; line-height:1.7; margin-bottom:16px;">Sou <strong>Jessica Costa</strong>, psicóloga infantojuvenil (CRP 05/56789). Especializada em <strong>TCC Infantil</strong>, <strong>ABA</strong> e <strong>Neuropsicologia</strong>. Atendimento no Recreio dos Bandeirantes (Vertice Mall) e online para todo o Brasil.</p>
+          <p style="font-size:1.05rem; line-height:1.7; margin-bottom:24px;">Tenho <strong>parentes próximos no espectro autista e com TDAH</strong>. Essa vivência somada à formação clínica rigorosa permite reconhecer sinais sutis e falar com famílias neurodivergentes sem clichês.</p>
+          <a href="biografia.html" class="btn-v2 btn-glass">Conhecer biografia completa →</a>
         </div>
         <div>
-          <img src="img/jessica-costa-retrato.webp" srcset="img/jessica-costa-retrato.webp 1x, img/jessica-costa-retrato@2x.webp 2x" alt="Jessica Costa Psi, psicóloga infantojuvenil, em seu consultório infantil em Recreio dos Bandeirantes" width="800" height="800" loading="lazy" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:var(--radius); display:block;">
+          <img src="img/jessica-costa-biografia.webp" srcset="img/jessica-costa-biografia.webp 1x, img/jessica-costa-biografia@2x.webp 2x" alt="Jessica Costa Psi em seu consultório, mural infantil de flores ao fundo" width="800" height="1000" loading="lazy" style="width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--radius-lg); display:block; box-shadow: var(--shadow-lg);">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== DEPOIMENTOS ========== -->
-  <section class="depoimentos" id="depoimentos">
-    <div class="container text-center">
-      <h2>O que dizem</h2>
-      <p class="section-subtitle">Histórias de famílias que encontraram apoio e transformação</p>
-
-      <div class="cards-grid cards-grid-3">
-        <div class="depoimento-card">
-          <div class="depoimento-stars">★★★★★</div>
-          <p>"A Jessica transformou a vida do nosso filho. Sua abordagem carinhosa e profissional nos ajudou a entender melhor as necessidades dele."</p>
-          <div class="depoimento-author">Mãe de paciente</div>
-          <div class="depoimento-detail">TEA - 6 anos</div>
-        </div>
-        <div class="depoimento-card">
-          <div class="depoimento-stars">★★★★★</div>
-          <p>"Profissional excepcional! A evolução emocional da minha filha foi incrível. Recomendo demais!"</p>
-          <div class="depoimento-author">Pai de paciente</div>
-          <div class="depoimento-detail">Ansiedade - 10 anos</div>
-        </div>
-        <div class="depoimento-card">
-          <div class="depoimento-stars">★★★★★</div>
-          <p>"Gratidão por todo o cuidado e dedicação. Meu filho ama as sessões e nós aprendemos muito com as orientações."</p>
-          <div class="depoimento-author">Mãe de paciente</div>
-          <div class="depoimento-detail">TDAH - 8 anos</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== BLOG ========== -->
-  <section class="blog" id="blog">
+  <section class="section-pad" style="background:var(--bg-alt);">
     <div class="container">
-      <h2>Recursos Educativos</h2>
-      <p class="section-subtitle">Blog & Artigos — Conteúdos para ajudar você a entender melhor o desenvolvimento infantil</p>
-
-      <div class="cards-grid cards-grid-3">
-        <div class="blog-card">
-          <div class="blog-card-img">😤</div>
-          <div class="blog-card-content">
-            <h3>Birra ou Sobrecarga Emocional?</h3>
-            <p>Entenda a diferença entre birra e sobrecarga emocional e como ajudar seu filho em cada situação.</p>
-            <a href="artigos/birra-ou-sobrecarga-emocional.html" class="read-more">Ler artigo →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card-img">🧩</div>
-          <div class="blog-card-content">
-            <h3>Conscientização sobre o Autismo</h3>
-            <p>Mitos, verdades e como promover a inclusão de crianças no espectro autista.</p>
-            <a href="artigos/conscientizacao-sobre-o-autismo.html" class="read-more">Ler artigo →</a>
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card-img">😊</div>
-          <div class="blog-card-content">
-            <h3>A Criança "Boazinha"</h3>
-            <p>Os impactos emocionais de ser sempre a criança que não dá trabalho.</p>
-            <a href="artigos/a-crianca-boazinha.html" class="read-more">Ler artigo →</a>
-          </div>
-        </div>
+      <span class="section-eyebrow">📚 Conteúdo</span>
+      <h2 class="section-title">Leitura recomendada</h2>
+      <p class="section-lead">Artigos que escrevo para famílias entenderem o desenvolvimento infantil e neurodivergências.</p>
+      <div class="specialty-grid">
+        <a href="artigos/psicologa-tea-clinicando-tea.html" class="specialty-card" style="text-decoration:none;">
+          <div class="icon-wrap">💛</div>
+          <h3>Sou Autista e Clinico Autistas</h3>
+          <p>Carta aberta: por que vivência pessoal soma à formação clínica.</p>
+        </a>
+        <a href="artigos/tdah-em-meninas.html" class="specialty-card ocean-tint" style="text-decoration:none;">
+          <div class="icon-wrap">🎯</div>
+          <h3>TDAH em Meninas</h3>
+          <p>Por que o diagnóstico chega tarde e como o transtorno aparece diferente.</p>
+        </a>
+        <a href="artigos/como-funciona-avaliacao-neuropsicologica.html" class="specialty-card" style="text-decoration:none;">
+          <div class="icon-wrap">📋</div>
+          <h3>Como Funciona a Avaliação</h3>
+          <p>Guia completo: etapas, testes (WISC, NEPSY, CONNERS), duração e laudo.</p>
+        </a>
       </div>
-
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="blog.html" class="btn btn-outline">Ver todos os artigos →</a>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="blog.html" class="btn-v2 btn-glass">Ver todos os artigos →</a>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTATO ========== -->
-  <section class="contato" id="contato">
-    <div class="container">
-      <h2>Entre em Contato</h2>
-      <p class="section-subtitle">Agende sua Consulta — Entre em contato para agendar uma consulta ou tirar suas dúvidas. Estou aqui para ajudar você e sua família.</p>
-
-      <div class="contato-grid">
-        <!-- Info -->
-        <div>
-          <div class="contato-info-item">
-            <span class="icon">📱</span>
-            <div>
-              <h4>WhatsApp</h4>
-              <p><a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer">(21) 97808-2882</a></p>
-            </div>
-          </div>
-          <div class="contato-info-item">
-            <span class="icon">✉️</span>
-            <div>
-              <h4>E-mail</h4>
-              <p><a href="mailto:psiporjessica@gmail.com">psiporjessica@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="contato-info-item">
-            <span class="icon">📍</span>
-            <div>
-              <h4>Consultório</h4>
-              <p>Vertice Mall<br>Av. Miguel Antônio Fernandes, 1333<br>Recreio dos Bandeirantes - Rio de Janeiro, RJ</p>
-            </div>
-          </div>
-          <div class="contato-info-item">
-            <span class="icon">🕐</span>
-            <div>
-              <h4>Horário de Atendimento</h4>
-              <p>Agendamento via WhatsApp ou E-mail</p>
-            </div>
-          </div>
-
-          <!-- Locais -->
-          <div class="locais-grid">
-            <div class="local-card">
-              <div class="icon">📍</div>
-              <h4>Barra da Tijuca e Recreio</h4>
-              <p>Consultório particular com ambiente acolhedor e lúdico, preparado especialmente para crianças.</p>
-            </div>
-            <div class="local-card">
-              <div class="icon">🏢</div>
-              <h4>BeeHavior Institute</h4>
-              <p><span class="city">Recreio - Rio de Janeiro, RJ</span><br><span class="city">Vila Olímpia - São Paulo, SP</span><br>Instituto especializado em neurodivergências.</p>
-            </div>
-          </div>
-
-          <div class="banner-breve">
-            🚀 Em breve: Consultórios São Paulo e Goiânia — Agende a sua visita!
-          </div>
-
-          <!-- Mapa -->
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps?q=Vertice+Mall+Av+Miguel+Antonio+Fernandes+1333+Recreio+dos+Bandeirantes+Rio+de+Janeiro&output=embed" title="Mapa do consultório no Vértice Mall, Recreio dos Bandeirantes" allowfullscreen loading="lazy"></iframe>
-          </div>
-        </div>
-
-        <!-- Formulário -->
-        <div>
-          <form class="form-contato" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <h3>📋 Formulário de Contato</h3>
-            <br>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nome">Nome *</label>
-                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
-              </div>
-              <div class="form-group">
-                <label for="email">E-mail *</label>
-                <input type="email" id="email" name="email" required placeholder="seu@email.com">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(21) 99999-9999">
-              </div>
-              <div class="form-group">
-                <label for="assunto">Assunto *</label>
-                <select id="assunto" name="assunto" required>
-                  <option value="" disabled selected>Selecione...</option>
-                  <option value="agendamento">Agendamento de Consulta</option>
-                  <option value="duvida">Dúvida</option>
-                  <option value="informacao">Informação sobre serviços</option>
-                  <option value="outro">Outro</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="mensagem">Mensagem *</label>
-              <textarea id="mensagem" name="mensagem" required placeholder="Conte como posso ajudar você e sua família..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Enviar Mensagem</button>
-            <div class="form-success" id="formSuccess">
-              ✅ Mensagem enviada com sucesso! Entrarei em contato em breve.
-            </div>
-          </form>
+  <section class="section-pad" id="contato">
+    <div class="container" style="max-width:880px;">
+      <div class="cta-glass">
+        <span class="section-eyebrow">📅 Próximo passo</span>
+        <h2 class="section-title" style="margin-bottom:16px;">Vamos conversar sobre sua família?</h2>
+        <p style="font-size:1.08rem; max-width:540px; margin:0 auto 28px;">Primeira conversa é por WhatsApp. Respondo pessoalmente — costumo escrever uma resposta detalhada antes de marcar primeira sessão.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+          <a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" class="btn-v2 btn-mint">💬 Falar pelo WhatsApp</a>
+          <a href="perguntas-frequentes.html" class="btn-v2 btn-glass">Ver perguntas frequentes</a>
         </div>
       </div>
     </div>
   </section>
 
-  
-  <!-- LEAD FORM -->
-  <section class="lead-cta-section">
-    <div class="container">
-      <h2>Pronta(o) para agendar com a Jessica?</h2>
-      <p class="lcta-sub">Preencha rapidamente e siga para o WhatsApp já com sua solicitação registrada.</p>
+  <section class="lead-cta-section v2" style="padding:80px 0;">
+    <div class="container" style="max-width:560px;">
+      <h2 style="text-align:center; margin-bottom:8px;">Prefere agendar pelo site?</h2>
+      <p class="lcta-sub" style="text-align:center; margin-bottom:32px;">Preencha rapidamente — eu respondo no WhatsApp com horários disponíveis.</p>
       <form class="lcta-form" data-lead-form data-lead-source="jessica-home" data-lead-type="primeira-consulta" novalidate>
         <div class="lcta-row">
-          <input class="lcta-input" type="text" name="name" placeholder="Seu nome" aria-label="Seu nome" required autocomplete="name">
-          <input class="lcta-input" type="tel" name="phone" placeholder="WhatsApp com DDD" aria-label="WhatsApp com DDD" required autocomplete="tel" inputmode="tel">
+          <input class="lcta-input" type="text" name="name" placeholder="Seu nome" required autocomplete="name">
+          <input class="lcta-input" type="tel" name="phone" placeholder="WhatsApp com DDD" required autocomplete="tel" inputmode="tel">
         </div>
         <div class="lcta-row">
-          <input class="lcta-input" type="email" name="email" placeholder="E-mail (opcional)" aria-label="E-mail (opcional)" autocomplete="email">
-          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança (opcional)" aria-label="Idade da criança (opcional)">
+          <input class="lcta-input" type="email" name="email" placeholder="Email (opcional)" autocomplete="email">
+          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança (opcional)">
         </div>
         <select class="lcta-input lcta-select" name="motivo">
           <option value="primeira-consulta">Quero agendar primeira consulta</option>
@@ -581,76 +532,75 @@
           <option value="duvida">Tirar uma dúvida</option>
           <option value="outro">Outro</option>
         </select>
-        <button class="lcta-btn" type="submit">💬 Quero falar com a Jessica no WhatsApp</button>
+        <button class="lcta-btn" type="submit">💬 Falar com a Jessica no WhatsApp</button>
         <div class="lcta-msg" style="display:none;"></div>
-        <p class="lcta-disclaimer">Ao enviar, você concorda que seus dados são tratados conforme a <a href="privacidade.html">Política de Privacidade</a> (LGPD). Você será direcionado(a) ao WhatsApp da Jessica.</p>
+        <p class="lcta-disclaimer">Ao enviar, voce concorda com a <a href="privacidade.html">Politica de Privacidade</a>. Voce sera direcionado(a) ao WhatsApp.</p>
       </form>
     </div>
   </section>
 
-  <!-- ========== CTA FINAL ========== -->
-  <section class="cta-final">
-    <div class="container">
-      <h2>Vamos Descomplicar a Infância Juntos?</h2>
-      <p>Agende uma consulta e descubra como posso ajudar sua família a enfrentar os desafios do desenvolvimento infantil com acolhimento e ciência.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📱 Agendar pelo WhatsApp</a>
-        <a href="mailto:psiporjessica@gmail.com" class="btn btn-outline">✉️ Enviar E-mail</a>
-        <a href="#contato" class="btn btn-outline">📋 Formulário de Contato</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <span class="bee-icon">🐝</span>
-            <span>Jessica Costa</span>
-          </div>
-          <p style="margin-top:4px; color:var(--primary); font-weight:600; font-size:0.9rem;">Descomplique a infância ✨</p>
-          <p style="margin-top:12px;">Psicologia infantil especializada em neurodivergências. TCC, ABA e muito carinho.</p>
-          <div class="footer-social">
-            <a href="https://www.tiktok.com/@jessicacostapsi" target="_blank" rel="noopener noreferrer" aria-label="TikTok">🎵</a>
-            <a href="https://www.linkedin.com/in/jessicacostapsi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
-          </div>
+      <div class="footer-content">
+        <div>
+          <h3>🐝 Jessica Costa Psi</h3>
+          <p style="color:rgba(255,255,255,0.72); margin-top:8px;">Psicóloga Infantojuvenil<br>CRP 05/56789</p>
+          <p style="color:rgba(255,255,255,0.72);">Vertice Mall — Recreio dos Bandeirantes, RJ</p>
         </div>
-        <div class="footer-links">
-          <h4>Links Rápidos</h4>
-          <a href="#inicio">Início</a>
-          <a href="#especialidades">Especialidades</a>
-          <a href="#biografia">Biografia</a>
-          <a href="manifesto.html">Manifesto</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#blog">Blog</a>
-          <a href="#contato">Contato</a>
+        <div>
+          <h4>Especialidades</h4>
+          <a href="psicologa-tea-rj.html">TEA Infantil</a>
+          <a href="psicologa-tdah-rj.html">TDAH Infantil</a>
+          <a href="avaliacao-neuropsicologica-infantil.html">Avaliação Neuropsicológica</a>
+          <a href="psicologa-infantojuvenil-recreio.html">Atendimento Recreio</a>
         </div>
-        <div class="footer-contact">
+        <div>
+          <h4>Conteúdo</h4>
+          <a href="blog.html">Blog</a>
+          <a href="perguntas-frequentes.html">FAQ</a>
+          <a href="glossario.html">Glossário</a>
+          <a href="biografia.html">Biografia</a>
+        </div>
+        <div>
           <h4>Contato</h4>
-          <p>📱 (21) 97808-2882</p>
-          <p>✉️ psiporjessica@gmail.com</p>
-          <p>📍 Vertice Mall - Recreio, RJ</p>
+          <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer">📱 WhatsApp</a>
+          <a href="mailto:psiporjessica@gmail.com">✉️ E-mail</a>
+          <a href="privacidade.html">Privacidade (LGPD)</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Jessica Costa PSI. Todos os direitos reservados. | CRP 05/56789</p>
-        <p class="footer-legal"><a href="privacidade.html">Política de Privacidade</a> · <a href="mailto:psiporjessica@gmail.com">Encarregado de Dados (DPO)</a></p>
+        <p>© 2026 Jessica Costa Psi · Todos os direitos reservados</p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Flutuante -->
-  <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">💬</a>
-
-  <!-- Botão Voltar ao Topo -->
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" type="button">↑</button>
-
-  <!-- Cloudflare Web Analytics (privacy-friendly, sem cookies, LGPD-friendly).
-       Para ativar: gere o beacon token em https://one.dash.cloudflare.com/?to=/:account/web-analytics
-       e descomente a linha abaixo substituindo REPLACE_WITH_BEACON_TOKEN. -->
-  <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_BEACON_TOKEN"}'></script> -->
+  <script>
+    (function(){
+      var header = document.getElementById('header');
+      if (!header) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 8) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      }, { passive: true });
+    })();
+    (function(){
+      var els = document.querySelectorAll('.specialty-card, .creature-card, .bento-card');
+      els.forEach(function(el){ el.classList.add('fade-up'); });
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting) {
+              e.target.classList.add('in-view');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        els.forEach(function(el){ io.observe(el); });
+      } else {
+        els.forEach(function(el){ el.classList.add('in-view'); });
+      }
+    })();
+  </script>
 
   <script src="js/main.js"></script>
   <script src="js/lead-form.js" defer></script>
