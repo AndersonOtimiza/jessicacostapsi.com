@@ -22,7 +22,9 @@
 (function () {
   'use strict';
 
-  var CRM_ENDPOINT = 'https://novo-crm.otimizapro.com/api/leads';
+  // Endpoint relativo — Cloudflare Pages Function em functions/api/lead.js
+  // que server-to-server envia ao CRM da Otimiza. Resolve o CORS.
+  var CRM_ENDPOINT = '/api/lead';
   var WHATSAPP_NUMBER = '5521978082882';
 
   // ------ Sticky WhatsApp button ----------------------------------
