@@ -52,16 +52,17 @@ zone_name = "jessicacostapsi.com"
 pattern = "www.jessicacostapsi.com/*"
 zone_name = "jessicacostapsi.com"
 
-# Banco de dados (Anderson preenche database_id após criar)
+# Banco de dados (criado em 2026-05-17 via `wrangler d1 create`, região ENAM)
 [[d1_databases]]
 binding = "DB"
 database_name = "jessicacostapsi-cursos"
-database_id = "REPLACE_AFTER_CREATING_D1"
+database_id = "928496ff-8c8f-4034-9fb6-f493cebc7655"
 
-# KV para tokens curtos (reset de senha, etc.) com TTL nativo
+# KV para tokens curtos (reset de senha, etc.) com TTL nativo.
+# Criado em 2026-05-17 (título: jessicacostapsi-worker-JESSICA_KV).
 [[kv_namespaces]]
 binding = "KV"
-id = "REPLACE_AFTER_CREATING_KV"
+id = "ee669de930c645e4b7a7622798eaee8c"
 
 # Vars não-sensíveis. Secrets de verdade via `wrangler secret put`.
 [vars]
