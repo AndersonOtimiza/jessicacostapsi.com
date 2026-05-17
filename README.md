@@ -22,7 +22,6 @@ Cognitivo-Comportamental) e **ABA** (Análise do Comportamento Aplicada).
 ├── index.html              # Página principal (10 seções)
 ├── biografia.html          # Biografia, formação, filosofia, locais de atendimento
 ├── blog.html               # Listagem de artigos
-├── colunistas.html         # Colunistas convidados
 ├── 404.html                # Página de erro customizada
 ├── artigos/                # 13 artigos sobre desenvolvimento infantil
 ├── css/style.css           # Estilo único (responsivo, animações)
@@ -116,8 +115,8 @@ Atalhos amigáveis: `/sobre → /biografia.html`, `/whatsapp → wa.me/...`, etc
 
 ## Analytics (Cloudflare Web Analytics)
 
-Snippet **comentado** em todas as páginas principais (`index.html`, `biografia.html`, `blog.html`,
-`colunistas.html`). Para ativar:
+Snippet **comentado** em todas as páginas principais (`index.html`, `biografia.html`, `blog.html`).
+Para ativar:
 
 1. Painel: <https://one.dash.cloudflare.com/?to=/:account/web-analytics> → criar site.
 2. Copiar o `beacon token` gerado.

@@ -25,7 +25,6 @@ Usar `Glob` para listar:
 | `index.html` (home) | 1.0 | weekly |
 | `blog.html` | 0.9 | weekly |
 | `biografia.html` | 0.8 | monthly |
-| `colunistas.html` | 0.6 | monthly |
 | `artigos/*.html` | 0.7 | yearly |
 | outras páginas raiz novas | 0.7 | monthly (default) |
 

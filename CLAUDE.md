@@ -7,7 +7,6 @@ Site estático da psicóloga infantojuvenil **Jessica Costa** (CRP 05/56789, Rec
 - [index.html](index.html) — landing principal, 10 seções (hero, especialidades, biografia, depoimentos, blog preview, contato, etc.)
 - [biografia.html](biografia.html) — formação, abordagem, filosofia
 - [blog.html](blog.html) — index dos artigos
-- [colunistas.html](colunistas.html) — colunistas convidados
 - [404.html](404.html) — página de erro
 - [artigos/](artigos/) — 13 artigos (TEA, TDAH, ansiedade, birra, parentalidade etc.)
 - [css/style.css](css/style.css) — único stylesheet (~1.300 linhas, animações de abelhas 🐝)
@@ -103,7 +102,6 @@ Itens pendentes que dependem de decisão da Jessica Costa ou ação no painel Cl
   - `rotina-e-previsibilidade.html` (72) → "Rotina e Previsibilidade: Aliadas do Desenvolvimento"
   - `seletividade-alimentar.html` (71) → "Seletividade Alimentar em Crianças Neurodivergentes"
   - `o-papel-do-brincar.html` (66) · `parentalidade-positiva.html` (66) · `como-falar-sobre-emocoes.html` (66) → remover sufixo
-- [ ] **Aplicar `noindex, follow` em `colunistas.html`** até ter colunistas reais (hoje é thin content: 3 cards "Em breve").
 - [ ] **Internal linking** nos 13 artigos (12 cross-links sugeridos — clusters TEA, TDAH, regulação emocional, parentalidade). Texto natural no corpo, não lista no fim.
 - [ ] **Encurtar description do `tdah-em-adultos.html`** de 155 → ~140 chars (folga, opcional).
 
@@ -111,7 +109,7 @@ Itens pendentes que dependem de decisão da Jessica Costa ou ação no painel Cl
 - [x] ~~**Desligar Bot Fight Mode** na zona `jessicacostapsi.com` (zone `528d39b71b15a717ff05a77cd7c217ad`) — bloqueia Googlebot/Bingbot hoje (403 + challenge).~~ ✅ Verificado 2026-05-16 via API: `fight_mode:false` + toda a stack de Bot Management off (ai_bots/content_bots/crawler protection disabled, cf_robots_variant off).
 - [ ] **Confirmar deploy ativo**: `wrangler pages deployment list --project-name=jessicacostapsi` — robots/sitemap/og retornam 404 em prod apesar de existirem no repo.
 - [ ] **Gerar `img/og-image.png` raster 1200×630** (Facebook/LinkedIn rejeitam SVG).
-- [ ] **Ativar Cloudflare Web Analytics**: criar beacon token + descomentar snippet em 5 páginas (index, biografia, blog, colunistas, privacidade).
+- [ ] **Ativar Cloudflare Web Analytics**: criar beacon token + descomentar snippet em 4 páginas (index, biografia, blog, privacidade).
 - [ ] **Rotacionar token Cloudflare** ainda em `.claude/settings.local.json` (ver README.md).
 
 ### Validação pós-deploy
