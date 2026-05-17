@@ -266,14 +266,15 @@
     </div>
   </header>
 
-  <!-- HERO v2 -->
-  <section class="hero-v2" id="inicio">
+  <!-- HERO Docusign-style — headline + 3 feature cards + trust row -->
+  <section class="hero-doc" id="inicio">
+    <!-- Camada decorativa de criaturas flutuantes -->
     <div class="creatures-canvas" aria-hidden="true">
-      <svg class="creature shark-svg" style="top:35%; left:0;" viewBox="0 0 120 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="creature shark-svg" style="top:40%; left:-10%;" viewBox="0 0 120 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5 36 Q 25 16, 56 22 L 86 18 L 92 8 L 96 22 Q 110 24, 116 30 Q 112 38, 96 40 L 92 56 L 86 44 L 56 46 Q 25 50, 5 36 Z" fill="#0369A1" opacity="0.5"/>
         <circle cx="78" cy="28" r="2" fill="white"/>
       </svg>
-      <svg class="creature bee-svg" style="top:12%; left:25%;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="creature bee-svg" style="top:10%; left:8%;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="28" cy="32" rx="14" ry="10" fill="#F59E0B"/>
         <rect x="16" y="28" width="24" height="3" fill="#1F2937"/>
         <rect x="16" y="34" width="24" height="3" fill="#1F2937"/>
@@ -281,15 +282,7 @@
         <ellipse cx="36" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
         <circle cx="24" cy="30" r="1.5" fill="#1F2937"/>
       </svg>
-      <svg class="creature bee-svg bee-2" style="top:60%; left:8%;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="28" cy="32" rx="14" ry="10" fill="#F59E0B"/>
-        <rect x="16" y="28" width="24" height="3" fill="#1F2937"/>
-        <rect x="16" y="34" width="24" height="3" fill="#1F2937"/>
-        <ellipse cx="20" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
-        <ellipse cx="36" cy="22" rx="10" ry="8" fill="rgba(255,255,255,0.85)"/>
-        <circle cx="24" cy="30" r="1.5" fill="#1F2937"/>
-      </svg>
-      <svg class="creature bee-svg bee-3" style="top:25%; left:55%;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="creature bee-svg bee-2" style="top:18%; right:10%; left:auto;" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="28" cy="32" rx="14" ry="10" fill="#F59E0B"/>
         <rect x="16" y="28" width="24" height="3" fill="#1F2937"/>
         <rect x="16" y="34" width="24" height="3" fill="#1F2937"/>
@@ -300,56 +293,52 @@
     </div>
 
     <div class="container">
-      <div class="bento-hero">
-        <div class="bento-main">
-          <span class="hero-badge">🐝 Psicologia Infantojuvenil · Recreio dos Bandeirantes</span>
-          <h1>Descomplique a <span class="h-gradient">Infância</span> com método e <span class="h-gradient-ocean">acolhimento</span>.</h1>
-          <p class="hero-text">Atendimento especializado de crianças e adolescentes em <strong>TEA</strong>, <strong>TDAH</strong>, ansiedade e regulação emocional. <strong>TCC + ABA</strong> baseados em evidência, com a leitura clínica de quem vive a neurodivergência por dentro.</p>
-          <div class="hero-actions">
-            <a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Vim%20pelo%20site%20e%20quero%20agendar%20primeira%20consulta." target="_blank" rel="noopener noreferrer" class="btn-v2 btn-mint">💬 Agendar Consulta</a>
-            <a href="avaliacao-neuropsicologica-infantil.html" class="btn-v2 btn-glass">📋 Avaliação Neuropsicológica</a>
-          </div>
-        </div>
+      <span class="hero-badge">🐝 Psicologia Infantojuvenil · CRP 05/56789</span>
 
-        <div class="bento-side">
-          <div class="bento-card bento-photo">
-            <img src="img/jessica-costa-retrato.webp" srcset="img/jessica-costa-retrato.webp 1x, img/jessica-costa-retrato@2x.webp 2x" alt="Jessica Costa Psi, psicóloga infantojuvenil, em seu consultório no Recreio" width="800" height="800" loading="eager">
-          </div>
-          <div class="bento-card bento-honey">
-            <span class="card-icon">🐝</span>
-            <h3>1ª linha em TEA</h3>
-            <p class="small">ABA + TCC adaptada. Avaliação completa + acompanhamento.</p>
-          </div>
-          <div class="bento-card bento-ocean">
-            <span class="card-icon">🦈</span>
-            <h3>Método autoral</h3>
-            <p class="small">Tubarão × Abelhinha — como conversar com a criança sobre regulação emocional.</p>
-          </div>
+      <h1>Descomplique a <span class="h-gradient">Infância</span> com<br>método e <span class="h-gradient-ocean">acolhimento</span>.</h1>
+
+      <p class="hero-sub">Atendimento especializado de crianças e adolescentes em TEA, TDAH, ansiedade e regulação emocional. TCC + ABA baseados em evidência — no Recreio dos Bandeirantes e online para todo o Brasil.</p>
+
+      <!-- 3 feature cards estilo Docusign -->
+      <div class="hero-features">
+        <div class="feature-card">
+          <div class="feature-icon-wrap">🧩</div>
+          <h3>TEA — Espectro Autista</h3>
+          <p>Avaliação neuropsicológica + intervenção <strong>ABA</strong>. Desenvolvimento de habilidades sociais, comunicação e autonomia respeitando neurodivergência.</p>
+          <a href="psicologa-tea-rj.html" class="feature-link">Saber mais sobre TEA →</a>
         </div>
+        <div class="feature-card ocean">
+          <div class="feature-icon-wrap">🎯</div>
+          <h3>TDAH Infantojuvenil</h3>
+          <p>TCC + treino de funções executivas + adaptações escolares. Atende inclusive a apresentação desatenta (frequente em meninas, subdiagnosticada).</p>
+          <a href="psicologa-tdah-rj.html" class="feature-link">Saber mais sobre TDAH →</a>
+        </div>
+        <div class="feature-card mint">
+          <div class="feature-icon-wrap">📋</div>
+          <h3>Avaliação Neuropsicológica</h3>
+          <p>Bateria completa <strong>WISC-IV, NEPSY-II, CONNERS-3, Vineland</strong>. Laudo escrito apto para escola, plano de saúde, INSS e justiça.</p>
+          <a href="avaliacao-neuropsicologica-infantil.html" class="feature-link">Ver detalhes da avaliação →</a>
+        </div>
+      </div>
+
+      <!-- CTA central -->
+      <div class="hero-actions-center">
+        <a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Vim%20pelo%20site%20e%20quero%20agendar%20primeira%20consulta." target="_blank" rel="noopener noreferrer" class="btn-v2 btn-mint">💬 Agendar Primeira Consulta</a>
+        <a href="#metodologia" class="btn-v2 btn-glass">Conhecer minha metodologia →</a>
+      </div>
+
+      <!-- Trust row em pill -->
+      <div class="hero-trust-row">
+        <span class="pill-item"><span class="dot"></span>CRP 05/56789</span>
+        <span class="sep"></span>
+        <span class="pill-item ocean"><span class="dot"></span>Especialização TCC + ABA + Neuropsicologia</span>
+        <span class="sep"></span>
+        <span class="pill-item"><span class="dot"></span>Crianças 2 a 18 anos</span>
+        <span class="sep"></span>
+        <span class="pill-item mint"><span class="dot"></span>Recreio (RJ) + Online Brasil</span>
       </div>
     </div>
   </section>
-
-  <div class="container">
-    <div class="trust-strip">
-      <div class="trust-stat">
-        <div class="num">CRP 05/56789</div>
-        <div class="label">Registro ativo</div>
-      </div>
-      <div class="trust-stat">
-        <div class="num">TCC + ABA</div>
-        <div class="label">Formação especializada</div>
-      </div>
-      <div class="trust-stat">
-        <div class="num">2–18 anos</div>
-        <div class="label">Crianças e adolescentes</div>
-      </div>
-      <div class="trust-stat">
-        <div class="num">RJ + Online</div>
-        <div class="label">Presencial e remoto</div>
-      </div>
-    </div>
-  </div>
 
   <section class="section-pad" id="especialidades">
     <div class="container">
