@@ -1,0 +1,19 @@
+# Arquivos da raiz do repo que NÃO devem virar Workers Assets
+# (servidos via env.ASSETS pelo Worker em worker/).
+# Sintaxe: gitignore-like.
+.git/
+.github/
+.claude/
+.wrangler/
+node_modules/
+worker/
+scripts/
+.editorconfig
+.prettierrc
+.prettierignore
+.gitignore
+.assetsignore
+README.md
+CLAUDE.md
+metodologia.md
+*.log

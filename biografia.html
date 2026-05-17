@@ -227,6 +227,10 @@
       <div class="metafora-nota">
         <p><strong>Importante:</strong> a metáfora não diz que a criança <em>é</em> um tubarão. Ela descreve <em>jeitos</em> de reagir — e jeitos podem ser aprendidos e treinados. A abelhinha também não é passiva: ela se defende quando precisa. Cooperar não é se submeter.</p>
       </div>
+
+      <div style="text-align:center; margin-top:32px;">
+        <a href="artigos/metodologia-tubarao-abelhinha.html" class="btn btn-primary">Ler o manifesto completo da metodologia →</a>
+      </div>
     </div>
   </section>
 
@@ -334,6 +338,7 @@
           <a href="index.html#inicio">Início</a>
           <a href="index.html#especialidades">Especialidades</a>
           <a href="biografia.html">Biografia</a>
+          <a href="manifesto.html">Manifesto</a>
           <a href="index.html#depoimentos">Depoimentos</a>
           <a href="blog.html">Blog</a>
           <a href="index.html#contato">Contato</a>
@@ -361,5 +366,34 @@
   <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_BEACON_TOKEN"}'></script> -->
 
   <script src="js/main.js"></script>
-</body>
+  <script src="js/lead-form.js" defer></script>
+
+  <!-- LEAD FORM -->
+  <section class="lead-cta-section">
+    <div class="container">
+      <h2>Quero conversar com a Jessica</h2>
+      <p class="lcta-sub">Agende sua primeira consulta ou avaliacao.</p>
+      <form class="lcta-form" data-lead-form data-lead-source="jessica-biografia" data-lead-type="primeira-consulta" novalidate>
+        <div class="lcta-row">
+          <input class="lcta-input" type="text" name="name" placeholder="Seu nome" required autocomplete="name">
+          <input class="lcta-input" type="tel" name="phone" placeholder="WhatsApp com DDD" required autocomplete="tel" inputmode="tel">
+        </div>
+        <div class="lcta-row">
+          <input class="lcta-input" type="email" name="email" placeholder="Email (opcional)" autocomplete="email">
+          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança (opcional)">
+        </div>
+        <select class="lcta-input lcta-select" name="motivo">
+          <option value="primeira-consulta">Quero agendar primeira consulta</option>
+          <option value="avaliacao-neuropsicologica">Quero avaliação neuropsicológica</option>
+          <option value="duvida">Tirar uma dúvida</option>
+          <option value="outro">Outro</option>
+        </select>
+        <button class="lcta-btn" type="submit">💬 Quero falar com a Jessica no WhatsApp</button>
+        <div class="lcta-msg" style="display:none;"></div>
+        <p class="lcta-disclaimer">Ao enviar, voce concorda que seus dados sao tratados conforme a <a href="privacidade.html">Politica de Privacidade</a> (LGPD). Voce sera direcionado(a) ao WhatsApp da Jessica.</p>
+      </form>
+    </div>
+  </section>
+
+  </body>
 </html>

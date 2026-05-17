@@ -65,8 +65,14 @@ direito de se proteger quando necessário.
 
 ## Pontos de atenção (TODO clínico — confirmar com Jessica)
 
-- [ ] Como a metáfora é introduzida na sessão? Ela usa imagens, fantoches,
-      desenho? Esse "como" daria um conteúdo de blog forte.
+- [x] **Como a metáfora é introduzida na sessão** (resposta via Anderson
+      em 2026-05-16): o recurso principal é o **fantoche** do tubarão e
+      da abelhinha — eles viram personagens nas mãos da psicóloga, deixam
+      de ser conceito e passam a ser alguém com quem a criança conversa.
+      A partir do fantoche, outros materiais entram conforme o caso
+      (desenho, jogos, histórias, cenas montadas, bichinhos de pelúcia
+      entrando e saindo da colmeia). Não há caminho fixo. Já aplicado no
+      manifesto, seção "Como isso vira sessão".
 - [ ] Existe uma terceira figura na metodologia (ex.: a colmeia, o
       jardim, a flor)? Vale registrar antes que se perca.
 - [ ] A metáfora vale também para os **pais**? Há indicação de que sim

@@ -142,6 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (path.indexOf('biografia') !== -1) {
         return 'Olá, Jessica! Vim pelo ' + origem + ' (página Biografia) e gostaria de agendar uma consulta.';
       }
+      if (path.indexOf('manifesto') !== -1) {
+        return 'Olá, Jessica! Li o seu manifesto no site e me identifiquei. Gostaria de conversar sobre um atendimento.';
+      }
       if (path.indexOf('blog') !== -1) {
         return 'Olá, Jessica! Vim pelo ' + origem + ' (página Blog) e gostaria de mais informações sobre os atendimentos.';
       }
