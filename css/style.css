@@ -601,27 +601,6 @@ h4 { font-size: 1.1rem; }
   gap: 8px;
 }
 
-/* === Colunistas === */
-.colunistas {
-  background: var(--white);
-}
-
-.colunista-card {
-  text-align: center;
-}
-
-.colunista-foto {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: #e8e0d8;
-  margin: 0 auto 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-}
-
 /* === Contato === */
 .contato {
   background: var(--primary-light);
@@ -1294,4 +1273,139 @@ h4 { font-size: 1.1rem; }
 }
 .footer-legal a:hover {
   opacity: 0.8;
+}
+
+/* === Tubarão x Abelhinha === */
+/* Metáfora terapêutica autoral da Jessica Costa (biografia.html). */
+.tubarao-abelhinha {
+  background: linear-gradient(135deg, var(--primary-light), #fce4b8);
+}
+
+.tubarao-abelhinha h2 {
+  color: var(--text);
+}
+
+.tubarao-abelhinha h2 .vs {
+  display: inline-block;
+  margin: 0 8px;
+  color: var(--accent);
+  font-weight: 800;
+  font-style: italic;
+  transform: rotate(-4deg);
+}
+
+.metafora-intro {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.metafora-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.metafora-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.metafora-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.metafora-card--tubarao {
+  border-top: 4px solid #5B7C99;
+}
+
+.metafora-card--abelhinha {
+  border-top: 4px solid var(--primary);
+}
+
+.metafora-icon {
+  font-size: 2.6rem;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.metafora-card h3 {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.metafora-card--tubarao h3 {
+  color: #2F4A66;
+}
+
+.metafora-card--abelhinha h3 {
+  color: var(--primary-dark);
+}
+
+.metafora-lede {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.metafora-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.metafora-list li {
+  position: relative;
+  padding: 8px 0 8px 26px;
+  color: var(--text-light);
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.metafora-list li:last-child {
+  border-bottom: none;
+}
+
+.metafora-list li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  font-weight: 700;
+}
+
+.metafora-card--tubarao .metafora-list li::before {
+  color: #5B7C99;
+}
+
+.metafora-card--abelhinha .metafora-list li::before {
+  color: var(--primary);
+}
+
+.metafora-nota {
+  margin-top: 32px;
+  background: var(--white);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .metafora-grid {
+    grid-template-columns: 1fr;
+  }
 }

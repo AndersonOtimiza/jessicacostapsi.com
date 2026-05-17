@@ -7,6 +7,8 @@
 /about         /biografia.html       301
 /contato       /#contato             301
 /contact       /#contato             301
+/colunistas       /                  301
+/colunistas.html  /                  301
 /whatsapp      https://wa.me/5521978082882  302
 
 # (Sem catch-all 404: Cloudflare Pages serve 404.html automaticamente para

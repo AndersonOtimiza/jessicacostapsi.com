@@ -145,9 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (path.indexOf('blog') !== -1) {
         return 'Olá, Jessica! Vim pelo ' + origem + ' (página Blog) e gostaria de mais informações sobre os atendimentos.';
       }
-      if (path.indexOf('colunistas') !== -1) {
-        return 'Olá, Jessica! Vim pelo ' + origem + ' (página Colunistas) e gostaria de mais informações.';
-      }
       return 'Olá, Jessica! Vim pelo ' + origem + ' e gostaria de agendar uma consulta.';
     }
 
