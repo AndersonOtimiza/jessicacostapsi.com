@@ -115,9 +115,61 @@ Itens pendentes que dependem de decisão da Jessica Costa ou ação no painel Cl
 - [ ] **Rotacionar token Cloudflare** ainda em `.claude/settings.local.json` (ver README.md).
 
 ### Validação pós-deploy
-- [ ] `curl -I https://jessicacostapsi.com/robots.txt` → 200
-- [ ] `curl -I https://jessicacostapsi.com/sitemap.xml` → 200
-- [ ] `curl -I https://jessicacostapsi.com/img/og-image.svg` → 200
-- [ ] `curl -sI -A "Googlebot/2.1" https://jessicacostapsi.com/` → 200 (não 403/challenge)
-- [ ] `curl -s https://jessicacostapsi.com/sitemap.xml | grep -c '<url>'` → 19
-- [ ] GSC: rodar `inspect_url_enhanced` em `/`, `/biografia`, 1 artigo. Resubmeter sitemap.
+- [x] ~~`curl -I https://jessicacostapsi.com/robots.txt` → 200~~ ✅ 2026-05-16
+- [x] ~~`curl -I https://jessicacostapsi.com/sitemap.xml` → 200~~ ✅ 2026-05-16
+- [x] ~~`curl -sI -A "Googlebot/2.1" https://jessicacostapsi.com/` → 200~~ ✅ 2026-05-16 (Bot Fight Mode off)
+- [ ] GSC: rodar `inspect_url_enhanced` em `/`, `/biografia`, `/psicologa-infantojuvenil-recreio`, 1 artigo. Resubmeter sitemap.
+
+## Plano de posicionamento — "Psicóloga #1 Barra/Recreio" (2026-05-16)
+
+Objetivo: rankear top-3 para queries "psicóloga infantojuvenil Recreio", "psicóloga TEA Barra", "psicóloga TDAH RJ zona oeste" em 90-180 dias.
+
+### Concorrentes diretos identificados
+| Domain | Diferencial | Risco pra Jessica |
+|---|---|---|
+| `psicologaluanareis.com` (Luana Reis) | **TCC + ABA infantojuvenil** — proposta IDÊNTICA | Diferenciação direta |
+| `ericajares.com.br` + `espacopersona.com.br` (Erica Jares) | Coordena clínica multi no Recreio Shopping | Autoridade local maior |
+| `rafaelguedes.com.br` | Conteúdo SEO denso, Recreio | Volume de páginas |
+| `jessicafeitosa.com` | TCC infantojuvenil Recreio | **Confusão de marca** (homônima) |
+| `clinicadespertare.com.br` | Multidisciplinar, unidades Barra+Recreio | Cobertura ampla |
+| `team-terapias.com.br` (Casa Shopping Barra) | TEA, multidisciplinar | TEA específico |
+
+### Aplicado na sessão 2026-05-16 (técnico/on-page)
+- ✅ Schema enrichment: `Psychologist` type, FAQPage com 7 perguntas, `hasOfferCatalog` com 4 Services, `openingHoursSpecification`, `areaServed` granular (6 bairros + 2 cidades), Instagram em `sameAs`
+- ✅ Landing geo-targeted criada: `/psicologa-infantojuvenil-recreio` (1.000 palavras, FAQ visível, mapa embed, schema LocalBusiness + Service + Breadcrumb)
+- ✅ Cross-link no index.html (bloco "Atendimento presencial" → landing)
+- ✅ Sitemap atualizado (20 URLs com nova landing prioridade 0.9)
+
+### Off-page (DEPENDE Jessica/Anderson — alto impacto, fora do site)
+- [ ] **Google Business Profile** — CRÍTICO para Local Pack. Sem GBP a Jessica não aparece no "Map Pack" do Google (3 resultados de mapa que aparecem antes do orgânico). Cadastrar:
+  - Nome: "Jessica Costa Psi - Psicóloga Infantojuvenil"
+  - Categoria: Psicóloga (primária) + Psicóloga Infantil (secundária)
+  - Endereço Vertice Mall + horário
+  - 5+ fotos (consultório, retrato, fachada)
+  - Solicitar **verificação por cartão postal** ou telefone
+- [ ] **Reviews ativos** — pedir 10 primeiros reviews para pais de pacientes ativos (template de mensagem WhatsApp + link direto pro GBP). Reviews são o sinal #1 de local ranking.
+- [ ] **Cadastro em diretórios profissionais**:
+  - [ ] ABDA — cadastro de psicólogos RJ (tdah.org.br)
+  - [ ] AMA-RJ (autismo)
+  - [ ] Doctoralia.com.br (perfil verificado)
+  - [ ] CRP-RJ (busca de psicólogos)
+  - [ ] iClinic, Conexa, ZenKlub, Vittude (marketplaces psi)
+- [ ] **Backlinks locais**:
+  - [ ] Pediatras Recreio/Barra (link cruzado com 3-5 consultórios parceiros)
+  - [ ] Escolas de Recreio (Escola Atelier, Escola Espaço, Sá Pereira, El Sol) — oferecer palestra → link no site da escola
+  - [ ] Vertice Mall website (verificar se lista lojistas)
+  - [ ] Blog da Tayane Costa (Otimiza) ou outros sites do ecossistema Anderson com link contextual
+- [ ] **Conteúdo de cluster** (próxima sprint):
+  - [ ] Landing `/psicologa-tea-rj` (cluster TEA, linka 4 artigos)
+  - [ ] Landing `/psicologa-tdah-rj` (cluster TDAH, linka 2 artigos)
+  - [ ] Internal linking nos 14 artigos (12 cross-links sugeridos — pendente desde TODO 2026-05-04)
+
+### Métricas de acompanhamento (rodar via GSC MCP semanal)
+- Impressões + cliques + posição média para queries `psicologa infantojuvenil recreio`, `psicologa TEA RJ`, `psicologa TDAH RJ`, `psicologa barra da tijuca infantil`
+- Páginas indexadas (deve crescer de ~19 → 25 nas próximas semanas)
+- Local Pack ranking (manual, via aba anônima): "psicóloga infantil recreio dos bandeirantes"
+
+### Baseline 2026-05-16 (90 dias antes desta sessão)
+- 49 impressões / 2 cliques / posição média 5.9 / CTR 4%
+- Toda atividade na home, sem queries acima de threshold de privacidade
+- Sub-indexado, sem demanda capturada

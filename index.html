@@ -36,15 +36,20 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Person",
+        "@type": "Psychologist",
         "@id": "https://jessicacostapsi.com/#person",
         "name": "Jessica Costa",
+        "alternateName": "Jessica Costa Psi",
         "jobTitle": "Psicóloga Infantojuvenil",
-        "description": "Psicóloga infantojuvenil especializada em TCC, ABA e neurodivergências (TEA, TDAH).",
+        "description": "Psicóloga infantojuvenil especializada em TCC, ABA e neurodivergências (TEA, TDAH). Atendimento presencial no Recreio dos Bandeirantes (RJ) e online.",
         "identifier": "CRP 05/56789",
         "url": "https://jessicacostapsi.com/",
-        "image": "https://jessicacostapsi.com/img/og-image.png",
+        "image": "https://jessicacostapsi.com/img/jessica-costa-retrato.webp",
+        "telephone": "+55-21-97808-2882",
+        "email": "psiporjessica@gmail.com",
+        "worksFor": { "@id": "https://jessicacostapsi.com/#business" },
         "sameAs": [
+          "https://www.instagram.com/psicologa.jessicacosta/",
           "https://www.tiktok.com/@jessicacostapsi",
           "https://www.linkedin.com/in/jessicacostapsi"
         ],
@@ -55,18 +60,28 @@
           "TDAH",
           "Neurodivergências",
           "Desenvolvimento Infantil",
-          "Orientação Parental"
+          "Orientação Parental",
+          "Avaliação Neuropsicológica Infantil",
+          "Psicoterapia Infantil",
+          "Habilidades Sociais"
+        ],
+        "alumniOf": [
+          { "@type": "EducationalOrganization", "name": "PUC Goiás" }
         ]
       },
       {
-        "@type": "MedicalBusiness",
+        "@type": ["MedicalBusiness", "Psychologist", "LocalBusiness"],
         "@id": "https://jessicacostapsi.com/#business",
-        "name": "Jessica Costa PSI",
-        "description": "Atendimento psicológico infantojuvenil com base em TCC e ABA.",
+        "name": "Jessica Costa Psi - Psicóloga Infantojuvenil",
+        "alternateName": "Jessica Costa PSI",
+        "description": "Consultório de psicologia infantojuvenil no Recreio dos Bandeirantes (Vertice Mall). Atendimento para crianças e adolescentes com TEA, TDAH e dificuldades emocionais com base em TCC e ABA.",
         "url": "https://jessicacostapsi.com/",
         "telephone": "+55-21-97808-2882",
         "email": "psiporjessica@gmail.com",
-        "image": "https://jessicacostapsi.com/img/og-image.png",
+        "image": [
+          "https://jessicacostapsi.com/img/jessica-costa-retrato.webp",
+          "https://jessicacostapsi.com/img/consultorio-vertice-mall.webp"
+        ],
         "priceRange": "$$",
         "medicalSpecialty": "Psychiatric",
         "address": {
@@ -74,14 +89,79 @@
           "streetAddress": "Av. Miguel Antônio Fernandes, 1333 — Vertice Mall",
           "addressLocality": "Recreio dos Bandeirantes",
           "addressRegion": "RJ",
+          "postalCode": "22790-671",
           "addressCountry": "BR"
         },
         "areaServed": [
+          { "@type": "Place", "name": "Recreio dos Bandeirantes, Rio de Janeiro" },
+          { "@type": "Place", "name": "Barra da Tijuca, Rio de Janeiro" },
+          { "@type": "Place", "name": "Vargem Grande, Rio de Janeiro" },
+          { "@type": "Place", "name": "Vargem Pequena, Rio de Janeiro" },
+          { "@type": "Place", "name": "Pontal, Rio de Janeiro" },
+          { "@type": "Place", "name": "Jacarepaguá, Rio de Janeiro" },
           { "@type": "City", "name": "Rio de Janeiro" },
           { "@type": "City", "name": "São Paulo" }
         ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "13:00"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços de Psicologia Infantojuvenil",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalTherapy",
+                "name": "Psicoterapia Infantil (TCC)",
+                "description": "Sessões de Terapia Cognitivo-Comportamental para crianças com base em evidências.",
+                "relevantSpecialty": "Psychiatric"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalTherapy",
+                "name": "Intervenção Comportamental Aplicada (ABA)",
+                "description": "Acompanhamento ABA para crianças com TEA, focado em desenvolvimento de habilidades sociais, comunicação e autonomia.",
+                "relevantSpecialty": "Psychiatric"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalTherapy",
+                "name": "Acompanhamento de TDAH Infantil",
+                "description": "Avaliação e intervenção para crianças e adolescentes com Transtorno do Déficit de Atenção e Hiperatividade.",
+                "relevantSpecialty": "Psychiatric"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "MedicalTherapy",
+                "name": "Orientação Parental",
+                "description": "Suporte para pais e cuidadores no manejo de comportamentos, estabelecimento de rotinas e fortalecimento de vínculos.",
+                "relevantSpecialty": "Psychiatric"
+              }
+            }
+          ]
+        },
         "founder": { "@id": "https://jessicacostapsi.com/#person" },
+        "employee": { "@id": "https://jessicacostapsi.com/#person" },
         "sameAs": [
+          "https://www.instagram.com/psicologa.jessicacosta/",
           "https://www.tiktok.com/@jessicacostapsi",
           "https://www.linkedin.com/in/jessicacostapsi"
         ]
@@ -93,6 +173,68 @@
         "name": "Jessica Costa PSI",
         "inLanguage": "pt-BR",
         "publisher": { "@id": "https://jessicacostapsi.com/#person" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://jessicacostapsi.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A Jessica atende crianças de qual idade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Atendimento de crianças e adolescentes, geralmente a partir de 2 anos até 18 anos, com foco em desenvolvimento infantil, neurodivergências e regulação emocional."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais especialidades a Jessica trabalha?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Terapia Cognitivo-Comportamental (TCC) e Análise do Comportamento Aplicada (ABA), com foco em TEA (Transtorno do Espectro Autista), TDAH, ansiedade infantil, dificuldades de comportamento e orientação parental."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Onde fica o consultório?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O consultório fica no Vertice Mall, Av. Miguel Antônio Fernandes, 1333, Recreio dos Bandeirantes, Rio de Janeiro - RJ. Localização estratégica que atende também Barra da Tijuca, Vargem Grande, Vargem Pequena, Pontal e Jacarepaguá."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Atende online também?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Atendimento online disponível para famílias fora do Rio de Janeiro, incluindo São Paulo, com a mesma metodologia baseada em evidências."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a primeira consulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A primeira consulta é uma conversa de acolhimento com os pais ou responsáveis para entender as demandas, histórico do desenvolvimento da criança e definir um plano terapêutico individualizado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "É necessário diagnóstico prévio de TEA/TDAH para iniciar atendimento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O atendimento pode começar com investigação clínica e avaliação. Se já houver diagnóstico prévio, é integrado ao planejamento terapêutico."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como agendar uma consulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O contato é direto pelo WhatsApp +55 (21) 97808-2882. Resposta rápida com horários disponíveis e orientações sobre primeira sessão."
+            }
+          }
+        ]
       }
     ]
   }
@@ -152,7 +294,17 @@
     </div>
   </section>
 
-  <!-- ========== ESPECIALIDADES ========== -->
+    <!-- BAIRROS ATENDIDOS — geo CTA -->
+  <section style="padding:40px 0; background:#fefcf7; text-align:center;">
+    <div class="container">
+      <p style="font-size:1rem; color:#666; margin-bottom:8px;">📍 Atendimento presencial no Vertice Mall</p>
+      <h2 style="font-size:1.5rem; margin:0 0 12px;">Psicóloga Infantojuvenil no Recreio dos Bandeirantes</h2>
+      <p style="font-size:0.95rem; max-width:700px; margin:0 auto 16px; color:#555;">Atende Recreio, Barra da Tijuca, Vargem Grande, Vargem Pequena, Pontal e Jacarepaguá. Também atendimento online para fora do RJ.</p>
+      <a href="psicologa-infantojuvenil-recreio.html" class="btn btn-outline btn-sm">Ver detalhes do consultório →</a>
+    </div>
+  </section>
+
+<!-- ========== ESPECIALIDADES ========== -->
   <section class="especialidades" id="especialidades">
     <div class="container">
       <h2>Áreas de Atuação</h2>
