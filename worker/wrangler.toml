@@ -1,0 +1,77 @@
+#
+# Worker que assume o roteamento da zona jessicacostapsi.com.
+#
+# Estratégia: este Worker fica na frente. Para rotas dinâmicas do sistema de
+# cursos (/cursos*, /aluno*, /cadastro, /login, /senha/*, /certificado/*,
+# /api/*), o Worker renderiza HTML / responde JSON. Para todo o resto, faz
+# passthrough para o site estático atual (Cloudflare Pages) via binding ASSETS,
+# aplicando HTMLRewriter para injetar o link "Cursos" na navegação.
+#
+# Antes do primeiro deploy, Anderson precisa:
+#   1. Criar D1: wrangler d1 create jessicacostapsi-cursos
+#      → copiar database_id para o bloco [[d1_databases]] abaixo.
+#   2. Criar KV (tokens de reset de senha):
+#        wrangler kv namespace create JESSICA_KV
+#      → copiar id para o bloco [[kv_namespaces]] abaixo.
+#   3. Configurar secrets (todos via `wrangler secret put <NOME>`):
+#        - SESSION_COOKIE_SECRET     # 32+ bytes aleatórios (openssl rand -hex 32)
+#        - OTIMIZA_X_JESSICA_SECRET  # combinado com Otimiza, idem 32 bytes
+#        - CF_STREAM_ACCOUNT_ID      # account id Cloudflare onde está Stream
+#        - CF_STREAM_SIGNING_KEY_ID  # key id (pk_*) gerado em Stream → Settings
+#        - CF_STREAM_SIGNING_KEY_JWK # JWK private key (RSASHA256) como JSON
+#        - CF_STREAM_SUBDOMAIN       # "customer-<code>.cloudflarestream.com"
+#                                    # (obrigatório: videodelivery.net é deprecated)
+#   4. Confirmar/escolher route. O bloco [[routes]] cobre jessicacostapsi.com/*;
+#      DNS deve apontar para o Worker (CNAME proxied @ + www).
+#
+
+name = "jessicacostapsi-worker"
+main = "src/index.js"
+compatibility_date = "2026-05-16"
+compatibility_flags = ["nodejs_compat"]
+
+# Servir o site estático (HTML/CSS/JS atuais) como ASSETS.
+# A pasta raiz do site (um nível acima desta) é o diretório de assets.
+# Worker fica responsável pelo roteamento; chama env.ASSETS.fetch(req) para passthrough.
+[assets]
+directory = "../"
+binding = "ASSETS"
+not_found_handling = "404-page"
+# Assets têm precedência baixa: o handler do Worker decide quando delegar.
+run_worker_first = true
+
+# Domínio: assume controle da zona jessicacostapsi.com.
+# Anderson deve confirmar que o Cloudflare Pages atual (projeto `jessicacostapsi`)
+# pode ser desconectado do custom domain depois que o Worker assumir, OU manter
+# Pages só como fonte do binding [assets] (modo recomendado: o que está aqui).
+[[routes]]
+pattern = "jessicacostapsi.com/*"
+zone_name = "jessicacostapsi.com"
+
+[[routes]]
+pattern = "www.jessicacostapsi.com/*"
+zone_name = "jessicacostapsi.com"
+
+# Banco de dados (Anderson preenche database_id após criar)
+[[d1_databases]]
+binding = "DB"
+database_name = "jessicacostapsi-cursos"
+database_id = "REPLACE_AFTER_CREATING_D1"
+
+# KV para tokens curtos (reset de senha, etc.) com TTL nativo
+[[kv_namespaces]]
+binding = "KV"
+id = "REPLACE_AFTER_CREATING_KV"
+
+# Vars não-sensíveis. Secrets de verdade via `wrangler secret put`.
+[vars]
+SITE_ORIGIN = "https://jessicacostapsi.com"
+OTIMIZA_CHECKOUT_BASE = "https://otimizapro.com/checkout/jessica"
+CRP_PROFISSIONAL = "05/56789"
+NOME_PROFISSIONAL = "Jessica Costa"
+SENDER_EMAIL = "contato@jessicacostapsi.com"
+ENV = "production"
+
+# Logs estruturados ativados para facilitar debug de webhook
+[observability]
+enabled = true

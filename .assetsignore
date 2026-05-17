@@ -1,13 +1,19 @@
 # Arquivos da raiz do repo que NÃO devem virar Workers Assets
 # (servidos via env.ASSETS pelo Worker em worker/).
 # Sintaxe: gitignore-like.
+#
+# IMPORTANTE: este arquivo é a 1ª linha de defesa contra exposição de código
+# fonte do worker, segredos em .claude/, migrations SQL, etc. O index.js
+# também tem early-return para paths sensíveis (defense in depth).
 .git/
 .github/
 .claude/
 .wrangler/
+.dev.vars
 node_modules/
 worker/
 scripts/
+migrations/
 .editorconfig
 .prettierrc
 .prettierignore
@@ -17,3 +23,5 @@ README.md
 CLAUDE.md
 metodologia.md
 *.log
+_headers
+_redirects
