@@ -116,12 +116,20 @@
       // Payload no formato do CRM Otimiza
       var leadType = form.dataset.leadType || motivo || 'primeira-consulta';
       var formSource = form.dataset.leadSource || 'jessica-site';
+      // Mapa de tipos para texto legivel (vai pra company — CRM rejeita employees > 10c)
+      var typeLabel = {
+        'primeira-consulta': 'Primeira Consulta',
+        'avaliacao-neuropsicologica': 'Avaliação Neuropsicológica',
+        'duvida': 'Dúvida / Orientação',
+        'outro': 'Outro',
+      };
+      var companyText = 'Jessica Costa Psi · ' + (typeLabel[leadType] || leadType);
       var payload = {
         name: name,
         email: email || (phoneDigits + '@jessica.lead'),
-        company: 'Paciente Particular', // CRM exige company; fixo p/ B2C
+        company: companyText, // discriminador legivel no CRM (em vez de "Paciente Particular" fixo)
         phone: phoneDigits,
-        employees: motivo || leadType, // reaproveita campo existente do CRM
+        // employees: campo do CRM aceita apenas valores curtos (1-10, 11-50, etc) — omitido em B2C
         formSource: formSource,
         formPage: window.location.origin + window.location.pathname,
         visitorId: getVisitorId(),
