@@ -44,6 +44,10 @@ run_worker_first = true
 # Anderson deve confirmar que o Cloudflare Pages atual (projeto `jessicacostapsi`)
 # pode ser desconectado do custom domain depois que o Worker assumir, OU manter
 # Pages só como fonte do binding [assets] (modo recomendado: o que está aqui).
+# Routes ativadas. O deploy assume jessicacostapsi.com/* SOMENTE se o
+# custom domain do Pages atual tiver sido removido antes (Dash CF →
+# Pages → jessicacostapsi → Custom domains). Sem essa remoção, há
+# precedência de domínio e o site pode ficar inconsistente.
 [[routes]]
 pattern = "jessicacostapsi.com/*"
 zone_name = "jessicacostapsi.com"
