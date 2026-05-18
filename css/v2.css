@@ -10,9 +10,10 @@
   --honey-100: #FEF3C7;
   --honey-300: #FCD34D;
   --honey-500: #F59E0B;
-  --honey-600: #D97706;
-  --honey-700: #B45309;
-  --honey-900: #78350F;
+  /* Amarelo abelha (yellow-600/700/900) — NÃO é terracota. Mantido em tom yellow puro. */
+  --honey-600: #CA8A04;
+  --honey-700: #A16207;
+  --honey-900: #713F12;
 
   /* 🦈 Oceano / Tubarão (técnica, confiança) */
   --ocean-50:  #F0F9FF;
@@ -50,7 +51,7 @@
   --shadow-md: 0 4px 12px rgba(15,23,42,0.08), 0 2px 4px rgba(15,23,42,0.04);
   --shadow-lg: 0 12px 32px rgba(15,23,42,0.10), 0 4px 12px rgba(15,23,42,0.06);
   --shadow-xl: 0 24px 64px rgba(15,23,42,0.14), 0 8px 24px rgba(15,23,42,0.08);
-  --shadow-honey: 0 12px 32px rgba(217, 119, 6, 0.20);
+  --shadow-honey: 0 12px 32px rgba(202, 138, 4, 0.20);
   --shadow-ocean: 0 12px 32px rgba(3, 105, 161, 0.20);
   --shadow-mint: 0 12px 32px rgba(16, 185, 129, 0.25);
 
@@ -437,7 +438,7 @@ a:hover { color: var(--ocean-900); }
 
 .btn-honey:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(217, 119, 6, 0.32);
+  box-shadow: 0 16px 40px rgba(202, 138, 4, 0.32);
   color: white;
 }
 

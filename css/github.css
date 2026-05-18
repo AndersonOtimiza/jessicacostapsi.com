@@ -28,9 +28,9 @@
   --gh-border-muted:      #d1d9e0b3;
   --gh-border-subtle:     #1f23280f;
 
-  /* Accent (honey / abelha) — marca Jessica Costa Psi */
-  --gh-accent-fg:         #B45309;
-  --gh-accent-emphasis:   #D97706;
+  /* Accent (honey / abelha) — amarelo abelha (yellow-700/600), NÃO terracota */
+  --gh-accent-fg:         #A16207;
+  --gh-accent-emphasis:   #CA8A04;
   --gh-accent-muted:      #FCD34D55;
   --gh-accent-subtle:     #FEF3C7;
 
@@ -114,11 +114,11 @@
   --gh-border-muted:      #3d444db3;
   --gh-border-subtle:     #ffffff0f;
 
-  /* Accent (honey / abelha) — marca Jessica Costa Psi */
+  /* Accent (honey / abelha) — amarelo abelha em dark, alinhado ao light yellow */
   --gh-accent-fg:         #FBBF24;
   --gh-accent-emphasis:   #F59E0B;
-  --gh-accent-muted:      #B4530944;
-  --gh-accent-subtle:     #78350F;
+  --gh-accent-muted:      #CA8A0444;
+  --gh-accent-subtle:     #713F12;
 
   /* Success (green) */
   --gh-success-fg:        #3fb950;
