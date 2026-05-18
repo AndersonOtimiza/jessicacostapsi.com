@@ -27,29 +27,13 @@
     applyTheme(next);
   }
   function init() {
-    // Garante consistencia mesmo se o inline script tiver falhado
+    // Default light: ignora prefers-color-scheme do SO; respeita apenas escolha persistida.
     var current = document.documentElement.getAttribute('data-theme');
-    if (!current) {
-      var stored = getStoredTheme();
-      current = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      applyTheme(current);
-    } else {
-      applyTheme(current);
-    }
+    if (!current) current = getStoredTheme() || 'light';
+    applyTheme(current);
     document.querySelectorAll('.theme-toggle').forEach(function (btn) {
       btn.addEventListener('click', toggleTheme);
     });
-    // Sincroniza com mudancas do sistema quando nao ha preferencia salva
-    if (window.matchMedia) {
-      var mq = window.matchMedia('(prefers-color-scheme: dark)');
-      var listener = function (e) {
-        if (!getStoredTheme()) {
-          applyTheme(e.matches ? 'dark' : 'light');
-        }
-      };
-      if (mq.addEventListener) mq.addEventListener('change', listener);
-      else if (mq.addListener) mq.addListener(listener);
-    }
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
