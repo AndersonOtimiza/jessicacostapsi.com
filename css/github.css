@@ -2408,3 +2408,29 @@ p .icon-inline {
   color: var(--gh-danger-fg);
   border: 1px solid var(--gh-danger-emphasis);
 }
+
+/* ================================================================
+   Responsividade — botões longos em mobile pequeno (<480px)
+   --------------------------------------------------------------
+   Audit 2026-05-18: botões CTA com `white-space: nowrap` (herdado
+   do reset GitHub-like) estouravam o viewport em telas <400px com
+   textos longos tipo "Ler o manifesto completo da metodologia →".
+   Solução: permitir wrap só em mobile, manter altura auto para
+   acomodar 2 linhas se necessário, sem alterar desktop/tablet.
+   ================================================================ */
+@media (max-width: 480px) {
+  .btn,
+  .btn-v2,
+  .btn-glass,
+  .btn-mint,
+  .btn-primary,
+  .btn-outline,
+  button.lcta-btn,
+  .lcta-btn {
+    white-space: normal;
+    height: auto;
+    min-height: 32px;
+    text-align: center;
+    line-height: 1.3;
+  }
+}
