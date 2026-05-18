@@ -2216,6 +2216,26 @@ p .icon-inline {
   color: var(--gh-accent-fg) !important;
 }
 
+/* Crédito discreto de autoria (agency credit) — Otimiza.pro */
+.footer-mega-credit {
+  margin: 4px 0 0;
+  font-size: 0.72rem;
+  color: var(--gh-fg-subtle);
+  letter-spacing: 0.01em;
+  opacity: 0.85;
+}
+.footer-mega-credit a {
+  color: var(--gh-fg-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--gh-border-default);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.footer-mega-credit a:hover {
+  color: var(--gh-accent-fg);
+  text-decoration-color: currentColor;
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
   .footer-mega-top {
