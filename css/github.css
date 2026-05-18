@@ -805,7 +805,7 @@ button.lcta-btn,
   filter: drop-shadow(0 4px 8px rgba(180,83,9,0.18));
   /* Bobbing vertical rápido (sobe e desce) — fica isolado do traslado no wrapper.
      Delays individuais nas .bee-N abaixo dessincronizam o voo das 5 abelhas. */
-  animation: bee-bob 2.2s ease-in-out infinite;
+  animation: bee-bob 3.2s ease-in-out infinite;
 }
 /* Mobile: reduz quantidade pra nao poluir o hero estreito */
 @media (max-width: 640px) {
@@ -818,38 +818,38 @@ button.lcta-btn,
 /* L → R (voam para a direita, orientacao nativa do SVG) */
 .bees-canvas .bee-wrap-1 {
   top: 14%;
-  animation: bee-fly-ltr-1 24s linear infinite;
+  animation: bee-fly-ltr-1 40s linear infinite;
 }
-.bees-canvas .bee-1 { width: 48px; height: 48px; animation-duration: 2.0s; animation-delay: -0.2s; }
+.bees-canvas .bee-1 { width: 48px; height: 48px; animation-duration: 3.0s; animation-delay: -0.2s; }
 
 .bees-canvas .bee-wrap-3 {
   top: 38%;
-  animation: bee-fly-ltr-2 30s linear infinite;
+  animation: bee-fly-ltr-2 50s linear infinite;
   animation-delay: -10s;
 }
-.bees-canvas .bee-3 { width: 52px; height: 52px; animation-duration: 2.5s; animation-delay: -0.8s; }
+.bees-canvas .bee-3 { width: 52px; height: 52px; animation-duration: 3.5s; animation-delay: -0.8s; }
 
 .bees-canvas .bee-wrap-5 {
   top: 62%;
-  animation: bee-fly-ltr-3 20s linear infinite;
+  animation: bee-fly-ltr-3 34s linear infinite;
   animation-delay: -6s;
 }
-.bees-canvas .bee-5 { width: 40px; height: 40px; animation-duration: 2.1s; animation-delay: -1.1s; }
+.bees-canvas .bee-5 { width: 40px; height: 40px; animation-duration: 3.1s; animation-delay: -1.1s; }
 
 /* R → L (espelhadas: scaleX(-1) p/ "olhar" pra direcao do voo) */
 .bees-canvas .bee-wrap-2 {
   top: 22%;
-  animation: bee-fly-rtl-1 28s linear infinite;
+  animation: bee-fly-rtl-1 48s linear infinite;
   animation-delay: -4s;
 }
-.bees-canvas .bee-2 { width: 36px; height: 36px; animation-duration: 2.3s; animation-delay: -0.5s; }
+.bees-canvas .bee-2 { width: 36px; height: 36px; animation-duration: 3.3s; animation-delay: -0.5s; }
 
 .bees-canvas .bee-wrap-4 {
   top: 50%;
-  animation: bee-fly-rtl-2 22s linear infinite;
+  animation: bee-fly-rtl-2 38s linear infinite;
   animation-delay: -14s;
 }
-.bees-canvas .bee-4 { width: 32px; height: 32px; animation-duration: 1.9s; animation-delay: -0.3s; }
+.bees-canvas .bee-4 { width: 32px; height: 32px; animation-duration: 2.8s; animation-delay: -0.3s; }
 
 /* Bobbing vertical: zigue-zague bipolar de ±15px (amplitude total 30px) — substitui o bob plano antigo de -10px só pra cima.
    Quatro paradas no ciclo dão sensação de oscilação real (sobe/desce/sobe), nao só "respira". */
