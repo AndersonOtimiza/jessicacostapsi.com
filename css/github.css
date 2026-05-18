@@ -806,11 +806,6 @@ button.lcta-btn,
   .bees-canvas .bee-2 { width: 30px; height: 30px; }
   .bees-canvas .bee-5 { width: 32px; height: 32px; }
 }
-.bees-canvas .bee .wing {
-  transform-origin: 28px 22px;
-  animation: bee-wing 0.12s ease-in-out infinite alternate;
-}
-
 /* L → R (voam para a direita, orientacao nativa do SVG) */
 .bees-canvas .bee-1 {
   top: 14%;
@@ -842,11 +837,6 @@ button.lcta-btn,
   width: 32px; height: 32px;
   animation: bee-fly-rtl-2 22s linear infinite;
   animation-delay: -14s;
-}
-
-@keyframes bee-wing {
-  from { transform: scaleY(1); }
-  to   { transform: scaleY(0.35); }
 }
 
 /* SVG nativo da abelha tem olho em cx=24 (esquerda do centro 28) — face LEFT.
@@ -891,8 +881,7 @@ button.lcta-btn,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bees-canvas .bee,
-  .bees-canvas .bee .wing { animation: none !important; }
+  .bees-canvas .bee { animation: none !important; }
   .bees-canvas .bee-1 { transform: translate(12vw, 0) scaleX(-1); }
   .bees-canvas .bee-2 { transform: translate(70vw, 0); }
   .bees-canvas .bee-3 { transform: translate(40vw, 0) scaleX(-1); }
