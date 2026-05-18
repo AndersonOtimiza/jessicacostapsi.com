@@ -774,6 +774,11 @@ button.lcta-btn,
 
 /* ============================================================
    Abelhinhas voando — banner principal (.bees-canvas)
+   Atravessam o hero horizontalmente em loop infinito.
+   - bee-1, bee-3, bee-5 voam da esquerda → direita
+   - bee-2, bee-4 voam da direita → esquerda (espelhadas via scaleX(-1))
+   Pequena oscilacao vertical simula voo natural.
+   Respeita prefers-reduced-motion (paradas e dispersas).
    ============================================================ */
 .bees-canvas {
   position: absolute;
@@ -785,69 +790,110 @@ button.lcta-btn,
 .hero-doc > .container { position: relative; z-index: 1; }
 .bees-canvas .bee {
   position: absolute;
-  top: 0; left: 0;
+  left: 0;
   width: 44px;
   height: 44px;
+  opacity: 0.92;
+  scale: 1 1; /* anula scale: -1 1 herdado da .bee legada em style.css; espelhamento R->L vai no transform */
   will-change: transform;
   filter: drop-shadow(0 4px 8px rgba(180,83,9,0.18));
+}
+/* Mobile: reduz quantidade pra nao poluir o hero estreito */
+@media (max-width: 640px) {
+  .bees-canvas .bee-3,
+  .bees-canvas .bee-4 { display: none; }
+  .bees-canvas .bee-1 { width: 38px; height: 38px; }
+  .bees-canvas .bee-2 { width: 30px; height: 30px; }
+  .bees-canvas .bee-5 { width: 32px; height: 32px; }
 }
 .bees-canvas .bee .wing {
   transform-origin: 28px 22px;
   animation: bee-wing 0.12s ease-in-out infinite alternate;
 }
-.bees-canvas .bee-1 { width: 48px; height: 48px; animation: bee-fly-1 22s ease-in-out infinite; }
-.bees-canvas .bee-2 { width: 36px; height: 36px; animation: bee-fly-2 18s ease-in-out infinite; animation-delay: -3s; }
-.bees-canvas .bee-3 { width: 52px; height: 52px; animation: bee-fly-3 27s ease-in-out infinite; animation-delay: -7s; }
-.bees-canvas .bee-4 { width: 32px; height: 32px; animation: bee-fly-4 20s ease-in-out infinite; animation-delay: -11s; }
-.bees-canvas .bee-5 { width: 40px; height: 40px; animation: bee-fly-5 25s ease-in-out infinite; animation-delay: -5s; }
+
+/* L → R (voam para a direita, orientacao nativa do SVG) */
+.bees-canvas .bee-1 {
+  top: 14%;
+  width: 48px; height: 48px;
+  animation: bee-fly-ltr-1 24s linear infinite;
+}
+.bees-canvas .bee-3 {
+  top: 38%;
+  width: 52px; height: 52px;
+  animation: bee-fly-ltr-2 30s linear infinite;
+  animation-delay: -10s;
+}
+.bees-canvas .bee-5 {
+  top: 62%;
+  width: 40px; height: 40px;
+  animation: bee-fly-ltr-3 20s linear infinite;
+  animation-delay: -6s;
+}
+
+/* R → L (espelhadas: scaleX(-1) p/ "olhar" pra direcao do voo) */
+.bees-canvas .bee-2 {
+  top: 22%;
+  width: 36px; height: 36px;
+  animation: bee-fly-rtl-1 28s linear infinite;
+  animation-delay: -4s;
+}
+.bees-canvas .bee-4 {
+  top: 50%;
+  width: 32px; height: 32px;
+  animation: bee-fly-rtl-2 22s linear infinite;
+  animation-delay: -14s;
+}
 
 @keyframes bee-wing {
   from { transform: scaleY(1); }
   to   { transform: scaleY(0.35); }
 }
-@keyframes bee-fly-1 {
-  0%   { transform: translate(8vw, 18vh) rotate(8deg) scale(1); }
-  20%  { transform: translate(28vw, 8vh) rotate(-4deg) scale(1.05); }
-  40%  { transform: translate(48vw, 22vh) rotate(10deg) scale(0.95); }
-  60%  { transform: translate(62vw, 12vh) rotate(-2deg) scale(1); }
-  80%  { transform: translate(38vw, 30vh) rotate(6deg) scale(1.08); }
-  100% { transform: translate(8vw, 18vh) rotate(8deg) scale(1); }
+
+/* L → R: -10vw → 110vw, com oscilacao vertical sutil (sin wave) */
+@keyframes bee-fly-ltr-1 {
+  0%   { transform: translate(-10vw, 0) rotate(2deg); }
+  25%  { transform: translate(20vw, -14px) rotate(-3deg); }
+  50%  { transform: translate(50vw, 8px) rotate(4deg); }
+  75%  { transform: translate(80vw, -10px) rotate(-2deg); }
+  100% { transform: translate(110vw, 0) rotate(2deg); }
 }
-@keyframes bee-fly-2 {
-  0%   { transform: translate(70vw, 14vh) rotate(-10deg) scale(1); }
-  25%  { transform: translate(85vw, 26vh) rotate(4deg) scale(0.92); }
-  50%  { transform: translate(72vw, 42vh) rotate(-6deg) scale(1.1); }
-  75%  { transform: translate(58vw, 30vh) rotate(8deg) scale(1); }
-  100% { transform: translate(70vw, 14vh) rotate(-10deg) scale(1); }
+@keyframes bee-fly-ltr-2 {
+  0%   { transform: translate(-10vw, 0) rotate(-2deg); }
+  30%  { transform: translate(25vw, 12px) rotate(3deg); }
+  60%  { transform: translate(60vw, -10px) rotate(-4deg); }
+  100% { transform: translate(110vw, 6px) rotate(1deg); }
 }
-@keyframes bee-fly-3 {
-  0%   { transform: translate(15vw, 55vh) rotate(4deg) scale(1); }
-  20%  { transform: translate(32vw, 68vh) rotate(-8deg) scale(0.96); }
-  45%  { transform: translate(50vw, 50vh) rotate(12deg) scale(1.05); }
-  70%  { transform: translate(40vw, 38vh) rotate(-4deg) scale(1.02); }
-  100% { transform: translate(15vw, 55vh) rotate(4deg) scale(1); }
+@keyframes bee-fly-ltr-3 {
+  0%   { transform: translate(-10vw, 0) rotate(3deg); }
+  20%  { transform: translate(18vw, -8px) rotate(-2deg); }
+  55%  { transform: translate(55vw, 14px) rotate(5deg); }
+  85%  { transform: translate(88vw, -6px) rotate(-3deg); }
+  100% { transform: translate(110vw, 0) rotate(3deg); }
 }
-@keyframes bee-fly-4 {
-  0%   { transform: translate(80vw, 55vh) rotate(-6deg) scale(1); }
-  30%  { transform: translate(88vw, 70vh) rotate(8deg) scale(1.05); }
-  60%  { transform: translate(72vw, 62vh) rotate(-10deg) scale(0.95); }
-  100% { transform: translate(80vw, 55vh) rotate(-6deg) scale(1); }
+
+/* R → L: 110vw → -10vw, espelhadas no eixo X */
+@keyframes bee-fly-rtl-1 {
+  0%   { transform: translate(110vw, 0) scaleX(-1) rotate(2deg); }
+  25%  { transform: translate(80vw, -12px) scaleX(-1) rotate(-3deg); }
+  55%  { transform: translate(45vw, 10px) scaleX(-1) rotate(4deg); }
+  80%  { transform: translate(20vw, -8px) scaleX(-1) rotate(-2deg); }
+  100% { transform: translate(-10vw, 0) scaleX(-1) rotate(2deg); }
 }
-@keyframes bee-fly-5 {
-  0%   { transform: translate(42vw, 6vh) rotate(2deg) scale(1); }
-  25%  { transform: translate(58vw, 18vh) rotate(-6deg) scale(1.04); }
-  50%  { transform: translate(50vw, 36vh) rotate(8deg) scale(0.98); }
-  75%  { transform: translate(30vw, 48vh) rotate(-4deg) scale(1.06); }
-  100% { transform: translate(42vw, 6vh) rotate(2deg) scale(1); }
+@keyframes bee-fly-rtl-2 {
+  0%   { transform: translate(110vw, 0) scaleX(-1) rotate(-3deg); }
+  30%  { transform: translate(75vw, 10px) scaleX(-1) rotate(2deg); }
+  65%  { transform: translate(40vw, -12px) scaleX(-1) rotate(-4deg); }
+  100% { transform: translate(-10vw, 4px) scaleX(-1) rotate(-1deg); }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .bees-canvas .bee,
   .bees-canvas .bee .wing { animation: none !important; }
-  .bees-canvas .bee-1 { transform: translate(8vw, 18vh) rotate(8deg); }
-  .bees-canvas .bee-2 { transform: translate(70vw, 14vh) rotate(-10deg); }
-  .bees-canvas .bee-3 { transform: translate(15vw, 55vh) rotate(4deg); }
-  .bees-canvas .bee-4 { transform: translate(80vw, 55vh) rotate(-6deg); }
-  .bees-canvas .bee-5 { transform: translate(42vw, 6vh) rotate(2deg); }
+  .bees-canvas .bee-1 { transform: translate(12vw, 0); }
+  .bees-canvas .bee-2 { transform: translate(70vw, 0) scaleX(-1); }
+  .bees-canvas .bee-3 { transform: translate(40vw, 0); }
+  .bees-canvas .bee-4 { transform: translate(82vw, 0) scaleX(-1); }
+  .bees-canvas .bee-5 { transform: translate(28vw, 0); }
 }
 
 /* ============================================================
