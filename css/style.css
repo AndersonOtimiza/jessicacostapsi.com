@@ -668,16 +668,6 @@ h4 { font-size: 1.1rem; }
   color: var(--text);
 }
 
-.banner-breve {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  color: var(--white);
-  padding: 20px 32px;
-  border-radius: var(--radius);
-  text-align: center;
-  font-weight: 600;
-  margin: 24px 0;
-}
-
 /* === Formulário === */
 .form-contato {
   background: var(--card-bg);
