@@ -11,22 +11,22 @@
 
 :root,
 :root[data-theme="light"] {
-  /* Canvas */
-  --gh-canvas-default:    #ffffff;
-  --gh-canvas-overlay:    #ffffff;
-  --gh-canvas-inset:      #f6f8fa;
-  --gh-canvas-subtle:     #f6f8fa;
+  /* Canvas — paleta honey/creme (marca abelha) */
+  --gh-canvas-default:    #FFFBEB;
+  --gh-canvas-overlay:    #FFFBEB;
+  --gh-canvas-inset:      #FDE68A;
+  --gh-canvas-subtle:     #FEF3C7;
 
-  /* Foreground */
+  /* Foreground — preto-cinza p/ texto principal + tons honey p/ secundario */
   --gh-fg-default:        #1f2328;
-  --gh-fg-muted:          #59636e;
-  --gh-fg-subtle:         #6e7781;
+  --gh-fg-muted:          #5C4A1F;
+  --gh-fg-subtle:         #8C7838;
   --gh-fg-on-emphasis:    #ffffff;
 
-  /* Border */
-  --gh-border-default:    #d1d9e0;
-  --gh-border-muted:      #d1d9e0b3;
-  --gh-border-subtle:     #1f23280f;
+  /* Border — bordas douradas sutis (abandona cinza Primer) */
+  --gh-border-default:    #FCD34D;
+  --gh-border-muted:      #FDE68Ab3;
+  --gh-border-subtle:     #B4530920;
 
   /* Accent (honey / abelha) — marca Jessica Costa Psi */
   --gh-accent-fg:         #B45309;
@@ -55,37 +55,37 @@
   --gh-done-fg:           #8250df;
   --gh-done-subtle:       #fbefff;
 
-  /* Neutrals */
-  --gh-neutral-emphasis:  #59636e;
+  /* Neutrals — tons mel acinzentados */
+  --gh-neutral-emphasis:  #5C4A1F;
   --gh-neutral-emphasis-plus: #1f2328;
-  --gh-neutral-muted:     #afb8c133;
-  --gh-neutral-subtle:    #6e77810f;
+  --gh-neutral-muted:     #FCD34D40;
+  --gh-neutral-subtle:    #8C78380f;
 
-  /* Shadows */
-  --gh-shadow-small:      0 1px 0 rgba(31,35,40,0.04);
-  --gh-shadow-medium:     0 3px 6px rgba(140,149,159,0.15);
-  --gh-shadow-large:      0 8px 24px rgba(140,149,159,0.2);
-  --gh-shadow-extra-large:0 12px 48px rgba(140,149,159,0.3);
-  --gh-shadow-inset:      inset 0 1px 0 rgba(208,215,222,0.2);
+  /* Shadows — sombras com matiz mel em vez de cinza neutro */
+  --gh-shadow-small:      0 1px 0 rgba(120, 80, 20, 0.05);
+  --gh-shadow-medium:     0 3px 6px rgba(180, 130, 40, 0.18);
+  --gh-shadow-large:      0 8px 24px rgba(180, 130, 40, 0.22);
+  --gh-shadow-extra-large:0 12px 48px rgba(180, 130, 40, 0.28);
+  --gh-shadow-inset:      inset 0 1px 0 rgba(252, 211, 77, 0.25);
 
-  /* Buttons */
-  --gh-btn-bg:            #f6f8fa;
-  --gh-btn-hover-bg:      #f3f4f6;
-  --gh-btn-active-bg:     #ebecf0;
-  --gh-btn-border:        #d1d9e0;
+  /* Buttons — secundario em creme honey, primario mantem verde */
+  --gh-btn-bg:            #FEF3C7;
+  --gh-btn-hover-bg:      #FDE68A;
+  --gh-btn-active-bg:     #FCD34D;
+  --gh-btn-border:        #FCD34D;
   --gh-btn-text:          #1f2328;
   --gh-btn-primary-bg:    #1f883d;
   --gh-btn-primary-hover: #1a7f37;
   --gh-btn-primary-text:  #ffffff;
 
-  /* Header */
-  --gh-header-bg:         #ffffff;
+  /* Header — creme um pouco mais saturado que canvas, com border honey */
+  --gh-header-bg:         #FEF3C7;
   --gh-header-text:       #1f2328;
-  --gh-header-border:     #d1d9e0;
+  --gh-header-border:     #FCD34D;
 
   /* Code */
-  --gh-code-bg:           rgba(175,184,193,0.2);
-  --gh-code-block-bg:     #f6f8fa;
+  --gh-code-bg:           rgba(180, 83, 9, 0.12);
+  --gh-code-block-bg:     #FEF3C7;
 
   /* Misc */
   --gh-radius:            6px;
@@ -97,22 +97,22 @@
 }
 
 :root[data-theme="dark"] {
-  /* Canvas */
-  --gh-canvas-default:    #0d1117;
-  --gh-canvas-overlay:    #151b23;
-  --gh-canvas-inset:      #010409;
-  --gh-canvas-subtle:     #151b23;
+  /* Canvas — preto-ambar (mood "colmeia a noite") */
+  --gh-canvas-default:    #1C1610;
+  --gh-canvas-overlay:    #2B2114;
+  --gh-canvas-inset:      #0F0B07;
+  --gh-canvas-subtle:     #2B2114;
 
-  /* Foreground */
-  --gh-fg-default:        #f0f6fc;
-  --gh-fg-muted:          #9198a1;
-  --gh-fg-subtle:         #6e7681;
+  /* Foreground — off-white amarelado + tons ambar acinzentado */
+  --gh-fg-default:        #FAF3E0;
+  --gh-fg-muted:          #C9B98A;
+  --gh-fg-subtle:         #8A7A4F;
   --gh-fg-on-emphasis:    #ffffff;
 
-  /* Border */
-  --gh-border-default:    #3d444d;
-  --gh-border-muted:      #3d444db3;
-  --gh-border-subtle:     #ffffff0f;
+  /* Border — marrom-mel escuro */
+  --gh-border-default:    #4A3818;
+  --gh-border-muted:      #4A3818b3;
+  --gh-border-subtle:     #FBBF240f;
 
   /* Accent (honey / abelha) — marca Jessica Costa Psi */
   --gh-accent-fg:         #FBBF24;
@@ -141,37 +141,37 @@
   --gh-done-fg:           #ab7df8;
   --gh-done-subtle:       #ab7df826;
 
-  /* Neutrals */
-  --gh-neutral-emphasis:  #9198a1;
-  --gh-neutral-emphasis-plus: #f0f6fc;
-  --gh-neutral-muted:     #656c7633;
-  --gh-neutral-subtle:    #ffffff0a;
+  /* Neutrals — tons ambar escuro */
+  --gh-neutral-emphasis:  #C9B98A;
+  --gh-neutral-emphasis-plus: #FAF3E0;
+  --gh-neutral-muted:     #4A381833;
+  --gh-neutral-subtle:    #FBBF2410;
 
-  /* Shadows */
+  /* Shadows — preto sem matiz azul (canvas e ambar escuro) */
   --gh-shadow-small:      0 0 transparent;
-  --gh-shadow-medium:     0 3px 6px #010409;
-  --gh-shadow-large:      0 8px 24px #010409;
-  --gh-shadow-extra-large:0 12px 48px #010409;
-  --gh-shadow-inset:      inset 0 1px 0 rgba(255,255,255,0.04);
+  --gh-shadow-medium:     0 3px 6px #0F0B07;
+  --gh-shadow-large:      0 8px 24px #0F0B07;
+  --gh-shadow-extra-large:0 12px 48px #0F0B07;
+  --gh-shadow-inset:      inset 0 1px 0 rgba(251, 191, 36, 0.05);
 
-  /* Buttons */
-  --gh-btn-bg:            #212830;
-  --gh-btn-hover-bg:      #2a313c;
-  --gh-btn-active-bg:     #2f3741;
-  --gh-btn-border:        #3d444d;
-  --gh-btn-text:          #f0f6fc;
+  /* Buttons — secundario em ambar escuro, primario mantem verde */
+  --gh-btn-bg:            #2B2114;
+  --gh-btn-hover-bg:      #3A2D1A;
+  --gh-btn-active-bg:     #4A3818;
+  --gh-btn-border:        #4A3818;
+  --gh-btn-text:          #FAF3E0;
   --gh-btn-primary-bg:    #238636;
   --gh-btn-primary-hover: #2ea043;
   --gh-btn-primary-text:  #ffffff;
 
-  /* Header */
-  --gh-header-bg:         #010409;
-  --gh-header-text:       #f0f6fc;
-  --gh-header-border:     #3d444d;
+  /* Header — afundado, mais escuro que canvas */
+  --gh-header-bg:         #0F0B07;
+  --gh-header-text:       #FAF3E0;
+  --gh-header-border:     #4A3818;
 
   /* Code */
-  --gh-code-bg:           rgba(101,108,118,0.4);
-  --gh-code-block-bg:     #151b23;
+  --gh-code-bg:           rgba(251, 191, 36, 0.15);
+  --gh-code-block-bg:     #2B2114;
 }
 
 /* Respeitar preferência do sistema quando data-theme não estiver setado */
@@ -312,6 +312,7 @@ header.header {
 .header.sticky,
 .header.scrolled {
   background: var(--gh-header-bg);
+  border-bottom-color: var(--gh-accent-emphasis);
   box-shadow: var(--gh-shadow-medium);
 }
 .header > .container {
@@ -546,6 +547,28 @@ button.lcta-btn,
   font-size: 0.9375rem;
 }
 
+/* Botão secundário translúcido ("Conhecer minha metodologia") —
+   garantir leitura sobre canvas honey/creme. */
+.btn-glass {
+  background: rgba(254, 243, 199, 0.72) !important; /* honey-100 a 72% */
+  border: 1px solid #FBBF24 !important;             /* honey-400 mais marcado */
+  color: var(--gh-fg-default) !important;
+}
+.btn-glass:hover {
+  background: rgba(253, 230, 138, 0.95) !important; /* honey-200 quase opaco */
+  border-color: var(--gh-accent-emphasis) !important;
+  color: var(--gh-fg-default) !important;
+}
+:root[data-theme="dark"] .btn-glass {
+  background: rgba(74, 56, 24, 0.6) !important;     /* marrom-mel escuro */
+  border-color: #B45309 !important;                  /* honey-700 */
+  color: var(--gh-fg-default) !important;
+}
+:root[data-theme="dark"] .btn-glass:hover {
+  background: rgba(120, 53, 15, 0.7) !important;
+  border-color: var(--gh-accent-fg) !important;
+}
+
 /* ============================================================
    5. HERO — headline grande + sub + cards (estilo github landing)
    ============================================================ */
@@ -695,11 +718,11 @@ button.lcta-btn,
   object-position: center top;
   border-radius: 12px;
   border: 1px solid var(--gh-border-default);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(180, 83, 9, 0.18);
   background: var(--gh-canvas-subtle);
 }
 [data-theme="dark"] .hero-doc-photo img {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
   border-color: var(--gh-border-default);
 }
 
@@ -769,9 +792,86 @@ button.lcta-btn,
   -webkit-text-fill-color: var(--gh-accent-fg) !important;
 }
 
-/* Esconde criaturas decorativas (tubarão/abelha animados) — visual GitHub é limpo */
+/* Esconde camada antiga; nova .bees-canvas substitui */
 .creatures-canvas { display: none !important; }
-.bee { display: none !important; }
+
+/* ============================================================
+   Abelhinhas voando — banner principal (.bees-canvas)
+   ============================================================ */
+.bees-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero-doc > .container { position: relative; z-index: 1; }
+.bees-canvas .bee {
+  position: absolute;
+  top: 0; left: 0;
+  width: 44px;
+  height: 44px;
+  will-change: transform;
+  filter: drop-shadow(0 4px 8px rgba(180,83,9,0.18));
+}
+.bees-canvas .bee .wing {
+  transform-origin: 28px 22px;
+  animation: bee-wing 0.12s ease-in-out infinite alternate;
+}
+.bees-canvas .bee-1 { width: 48px; height: 48px; animation: bee-fly-1 22s ease-in-out infinite; }
+.bees-canvas .bee-2 { width: 36px; height: 36px; animation: bee-fly-2 18s ease-in-out infinite; animation-delay: -3s; }
+.bees-canvas .bee-3 { width: 52px; height: 52px; animation: bee-fly-3 27s ease-in-out infinite; animation-delay: -7s; }
+.bees-canvas .bee-4 { width: 32px; height: 32px; animation: bee-fly-4 20s ease-in-out infinite; animation-delay: -11s; }
+.bees-canvas .bee-5 { width: 40px; height: 40px; animation: bee-fly-5 25s ease-in-out infinite; animation-delay: -5s; }
+
+@keyframes bee-wing {
+  from { transform: scaleY(1); }
+  to   { transform: scaleY(0.35); }
+}
+@keyframes bee-fly-1 {
+  0%   { transform: translate(8vw, 18vh) rotate(8deg) scale(1); }
+  20%  { transform: translate(28vw, 8vh) rotate(-4deg) scale(1.05); }
+  40%  { transform: translate(48vw, 22vh) rotate(10deg) scale(0.95); }
+  60%  { transform: translate(62vw, 12vh) rotate(-2deg) scale(1); }
+  80%  { transform: translate(38vw, 30vh) rotate(6deg) scale(1.08); }
+  100% { transform: translate(8vw, 18vh) rotate(8deg) scale(1); }
+}
+@keyframes bee-fly-2 {
+  0%   { transform: translate(70vw, 14vh) rotate(-10deg) scale(1); }
+  25%  { transform: translate(85vw, 26vh) rotate(4deg) scale(0.92); }
+  50%  { transform: translate(72vw, 42vh) rotate(-6deg) scale(1.1); }
+  75%  { transform: translate(58vw, 30vh) rotate(8deg) scale(1); }
+  100% { transform: translate(70vw, 14vh) rotate(-10deg) scale(1); }
+}
+@keyframes bee-fly-3 {
+  0%   { transform: translate(15vw, 55vh) rotate(4deg) scale(1); }
+  20%  { transform: translate(32vw, 68vh) rotate(-8deg) scale(0.96); }
+  45%  { transform: translate(50vw, 50vh) rotate(12deg) scale(1.05); }
+  70%  { transform: translate(40vw, 38vh) rotate(-4deg) scale(1.02); }
+  100% { transform: translate(15vw, 55vh) rotate(4deg) scale(1); }
+}
+@keyframes bee-fly-4 {
+  0%   { transform: translate(80vw, 55vh) rotate(-6deg) scale(1); }
+  30%  { transform: translate(88vw, 70vh) rotate(8deg) scale(1.05); }
+  60%  { transform: translate(72vw, 62vh) rotate(-10deg) scale(0.95); }
+  100% { transform: translate(80vw, 55vh) rotate(-6deg) scale(1); }
+}
+@keyframes bee-fly-5 {
+  0%   { transform: translate(42vw, 6vh) rotate(2deg) scale(1); }
+  25%  { transform: translate(58vw, 18vh) rotate(-6deg) scale(1.04); }
+  50%  { transform: translate(50vw, 36vh) rotate(8deg) scale(0.98); }
+  75%  { transform: translate(30vw, 48vh) rotate(-4deg) scale(1.06); }
+  100% { transform: translate(42vw, 6vh) rotate(2deg) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bees-canvas .bee,
+  .bees-canvas .bee .wing { animation: none !important; }
+  .bees-canvas .bee-1 { transform: translate(8vw, 18vh) rotate(8deg); }
+  .bees-canvas .bee-2 { transform: translate(70vw, 14vh) rotate(-10deg); }
+  .bees-canvas .bee-3 { transform: translate(15vw, 55vh) rotate(4deg); }
+  .bees-canvas .bee-4 { transform: translate(80vw, 55vh) rotate(-6deg); }
+  .bees-canvas .bee-5 { transform: translate(42vw, 6vh) rotate(2deg); }
+}
 
 /* ============================================================
    6. FEATURE CARDS — 3 colunas, bordered (estilo GitHub features)
