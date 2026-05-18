@@ -278,13 +278,15 @@
 
   <!-- HERO — headline + foto da Jessica (2 colunas) + CTAs + trust row -->
   <section class="hero-doc" id="inicio">
-    <!-- Camada decorativa: abelhinhas voando -->
+    <!-- Camada decorativa: abelhinhas voando
+         Estrutura em wrapper: .bee-wrap-N faz o traslado horizontal,
+         .bee interno faz o bobbing vertical rápido (evita conflito de transform). -->
     <div class="bees-canvas" aria-hidden="true">
-      <span class="bee bee-1" role="img" aria-label="abelha">🐝</span>
-      <span class="bee bee-2" role="img" aria-label="abelha">🐝</span>
-      <span class="bee bee-3" role="img" aria-label="abelha">🐝</span>
-      <span class="bee bee-4" role="img" aria-label="abelha">🐝</span>
-      <span class="bee bee-5" role="img" aria-label="abelha">🐝</span>
+      <span class="bee-wrap bee-wrap-1"><span class="bee bee-1" role="img" aria-label="abelha">🐝</span></span>
+      <span class="bee-wrap bee-wrap-2"><span class="bee bee-2" role="img" aria-label="abelha">🐝</span></span>
+      <span class="bee-wrap bee-wrap-3"><span class="bee bee-3" role="img" aria-label="abelha">🐝</span></span>
+      <span class="bee-wrap bee-wrap-4"><span class="bee bee-4" role="img" aria-label="abelha">🐝</span></span>
+      <span class="bee-wrap bee-wrap-5"><span class="bee bee-5" role="img" aria-label="abelha">🐝</span></span>
     </div>
 
     <div class="container hero-doc-grid">

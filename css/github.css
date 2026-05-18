@@ -788,55 +788,73 @@ button.lcta-btn,
   z-index: 0;
 }
 .hero-doc > .container { position: relative; z-index: 1; }
-.bees-canvas .bee {
+.bees-canvas .bee-wrap {
   position: absolute;
   left: 0;
+  display: inline-block;
+  will-change: transform;
+}
+.bees-canvas .bee {
+  position: relative;
+  display: inline-block;
   width: 44px;
   height: 44px;
   opacity: 0.92;
-  scale: 1 1; /* anula scale: -1 1 herdado da .bee legada em style.css; espelhamento R->L vai no transform */
+  scale: 1 1; /* anula scale: -1 1 herdado da .bee legada em style.css; espelhamento R->L vai no transform do wrapper */
   will-change: transform;
   filter: drop-shadow(0 4px 8px rgba(180,83,9,0.18));
+  /* Bobbing vertical rápido (sobe e desce) — fica isolado do traslado no wrapper.
+     Delays individuais nas .bee-N abaixo dessincronizam o voo das 5 abelhas. */
+  animation: bee-bob 1.6s ease-in-out infinite;
 }
 /* Mobile: reduz quantidade pra nao poluir o hero estreito */
 @media (max-width: 640px) {
-  .bees-canvas .bee-3,
-  .bees-canvas .bee-4 { display: none; }
+  .bees-canvas .bee-wrap-3,
+  .bees-canvas .bee-wrap-4 { display: none; }
   .bees-canvas .bee-1 { width: 38px; height: 38px; }
   .bees-canvas .bee-2 { width: 30px; height: 30px; }
   .bees-canvas .bee-5 { width: 32px; height: 32px; }
 }
 /* L → R (voam para a direita, orientacao nativa do SVG) */
-.bees-canvas .bee-1 {
+.bees-canvas .bee-wrap-1 {
   top: 14%;
-  width: 48px; height: 48px;
   animation: bee-fly-ltr-1 24s linear infinite;
 }
-.bees-canvas .bee-3 {
+.bees-canvas .bee-1 { width: 48px; height: 48px; animation-duration: 1.4s; animation-delay: -0.2s; }
+
+.bees-canvas .bee-wrap-3 {
   top: 38%;
-  width: 52px; height: 52px;
   animation: bee-fly-ltr-2 30s linear infinite;
   animation-delay: -10s;
 }
-.bees-canvas .bee-5 {
+.bees-canvas .bee-3 { width: 52px; height: 52px; animation-duration: 1.9s; animation-delay: -0.8s; }
+
+.bees-canvas .bee-wrap-5 {
   top: 62%;
-  width: 40px; height: 40px;
   animation: bee-fly-ltr-3 20s linear infinite;
   animation-delay: -6s;
 }
+.bees-canvas .bee-5 { width: 40px; height: 40px; animation-duration: 1.5s; animation-delay: -1.1s; }
 
 /* R → L (espelhadas: scaleX(-1) p/ "olhar" pra direcao do voo) */
-.bees-canvas .bee-2 {
+.bees-canvas .bee-wrap-2 {
   top: 22%;
-  width: 36px; height: 36px;
   animation: bee-fly-rtl-1 28s linear infinite;
   animation-delay: -4s;
 }
-.bees-canvas .bee-4 {
+.bees-canvas .bee-2 { width: 36px; height: 36px; animation-duration: 1.7s; animation-delay: -0.5s; }
+
+.bees-canvas .bee-wrap-4 {
   top: 50%;
-  width: 32px; height: 32px;
   animation: bee-fly-rtl-2 22s linear infinite;
   animation-delay: -14s;
+}
+.bees-canvas .bee-4 { width: 32px; height: 32px; animation-duration: 1.3s; animation-delay: -0.3s; }
+
+/* Bobbing vertical: ~10px de amplitude, ciclo curto = batida de asa. */
+@keyframes bee-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
 }
 
 /* SVG nativo da abelha tem olho em cx=24 (esquerda do centro 28) — face LEFT.
@@ -881,12 +899,13 @@ button.lcta-btn,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bees-canvas .bee { animation: none !important; }
-  .bees-canvas .bee-1 { transform: translate(12vw, 0) scaleX(-1); }
-  .bees-canvas .bee-2 { transform: translate(70vw, 0); }
-  .bees-canvas .bee-3 { transform: translate(40vw, 0) scaleX(-1); }
-  .bees-canvas .bee-4 { transform: translate(82vw, 0); }
-  .bees-canvas .bee-5 { transform: translate(28vw, 0) scaleX(-1); }
+  .bees-canvas .bee-wrap,
+  .bees-canvas .bee { animation: none !important; transform: none !important; }
+  .bees-canvas .bee-wrap-1 { transform: translate(12vw, 0) scaleX(-1) !important; }
+  .bees-canvas .bee-wrap-2 { transform: translate(70vw, 0) !important; }
+  .bees-canvas .bee-wrap-3 { transform: translate(40vw, 0) scaleX(-1) !important; }
+  .bees-canvas .bee-wrap-4 { transform: translate(82vw, 0) !important; }
+  .bees-canvas .bee-wrap-5 { transform: translate(28vw, 0) scaleX(-1) !important; }
 }
 
 /* ============================================================
