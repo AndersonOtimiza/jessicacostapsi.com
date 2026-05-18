@@ -28,11 +28,11 @@
   --gh-border-muted:      #d1d9e0b3;
   --gh-border-subtle:     #1f23280f;
 
-  /* Accent (blue) */
-  --gh-accent-fg:         #0969da;
-  --gh-accent-emphasis:   #0969da;
-  --gh-accent-muted:      #0969da66;
-  --gh-accent-subtle:     #ddf4ff;
+  /* Accent (honey / abelha) — marca Jessica Costa Psi */
+  --gh-accent-fg:         #B45309;
+  --gh-accent-emphasis:   #D97706;
+  --gh-accent-muted:      #FCD34D55;
+  --gh-accent-subtle:     #FEF3C7;
 
   /* Success (green) — primary button */
   --gh-success-fg:        #1a7f37;
@@ -114,11 +114,11 @@
   --gh-border-muted:      #3d444db3;
   --gh-border-subtle:     #ffffff0f;
 
-  /* Accent (blue) */
-  --gh-accent-fg:         #4493f8;
-  --gh-accent-emphasis:   #1f6feb;
-  --gh-accent-muted:      #4493f866;
-  --gh-accent-subtle:     #388bfd1a;
+  /* Accent (honey / abelha) — marca Jessica Costa Psi */
+  --gh-accent-fg:         #FBBF24;
+  --gh-accent-emphasis:   #F59E0B;
+  --gh-accent-muted:      #B4530944;
+  --gh-accent-subtle:     #78350F;
 
   /* Success (green) */
   --gh-success-fg:        #3fb950;
