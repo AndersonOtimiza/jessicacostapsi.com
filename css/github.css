@@ -765,8 +765,8 @@ button.lcta-btn,
   background: none !important;
   -webkit-background-clip: initial !important;
   background-clip: initial !important;
-  color: var(--gh-accent-fg) !important;
-  -webkit-text-fill-color: var(--gh-accent-fg) !important;
+  color: #F59E0B !important; /* amarelo abelha (yellow-500) */
+  -webkit-text-fill-color: #F59E0B !important;
 }
 
 /* Esconde camada antiga; nova .bees-canvas substitui */
@@ -1527,6 +1527,25 @@ select {
 }
 .bee-card {
   border-left: 3px solid var(--gh-attention-fg);
+}
+/* Override v2.css: tags com contraste AA sobre canvas claro do card */
+.creature-card.shark-card .tag {
+  color: #075985; /* sky-800 */
+  background: rgba(14, 165, 233, 0.18);
+  border-color: rgba(14, 165, 233, 0.45);
+}
+.creature-card.bee-card .tag {
+  color: #92400E; /* amber-800 */
+  background: rgba(245, 158, 11, 0.18);
+  border-color: rgba(245, 158, 11, 0.45);
+}
+:root[data-theme="dark"] .creature-card.shark-card .tag {
+  color: #7DD3FC; /* sky-300 */
+  background: rgba(14, 165, 233, 0.22);
+}
+:root[data-theme="dark"] .creature-card.bee-card .tag {
+  color: #FCD34D; /* amber-300 */
+  background: rgba(245, 158, 11, 0.22);
 }
 .creature-card h3 {
   font-size: 1.25rem;

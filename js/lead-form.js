@@ -104,8 +104,15 @@
       var email = (formData.get('email') || '').toString().trim();
       var motivo = (formData.get('motivo') || '').toString().trim();
       var crianca_idade = (formData.get('crianca_idade') || '').toString().trim();
+      var mensagem = (formData.get('mensagem') || '').toString().trim();
 
-      // Validacao basica — TODOS os campos obrigatorios (decisao 2026-05-18)
+      // Campos obrigatorios sao condicionais a presenca no form:
+      // nem todo form tem select de motivo ou idade da crianca (ex.: form de FAQ).
+      var hasField = function (n) {
+        return !!form.querySelector('[name="' + n + '"]');
+      };
+
+      // Validacao basica — name/phone/email sempre obrigatorios
       var phoneDigits = phone.replace(/\D/g, '');
       if (!name) {
         showMsg(msgBox, 'Por favor informe seu nome.', 'error');
@@ -119,11 +126,11 @@
         showMsg(msgBox, 'Informe um e-mail válido.', 'error');
         return;
       }
-      if (!crianca_idade) {
+      if (hasField('crianca_idade') && !crianca_idade) {
         showMsg(msgBox, 'Informe a idade da criança.', 'error');
         return;
       }
-      if (!motivo) {
+      if (hasField('motivo') && !motivo) {
         showMsg(msgBox, 'Selecione o motivo do contato.', 'error');
         return;
       }
@@ -162,6 +169,7 @@
           siteOrigem: 'jessicacostapsi.com',
           tipoSolicitacao: leadType,
           criancaIdade: crianca_idade || undefined,
+          mensagem: mensagem || undefined,
         },
       };
 
@@ -184,19 +192,23 @@
         }
       }
 
-      // Mensagem prepopulada WhatsApp
+      // Mensagem prepopulada WhatsApp — usa motivo (select) ou leadType (dataset)
+      var intent = motivo || leadType;
       var waMsg = 'Olá, Jessica! Sou ' + name + '.';
-      if (motivo === 'avaliacao-neuropsicologica') {
-        waMsg += ' Tenho interesse em avaliação neuropsicológica para meu filho(a).';
-      } else if (motivo === 'primeira-consulta') {
+      if (intent === 'avaliacao-neuropsicologica') {
+        waMsg += ' Tenho interesse em avaliação neuropsicológica.';
+      } else if (intent === 'primeira-consulta') {
         waMsg += ' Gostaria de agendar uma primeira consulta.';
-      } else if (motivo === 'duvida') {
+      } else if (intent === 'duvida') {
         waMsg += ' Tenho uma dúvida que gostaria de esclarecer.';
-      } else if (motivo) {
-        waMsg += ' Vim pelo site para falar sobre: ' + motivo + '.';
+      } else if (intent) {
+        waMsg += ' Vim pelo site para falar sobre: ' + intent + '.';
       }
       if (crianca_idade) {
         waMsg += ' Idade da criança: ' + crianca_idade + '.';
+      }
+      if (mensagem) {
+        waMsg += ' Minha dúvida: ' + mensagem;
       }
 
       var waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(waMsg);
