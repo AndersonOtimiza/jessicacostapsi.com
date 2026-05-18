@@ -849,51 +849,55 @@ button.lcta-btn,
   to   { transform: scaleY(0.35); }
 }
 
+/* SVG nativo da abelha tem olho em cx=24 (esquerda do centro 28) — face LEFT.
+   Logo: bees voando L→R precisam scaleX(-1) p/ apontar a cabeça pra direita;
+         bees voando R→L ficam na orientacao nativa (sem scaleX). */
+
 /* L → R: -10vw → 110vw, com oscilacao vertical sutil (sin wave) */
 @keyframes bee-fly-ltr-1 {
-  0%   { transform: translate(-10vw, 0) rotate(2deg); }
-  25%  { transform: translate(20vw, -14px) rotate(-3deg); }
-  50%  { transform: translate(50vw, 8px) rotate(4deg); }
-  75%  { transform: translate(80vw, -10px) rotate(-2deg); }
-  100% { transform: translate(110vw, 0) rotate(2deg); }
+  0%   { transform: translate(-10vw, 0) scaleX(-1) rotate(2deg); }
+  25%  { transform: translate(20vw, -14px) scaleX(-1) rotate(-3deg); }
+  50%  { transform: translate(50vw, 8px) scaleX(-1) rotate(4deg); }
+  75%  { transform: translate(80vw, -10px) scaleX(-1) rotate(-2deg); }
+  100% { transform: translate(110vw, 0) scaleX(-1) rotate(2deg); }
 }
 @keyframes bee-fly-ltr-2 {
-  0%   { transform: translate(-10vw, 0) rotate(-2deg); }
-  30%  { transform: translate(25vw, 12px) rotate(3deg); }
-  60%  { transform: translate(60vw, -10px) rotate(-4deg); }
-  100% { transform: translate(110vw, 6px) rotate(1deg); }
+  0%   { transform: translate(-10vw, 0) scaleX(-1) rotate(-2deg); }
+  30%  { transform: translate(25vw, 12px) scaleX(-1) rotate(3deg); }
+  60%  { transform: translate(60vw, -10px) scaleX(-1) rotate(-4deg); }
+  100% { transform: translate(110vw, 6px) scaleX(-1) rotate(1deg); }
 }
 @keyframes bee-fly-ltr-3 {
-  0%   { transform: translate(-10vw, 0) rotate(3deg); }
-  20%  { transform: translate(18vw, -8px) rotate(-2deg); }
-  55%  { transform: translate(55vw, 14px) rotate(5deg); }
-  85%  { transform: translate(88vw, -6px) rotate(-3deg); }
-  100% { transform: translate(110vw, 0) rotate(3deg); }
+  0%   { transform: translate(-10vw, 0) scaleX(-1) rotate(3deg); }
+  20%  { transform: translate(18vw, -8px) scaleX(-1) rotate(-2deg); }
+  55%  { transform: translate(55vw, 14px) scaleX(-1) rotate(5deg); }
+  85%  { transform: translate(88vw, -6px) scaleX(-1) rotate(-3deg); }
+  100% { transform: translate(110vw, 0) scaleX(-1) rotate(3deg); }
 }
 
-/* R → L: 110vw → -10vw, espelhadas no eixo X */
+/* R → L: 110vw → -10vw, orientacao nativa do SVG (face LEFT) */
 @keyframes bee-fly-rtl-1 {
-  0%   { transform: translate(110vw, 0) scaleX(-1) rotate(2deg); }
-  25%  { transform: translate(80vw, -12px) scaleX(-1) rotate(-3deg); }
-  55%  { transform: translate(45vw, 10px) scaleX(-1) rotate(4deg); }
-  80%  { transform: translate(20vw, -8px) scaleX(-1) rotate(-2deg); }
-  100% { transform: translate(-10vw, 0) scaleX(-1) rotate(2deg); }
+  0%   { transform: translate(110vw, 0) rotate(2deg); }
+  25%  { transform: translate(80vw, -12px) rotate(-3deg); }
+  55%  { transform: translate(45vw, 10px) rotate(4deg); }
+  80%  { transform: translate(20vw, -8px) rotate(-2deg); }
+  100% { transform: translate(-10vw, 0) rotate(2deg); }
 }
 @keyframes bee-fly-rtl-2 {
-  0%   { transform: translate(110vw, 0) scaleX(-1) rotate(-3deg); }
-  30%  { transform: translate(75vw, 10px) scaleX(-1) rotate(2deg); }
-  65%  { transform: translate(40vw, -12px) scaleX(-1) rotate(-4deg); }
-  100% { transform: translate(-10vw, 4px) scaleX(-1) rotate(-1deg); }
+  0%   { transform: translate(110vw, 0) rotate(-3deg); }
+  30%  { transform: translate(75vw, 10px) rotate(2deg); }
+  65%  { transform: translate(40vw, -12px) rotate(-4deg); }
+  100% { transform: translate(-10vw, 4px) rotate(-1deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .bees-canvas .bee,
   .bees-canvas .bee .wing { animation: none !important; }
-  .bees-canvas .bee-1 { transform: translate(12vw, 0); }
-  .bees-canvas .bee-2 { transform: translate(70vw, 0) scaleX(-1); }
-  .bees-canvas .bee-3 { transform: translate(40vw, 0); }
-  .bees-canvas .bee-4 { transform: translate(82vw, 0) scaleX(-1); }
-  .bees-canvas .bee-5 { transform: translate(28vw, 0); }
+  .bees-canvas .bee-1 { transform: translate(12vw, 0) scaleX(-1); }
+  .bees-canvas .bee-2 { transform: translate(70vw, 0); }
+  .bees-canvas .bee-3 { transform: translate(40vw, 0) scaleX(-1); }
+  .bees-canvas .bee-4 { transform: translate(82vw, 0); }
+  .bees-canvas .bee-5 { transform: translate(28vw, 0) scaleX(-1); }
 }
 
 /* ============================================================
