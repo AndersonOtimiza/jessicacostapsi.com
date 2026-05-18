@@ -1161,7 +1161,6 @@ button.lcta-btn,
 .metodologias,
 .lead-cta-section,
 .shark-bee-showcase,
-.banner-breve,
 .principios,
 .missao-visao,
 .metafora-intro {
@@ -1444,7 +1443,6 @@ select {
 
 .cta-glass,
 .cta-final,
-.banner-breve,
 .manifesto-cta {
   padding: 32px;
   background: var(--gh-canvas-subtle) !important;
@@ -1457,14 +1455,11 @@ select {
 }
 .cta-final h2,
 .cta-glass h2,
-.banner-breve h2,
-.banner-breve h3,
 .manifesto-cta h2 {
   color: var(--gh-fg-default);
 }
 .cta-final p,
 .cta-glass p,
-.banner-breve p,
 .manifesto-cta p {
   color: var(--gh-fg-muted);
 }
@@ -1756,11 +1751,6 @@ footer.footer,
 .fade-up.in-view {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Banner pequeno (alguns artigos têm "banner-breve") */
-.banner-breve {
-  padding: 24px;
 }
 
 /* Diferencial-badge / metodologia-list items */
