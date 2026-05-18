@@ -2,10 +2,10 @@
  * Lead capture form para o site da Jessica Costa Psi.
  * Padrao adaptado do `lead-cta.js` da Otimiza (otimizapro.com).
  *
- * Captura: nome, telefone (obrigatorio), email (opcional), motivo (segmento),
- * idade da crianca (opcional). Envia para o CRM da Otimiza
- * (https://novo-crm.otimizapro.com/api/leads) e depois redireciona
- * para WhatsApp com mensagem pre-populada com o nome do lead.
+ * Captura: nome, telefone, email, motivo (segmento), idade da crianca
+ * — TODOS OBRIGATORIOS desde 2026-05-18 (decisao Anderson).
+ * Envia para o CRM da Otimiza (https://novo-crm.otimizapro.com/api/leads)
+ * e depois redireciona para WhatsApp com mensagem pre-populada com o nome do lead.
  *
  * Como usar no HTML:
  *   <form class="lcta-form" data-lead-form data-lead-source="jessica-home" data-lead-type="primeira-consulta">
@@ -105,14 +105,26 @@
       var motivo = (formData.get('motivo') || '').toString().trim();
       var crianca_idade = (formData.get('crianca_idade') || '').toString().trim();
 
-      // Validacao basica
+      // Validacao basica — TODOS os campos obrigatorios (decisao 2026-05-18)
       var phoneDigits = phone.replace(/\D/g, '');
-      if (!name || phoneDigits.length < 10) {
-        showMsg(msgBox, 'Por favor preencha seu nome e WhatsApp com DDD.', 'error');
+      if (!name) {
+        showMsg(msgBox, 'Por favor informe seu nome.', 'error');
         return;
       }
-      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showMsg(msgBox, 'Email invalido. Pode deixar em branco se preferir.', 'error');
+      if (phoneDigits.length < 10) {
+        showMsg(msgBox, 'Informe seu WhatsApp com DDD (mínimo 10 dígitos).', 'error');
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showMsg(msgBox, 'Informe um e-mail válido.', 'error');
+        return;
+      }
+      if (!crianca_idade) {
+        showMsg(msgBox, 'Informe a idade da criança.', 'error');
+        return;
+      }
+      if (!motivo) {
+        showMsg(msgBox, 'Selecione o motivo do contato.', 'error');
         return;
       }
 
@@ -132,7 +144,7 @@
       var companyText = 'Jessica Costa Psi · ' + (typeLabel[leadType] || leadType);
       var payload = {
         name: name,
-        email: email || (phoneDigits + '@jessica.lead'),
+        email: email, // 2026-05-18: email agora e obrigatorio no form, fallback removido
         company: companyText, // discriminador legivel no CRM (em vez de "Paciente Particular" fixo)
         phone: phoneDigits,
         // employees: campo do CRM aceita apenas valores curtos (1-10, 11-50, etc) — omitido em B2C

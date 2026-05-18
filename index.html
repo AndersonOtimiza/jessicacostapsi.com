@@ -498,10 +498,11 @@
           <input class="lcta-input" type="tel" name="phone" placeholder="WhatsApp com DDD" required autocomplete="tel" inputmode="tel">
         </div>
         <div class="lcta-row">
-          <input class="lcta-input" type="email" name="email" placeholder="Email (opcional)" autocomplete="email">
-          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança (opcional)">
+          <input class="lcta-input" type="email" name="email" placeholder="Seu e-mail" required autocomplete="email">
+          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança" required>
         </div>
-        <select class="lcta-input lcta-select" name="motivo">
+        <select class="lcta-input lcta-select" name="motivo" required>
+          <option value="" disabled selected>Qual o motivo do contato?</option>
           <option value="primeira-consulta">Quero agendar primeira consulta</option>
           <option value="avaliacao-neuropsicologica">Quero avaliação neuropsicológica</option>
           <option value="duvida">Tirar uma dúvida</option>

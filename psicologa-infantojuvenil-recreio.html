@@ -324,10 +324,11 @@
           <input class="lcta-input" type="tel" name="phone" placeholder="WhatsApp com DDD" aria-label="WhatsApp com DDD" required autocomplete="tel" inputmode="tel">
         </div>
         <div class="lcta-row">
-          <input class="lcta-input" type="email" name="email" placeholder="E-mail (opcional)" aria-label="E-mail (opcional)" autocomplete="email">
-          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança (opcional)" aria-label="Idade da criança (opcional)">
+          <input class="lcta-input" type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required autocomplete="email">
+          <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança" aria-label="Idade da criança" required>
         </div>
-        <select class="lcta-input lcta-select" name="motivo">
+        <select class="lcta-input lcta-select" name="motivo" required>
+          <option value="" disabled selected>Qual o motivo do contato?</option>
           <option value="primeira-consulta">Quero agendar primeira consulta</option>
           <option value="avaliacao-neuropsicologica">Quero avaliação neuropsicológica</option>
           <option value="duvida">Tirar uma dúvida</option>
