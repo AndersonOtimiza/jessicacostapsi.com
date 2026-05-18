@@ -314,9 +314,9 @@ h4 { font-size: 1.1rem; }
 
 @keyframes float-bee-1 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(60px, -30px) rotate(10deg); }
-  50% { transform: translate(120px, 15px) rotate(-5deg); }
-  75% { transform: translate(40px, -20px) rotate(8deg); }
+  25% { transform: translate(-60px, -30px) rotate(10deg); }
+  50% { transform: translate(-120px, 15px) rotate(-5deg); }
+  75% { transform: translate(-40px, -20px) rotate(8deg); }
 }
 
 @keyframes float-bee-2 {
@@ -328,14 +328,14 @@ h4 { font-size: 1.1rem; }
 
 @keyframes float-bee-3 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(80px, -40px) rotate(15deg); }
+  33% { transform: translate(-80px, -40px) rotate(15deg); }
   66% { transform: translate(-40px, 20px) rotate(-10deg); }
 }
 
 @keyframes float-bee-4 {
   0%, 100% { transform: translate(0, 0); }
   25% { transform: translate(-70px, -35px) rotate(-12deg); }
-  50% { transform: translate(30px, 20px) rotate(6deg); }
+  50% { transform: translate(-30px, 20px) rotate(6deg); }
   75% { transform: translate(-20px, -15px) rotate(-4deg); }
 }
 
