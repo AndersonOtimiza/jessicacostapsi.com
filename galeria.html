@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>(function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
-  <meta name="description" content="Galeria do consultório de Jessica Costa Psi no Recreio dos Bandeirantes — ambiente acolhedor, retratos e bastidores da clínica infantojuvenil.">
+  <meta name="description" content="Galeria de Jessica Costa Psi: consultório no Recreio dos Bandeirantes, retratos profissionais e bastidores dos ensaios fotográficos da clínica infantojuvenil.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jessicacostapsi.com/galeria">
   <meta name="theme-color" content="#FFD93D">
@@ -16,14 +16,14 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://jessicacostapsi.com/galeria">
   <meta property="og:title" content="Galeria | Jessica Costa Psi">
-  <meta property="og:description" content="Conheça o ambiente do consultório e os bastidores da clínica infantojuvenil de Jessica Costa — Recreio dos Bandeirantes (RJ).">
+  <meta property="og:description" content="Conheça o consultório, os retratos e os bastidores da clínica infantojuvenil de Jessica Costa — Recreio dos Bandeirantes (RJ).">
   <meta property="og:image" content="https://jessicacostapsi.com/img/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galeria | Jessica Costa Psi">
-  <meta name="twitter:description" content="Conheça o ambiente do consultório e os bastidores da clínica infantojuvenil de Jessica Costa — Recreio dos Bandeirantes (RJ).">
+  <meta name="twitter:description" content="Conheça o consultório, os retratos e os bastidores da clínica infantojuvenil de Jessica Costa — Recreio dos Bandeirantes (RJ).">
   <meta name="twitter:image" content="https://jessicacostapsi.com/img/og-image.png">
   <title>Galeria | Jessica Costa Psi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,25 @@
       "https://jessicacostapsi.com/img/jessica-costa-biografia.webp",
       "https://jessicacostapsi.com/img/jessica-costa-retrato.webp",
       "https://jessicacostapsi.com/img/jessica-hero.webp",
-      "https://jessicacostapsi.com/img/jessica-costa-avatar.webp"
+      "https://jessicacostapsi.com/img/jessica-costa-avatar.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-16-20260403-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-17-20260403-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-18-20260403-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-15-20251017-portrait-edit@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-11-20251017-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-08-20251017-landscape@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-09-20251017-landscape@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-12-20251017-landscape@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-13-20251017-landscape@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-14-20251017-landscape@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-10-20251017-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-01-20250910-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-02-20250910-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-03-20250910-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-04-20250910-portrait@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-05-20250910-landscape@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-06-20250910-landscape@2x.webp",
+      "https://jessicacostapsi.com/img/galeria/galeria-07-20250910-landscape@2x.webp"
     ]
   }
   </script>
@@ -197,6 +215,98 @@
       .galeria-section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
       .galeria-section-icon { width: 40px; height: 40px; flex-basis: 40px; }
     }
+
+    /* Sub-grupos por ensaio (set/2025, out/2025, abr/2026) */
+    .galeria-ensaio {
+      margin-top: 36px;
+    }
+    .galeria-ensaio:first-of-type { margin-top: 8px; }
+    .galeria-ensaio-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--primary-dark);
+      margin: 0 0 16px;
+      padding: 4px 12px;
+      background: var(--primary-light);
+      border-radius: var(--radius-pill);
+    }
+    .galeria-ensaio-title::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    /* Lightbox: overlay full-screen ao clicar numa figura */
+    .galeria-lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 20, 24, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 24px;
+      cursor: zoom-out;
+      animation: galeria-fade 180ms ease-out;
+    }
+    .galeria-lightbox.is-open { display: flex; }
+    .galeria-lightbox img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+      object-fit: contain;
+    }
+    .galeria-lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 160ms ease;
+    }
+    .galeria-lightbox-close:hover,
+    .galeria-lightbox-close:focus-visible {
+      background: rgba(255,255,255,0.25);
+      outline: 2px solid rgba(255,255,255,0.5);
+      outline-offset: 2px;
+    }
+    .galeria-lightbox-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: min(720px, 90vw);
+      padding: 8px 16px;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border-radius: var(--radius-pill);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    @keyframes galeria-fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .galeria-lightbox { animation: none; }
+    }
   </style>
 </head>
 <body>
@@ -205,15 +315,21 @@
     ============================================================================
     GALERIA — página dedicada
     ============================================================================
-    Estrutura: 4 categorias (consultório/ambiente · materiais lúdicos ·
-    Jessica em atendimento/retratos · eventos/palestras).
+    Estrutura atual (2026-05-18):
+      1) Consultório e ambiente (Vertice Mall - Recreio)
+      2) Ensaios fotográficos profissionais — agrupados cronologicamente:
+         · abr/2026 (3 fotos)
+         · out/2025 (8 fotos)
+         · set/2025 (7 fotos)
 
-    Hoje só temos fotos publicáveis em 2 das 4 categorias (ambiente + retratos).
-    As outras 2 (materiais lúdicos + eventos) ficam marcadas com .galeria-empty
-    até a Jessica liberar fotos vindas de `Designer/Fotos/` (não versionado).
+    Fotos novas em img/galeria/galeria-NN-YYYYMMDD-(portrait|landscape).webp
+    geradas a partir de Designer/Fotos/ (não versionado). Cada foto tem par
+    1x (≤80KB) + @2x (≤200KB) para retina.
 
     NÃO mexer em css/style.css — todo o CSS desta página é escopado no <style>
     acima, exatamente como manifesto.html faz.
+
+    Lightbox: clique numa figura abre overlay full-screen. Tecla ESC fecha.
     ============================================================================
   -->
 
@@ -277,7 +393,7 @@
         </header>
 
         <div class="galeria-grid">
-          <figure class="galeria-figure galeria-figure--landscape">
+          <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/consultorio-vertice-mall.webp" data-caption="Sala de atendimento — Vertice Mall, Recreio dos Bandeirantes (RJ).">
             <a href="img/consultorio-vertice-mall.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
               <img
                 src="img/consultorio-vertice-mall.webp"
@@ -289,7 +405,7 @@
             <figcaption>Sala de atendimento — Vertice Mall, Recreio dos Bandeirantes (RJ).</figcaption>
           </figure>
 
-          <figure class="galeria-figure">
+          <figure class="galeria-figure" data-lightbox="img/jessica-costa-biografia@2x.webp" data-caption="Mural infantil — referência visual que ajuda a criança a se ambientar.">
             <a href="img/jessica-costa-biografia@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
               <img
                 src="img/jessica-costa-biografia.webp"
@@ -305,119 +421,276 @@
       </section>
 
       <!-- ====================================================================
-           SEÇÃO 2 · Materiais lúdicos e instrumentos de avaliação
-           Estado: SEM FOTOS publicáveis ainda (Designer/Fotos/ não versionado).
-           Mantida visível com placeholder honesto — converter assim que a
-           Jessica liberar 4–6 fotos editadas e otimizadas.
+           SEÇÃO 2 · Ensaios profissionais (3 sub-ensaios cronológicos)
+           Fotos: img/galeria/galeria-NN-YYYYMMDD-orientacao.webp
            ==================================================================== -->
-      <section class="galeria-section" aria-labelledby="cat-materiais">
+      <section class="galeria-section" aria-labelledby="cat-ensaios">
         <header class="galeria-section-header">
           <span class="galeria-section-icon" aria-hidden="true">
-            <!-- Ícone: blocos lúdicos / peças de jogo -->
+            <!-- Ícone: câmera fotográfica -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="8" height="8" rx="1.5"/>
-              <rect x="13" y="3" width="8" height="8" rx="1.5"/>
-              <rect x="3" y="13" width="8" height="8" rx="1.5"/>
-              <path d="M17 13v4M15 15h4"/>
-              <circle cx="17" cy="19" r="0.8" fill="currentColor"/>
+              <path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/>
+              <circle cx="12" cy="13" r="4"/>
             </svg>
           </span>
           <div class="galeria-section-text">
-            <h2 id="cat-materiais">Materiais lúdicos e instrumentos</h2>
-            <p class="galeria-section-sub">Recursos que apoiam a ludoterapia, a avaliação neuropsicológica e o trabalho com regulação emocional.</p>
+            <h2 id="cat-ensaios">Ensaios fotográficos profissionais</h2>
+            <p class="galeria-section-sub">Bastidores dos ensaios institucionais da Jessica — retratos, expressões e o dia a dia da clínica.</p>
           </div>
         </header>
 
-        <div class="galeria-empty">
-          <p><strong>Em preparação.</strong> Em breve, fotos dos materiais e instrumentos usados em sessão — selecionados pela Jessica para entrarem aqui com cuidado e contexto.</p>
-        </div>
-      </section>
+        <!-- ===== Sub-ensaio 1: abr/2026 (mais recente) ===== -->
+        <div class="galeria-ensaio">
+          <p class="galeria-ensaio-title">Ensaio · abril de 2026</p>
+          <div class="galeria-grid">
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-16-20260403-portrait@2x.webp" data-caption="Jessica Costa — ensaio institucional, abril de 2026.">
+              <a href="img/galeria/galeria-16-20260403-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-16-20260403-portrait.webp"
+                  srcset="img/galeria/galeria-16-20260403-portrait.webp 1x, img/galeria/galeria-16-20260403-portrait@2x.webp 2x"
+                  alt="Jessica Costa em retrato profissional — ensaio fotográfico institucional de abril de 2026"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Retrato — ensaio institucional de 2026.</figcaption>
+            </figure>
 
-      <!-- ====================================================================
-           SEÇÃO 3 · Jessica em atendimento / retratos
-           ==================================================================== -->
-      <section class="galeria-section" aria-labelledby="cat-retratos">
-        <header class="galeria-section-header">
-          <span class="galeria-section-icon" aria-hidden="true">
-            <!-- Ícone: silhueta + estetoscópio simplificado (profissional de saúde) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="3.5"/>
-              <path d="M5 20a7 7 0 0 1 14 0"/>
-            </svg>
-          </span>
-          <div class="galeria-section-text">
-            <h2 id="cat-retratos">Jessica em atendimento</h2>
-            <p class="galeria-section-sub">Retratos profissionais e momentos no dia a dia da clínica.</p>
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-17-20260403-portrait@2x.webp" data-caption="Jessica Costa em sessão de fotos — abril de 2026.">
+              <a href="img/galeria/galeria-17-20260403-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-17-20260403-portrait.webp"
+                  srcset="img/galeria/galeria-17-20260403-portrait.webp 1x, img/galeria/galeria-17-20260403-portrait@2x.webp 2x"
+                  alt="Jessica Costa Psi em pose profissional durante sessão de fotos de abril de 2026"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Pose profissional — sessão de 2026.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-18-20260403-portrait@2x.webp" data-caption="Jessica Costa — ensaio fotográfico, abril de 2026.">
+              <a href="img/galeria/galeria-18-20260403-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-18-20260403-portrait.webp"
+                  srcset="img/galeria/galeria-18-20260403-portrait.webp 1x, img/galeria/galeria-18-20260403-portrait@2x.webp 2x"
+                  alt="Retrato natural de Jessica Costa, psicóloga infantojuvenil — ensaio abril de 2026"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Retrato natural — ensaio de 2026.</figcaption>
+            </figure>
           </div>
-        </header>
-
-        <div class="galeria-grid">
-          <figure class="galeria-figure">
-            <a href="img/jessica-hero@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
-              <img
-                src="img/jessica-hero.webp"
-                srcset="img/jessica-hero.webp 1x, img/jessica-hero@2x.webp 2x"
-                alt="Jessica Costa Psi sorrindo, retrato profissional usado na home do site"
-                loading="lazy"
-                decoding="async"
-                width="800" height="1000">
-            </a>
-            <figcaption>Jessica Costa — psicóloga infantojuvenil, CRP 05/56789.</figcaption>
-          </figure>
-
-          <figure class="galeria-figure">
-            <a href="img/jessica-costa-retrato@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
-              <img
-                src="img/jessica-costa-retrato.webp"
-                srcset="img/jessica-costa-retrato.webp 1x, img/jessica-costa-retrato@2x.webp 2x"
-                alt="Retrato profissional de Jessica Costa, psicóloga infantojuvenil em Recreio dos Bandeirantes"
-                loading="lazy"
-                decoding="async"
-                width="800" height="1000">
-            </a>
-            <figcaption>Retrato profissional — sessão de fotos institucional.</figcaption>
-          </figure>
-
-          <figure class="galeria-figure">
-            <a href="img/jessica-costa-avatar@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
-              <img
-                src="img/jessica-costa-avatar.webp"
-                srcset="img/jessica-costa-avatar.webp 1x, img/jessica-costa-avatar@2x.webp 2x"
-                alt="Avatar de Jessica Costa Psi em enquadramento fechado para redes sociais"
-                loading="lazy"
-                decoding="async"
-                width="800" height="1000">
-            </a>
-            <figcaption>Headshot para canais sociais e perfis verificados.</figcaption>
-          </figure>
         </div>
-      </section>
 
-      <!-- ====================================================================
-           SEÇÃO 4 · Eventos / palestras
-           Estado: SEM FOTOS publicáveis ainda. Placeholder honesto até a
-           Jessica liberar registros editados.
-           ==================================================================== -->
-      <section class="galeria-section" aria-labelledby="cat-eventos">
-        <header class="galeria-section-header">
-          <span class="galeria-section-icon" aria-hidden="true">
-            <!-- Ícone: microfone (palestras / eventos) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="9" y="3" width="6" height="12" rx="3"/>
-              <path d="M5 11a7 7 0 0 0 14 0"/>
-              <path d="M12 18v3"/>
-              <path d="M9 21h6"/>
-            </svg>
-          </span>
-          <div class="galeria-section-text">
-            <h2 id="cat-eventos">Eventos e palestras</h2>
-            <p class="galeria-section-sub">Encontros com escolas, pediatras e famílias — formação continuada e divulgação científica.</p>
+        <!-- ===== Sub-ensaio 2: out/2025 ===== -->
+        <div class="galeria-ensaio">
+          <p class="galeria-ensaio-title">Ensaio · outubro de 2025</p>
+          <div class="galeria-grid">
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-15-20251017-portrait-edit@2x.webp" data-caption="Jessica Costa — retrato editado, sessão de outubro de 2025.">
+              <a href="img/galeria/galeria-15-20251017-portrait-edit@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-15-20251017-portrait-edit.webp"
+                  srcset="img/galeria/galeria-15-20251017-portrait-edit.webp 1x, img/galeria/galeria-15-20251017-portrait-edit@2x.webp 2x"
+                  alt="Retrato profissional editado de Jessica Costa Psi — ensaio outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="920">
+              </a>
+              <figcaption>Retrato editado — ensaio de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-11-20251017-portrait@2x.webp" data-caption="Jessica Costa em sessão de fotos — outubro de 2025.">
+              <a href="img/galeria/galeria-11-20251017-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-11-20251017-portrait.webp"
+                  srcset="img/galeria/galeria-11-20251017-portrait.webp 1x, img/galeria/galeria-11-20251017-portrait@2x.webp 2x"
+                  alt="Jessica Costa Psi em retrato profissional do ensaio fotográfico de outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Retrato profissional — outubro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-10-20251017-portrait@2x.webp" data-caption="Jessica Costa — bastidores do ensaio, outubro de 2025.">
+              <a href="img/galeria/galeria-10-20251017-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-10-20251017-portrait.webp"
+                  srcset="img/galeria/galeria-10-20251017-portrait.webp 1x, img/galeria/galeria-10-20251017-portrait@2x.webp 2x"
+                  alt="Jessica Costa em foto vertical — bastidores do ensaio de outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Bastidores — ensaio de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-08-20251017-landscape@2x.webp" data-caption="Jessica Costa — enquadramento horizontal do ensaio de outubro de 2025.">
+              <a href="img/galeria/galeria-08-20251017-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-08-20251017-landscape.webp"
+                  srcset="img/galeria/galeria-08-20251017-landscape.webp 1x, img/galeria/galeria-08-20251017-landscape@2x.webp 2x"
+                  alt="Jessica Costa Psi em foto horizontal, enquadramento amplo do ensaio de outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Enquadramento horizontal — outubro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-09-20251017-landscape@2x.webp" data-caption="Jessica Costa — sessão fotográfica, outubro de 2025.">
+              <a href="img/galeria/galeria-09-20251017-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-09-20251017-landscape.webp"
+                  srcset="img/galeria/galeria-09-20251017-landscape.webp 1x, img/galeria/galeria-09-20251017-landscape@2x.webp 2x"
+                  alt="Jessica Costa em foto horizontal — sessão fotográfica de outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Sessão fotográfica — outubro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-12-20251017-landscape@2x.webp" data-caption="Jessica Costa — retrato horizontal, outubro de 2025.">
+              <a href="img/galeria/galeria-12-20251017-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-12-20251017-landscape.webp"
+                  srcset="img/galeria/galeria-12-20251017-landscape.webp 1x, img/galeria/galeria-12-20251017-landscape@2x.webp 2x"
+                  alt="Jessica Costa Psi em retrato horizontal do ensaio de outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Retrato horizontal — outubro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-13-20251017-landscape@2x.webp" data-caption="Jessica Costa — bastidores do ensaio, outubro de 2025.">
+              <a href="img/galeria/galeria-13-20251017-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-13-20251017-landscape.webp"
+                  srcset="img/galeria/galeria-13-20251017-landscape.webp 1x, img/galeria/galeria-13-20251017-landscape@2x.webp 2x"
+                  alt="Jessica Costa em foto horizontal natural — bastidores do ensaio de outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Bastidores horizontais — outubro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-14-20251017-landscape@2x.webp" data-caption="Jessica Costa — foto institucional, outubro de 2025.">
+              <a href="img/galeria/galeria-14-20251017-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-14-20251017-landscape.webp"
+                  srcset="img/galeria/galeria-14-20251017-landscape.webp 1x, img/galeria/galeria-14-20251017-landscape@2x.webp 2x"
+                  alt="Jessica Costa Psi em foto institucional horizontal — outubro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Foto institucional — outubro de 2025.</figcaption>
+            </figure>
           </div>
-        </header>
-
-        <div class="galeria-empty">
-          <p><strong>Em preparação.</strong> Os registros das próximas palestras e formações da Jessica para escolas e equipes de saúde entram aqui assim que estiverem prontos para publicação.</p>
         </div>
+
+        <!-- ===== Sub-ensaio 3: set/2025 (primeiro ensaio) ===== -->
+        <div class="galeria-ensaio">
+          <p class="galeria-ensaio-title">Ensaio · setembro de 2025</p>
+          <div class="galeria-grid">
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-01-20250910-portrait@2x.webp" data-caption="Jessica Costa — primeiro ensaio profissional, setembro de 2025.">
+              <a href="img/galeria/galeria-01-20250910-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-01-20250910-portrait.webp"
+                  srcset="img/galeria/galeria-01-20250910-portrait.webp 1x, img/galeria/galeria-01-20250910-portrait@2x.webp 2x"
+                  alt="Jessica Costa Psi em retrato profissional — primeiro ensaio fotográfico de setembro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Retrato — setembro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-02-20250910-portrait@2x.webp" data-caption="Jessica Costa em sessão de fotos — setembro de 2025.">
+              <a href="img/galeria/galeria-02-20250910-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-02-20250910-portrait.webp"
+                  srcset="img/galeria/galeria-02-20250910-portrait.webp 1x, img/galeria/galeria-02-20250910-portrait@2x.webp 2x"
+                  alt="Jessica Costa Psi em pose alternativa do ensaio de setembro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Sessão de fotos — setembro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-03-20250910-portrait@2x.webp" data-caption="Jessica Costa — bastidores, setembro de 2025.">
+              <a href="img/galeria/galeria-03-20250910-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-03-20250910-portrait.webp"
+                  srcset="img/galeria/galeria-03-20250910-portrait.webp 1x, img/galeria/galeria-03-20250910-portrait@2x.webp 2x"
+                  alt="Jessica Costa em foto vertical natural — bastidores do ensaio de setembro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Bastidores — setembro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure" data-lightbox="img/galeria/galeria-04-20250910-portrait@2x.webp" data-caption="Jessica Costa — sessão fotográfica, setembro de 2025.">
+              <a href="img/galeria/galeria-04-20250910-portrait@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-04-20250910-portrait.webp"
+                  srcset="img/galeria/galeria-04-20250910-portrait.webp 1x, img/galeria/galeria-04-20250910-portrait@2x.webp 2x"
+                  alt="Jessica Costa Psi em retrato natural — ensaio fotográfico de setembro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="800" height="1000">
+              </a>
+              <figcaption>Retrato natural — setembro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-05-20250910-landscape@2x.webp" data-caption="Jessica Costa — enquadramento horizontal, setembro de 2025.">
+              <a href="img/galeria/galeria-05-20250910-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-05-20250910-landscape.webp"
+                  srcset="img/galeria/galeria-05-20250910-landscape.webp 1x, img/galeria/galeria-05-20250910-landscape@2x.webp 2x"
+                  alt="Jessica Costa Psi em foto horizontal — ensaio fotográfico de setembro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Enquadramento horizontal — setembro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-06-20250910-landscape@2x.webp" data-caption="Jessica Costa — bastidores horizontais, setembro de 2025.">
+              <a href="img/galeria/galeria-06-20250910-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-06-20250910-landscape.webp"
+                  srcset="img/galeria/galeria-06-20250910-landscape.webp 1x, img/galeria/galeria-06-20250910-landscape@2x.webp 2x"
+                  alt="Jessica Costa em retrato horizontal — bastidores do ensaio de setembro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Bastidores horizontais — setembro de 2025.</figcaption>
+            </figure>
+
+            <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/galeria/galeria-07-20250910-landscape@2x.webp" data-caption="Jessica Costa — foto institucional, setembro de 2025.">
+              <a href="img/galeria/galeria-07-20250910-landscape@2x.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
+                <img
+                  src="img/galeria/galeria-07-20250910-landscape.webp"
+                  srcset="img/galeria/galeria-07-20250910-landscape.webp 1x, img/galeria/galeria-07-20250910-landscape@2x.webp 2x"
+                  alt="Jessica Costa Psi em foto institucional horizontal — primeiro ensaio de setembro de 2025"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200" height="900">
+              </a>
+              <figcaption>Foto institucional — setembro de 2025.</figcaption>
+            </figure>
+          </div>
+        </div>
+
       </section>
 
     </div>
@@ -713,6 +986,74 @@
 
   <a href="https://wa.me/5521978082882" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.5A8 8 0 1 1 21 12Z"/></svg></a>
   <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" type="button">↑</button>
+
+  <!-- ==================================================================
+       LIGHTBOX — overlay full-screen para abrir foto ampliada.
+       Comportamento:
+         - Clicar em qualquer .galeria-figure abre a foto em tamanho @2x.
+         - Tecla ESC ou clique no overlay/X fecha.
+         - Atributo data-lightbox define a URL da foto grande.
+         - Atributo data-caption define a legenda exibida no rodapé.
+       Cair de volta para o <a target="_blank"> só se JS estiver off.
+       ================================================================== -->
+  <div class="galeria-lightbox" id="galeriaLightbox" role="dialog" aria-modal="true" aria-label="Foto em tamanho ampliado" aria-hidden="true">
+    <button class="galeria-lightbox-close" type="button" aria-label="Fechar visualização ampliada">×</button>
+    <img id="galeriaLightboxImg" src="" alt="">
+    <p class="galeria-lightbox-caption" id="galeriaLightboxCaption"></p>
+  </div>
+
+  <script>
+    /* Lightbox da galeria — vanilla, sem deps. */
+    (function(){
+      var lb = document.getElementById('galeriaLightbox');
+      if (!lb) return;
+      var img = document.getElementById('galeriaLightboxImg');
+      var cap = document.getElementById('galeriaLightboxCaption');
+      var btnClose = lb.querySelector('.galeria-lightbox-close');
+      var figures = document.querySelectorAll('.galeria-figure[data-lightbox]');
+
+      function open(src, caption, altText){
+        if (!src) return;
+        img.src = src;
+        img.alt = altText || caption || 'Foto ampliada';
+        cap.textContent = caption || '';
+        cap.style.display = caption ? '' : 'none';
+        lb.classList.add('is-open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        btnClose.focus();
+      }
+      function close(){
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        img.src = '';
+      }
+
+      figures.forEach(function(fig){
+        var link = fig.querySelector('a');
+        if (!link) return;
+        link.addEventListener('click', function(e){
+          // Permitir Ctrl+Click / botão do meio abrir em aba (UX padrão)
+          if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+          e.preventDefault();
+          var src = fig.getAttribute('data-lightbox') || link.getAttribute('href');
+          var caption = fig.getAttribute('data-caption') || '';
+          var imgInside = link.querySelector('img');
+          var altText = imgInside ? imgInside.getAttribute('alt') : '';
+          open(src, caption, altText);
+        });
+      });
+
+      btnClose.addEventListener('click', close);
+      lb.addEventListener('click', function(e){
+        if (e.target === lb) close();
+      });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && lb.classList.contains('is-open')) close();
+      });
+    })();
+  </script>
 
   <!-- Cloudflare Web Analytics (privacy-friendly, sem cookies, LGPD-friendly).
        Para ativar: gere o beacon token em https://one.dash.cloudflare.com/?to=/:account/web-analytics
