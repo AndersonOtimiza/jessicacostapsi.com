@@ -46,8 +46,8 @@
     "author": { "@id": "https://jessicacostapsi.com/#person" },
     "publisher": { "@id": "https://jessicacostapsi.com/#person" },
     "mainEntityOfPage": "https://jessicacostapsi.com/galeria",
+    "primaryImageOfPage": "https://jessicacostapsi.com/img/consultorio-vertice-mall.webp",
     "image": [
-      "https://jessicacostapsi.com/img/consultorio-vertice-mall.webp",
       "https://jessicacostapsi.com/img/jessica-costa-retrato.webp",
       "https://jessicacostapsi.com/img/jessica-hero.webp",
       "https://jessicacostapsi.com/img/jessica-costa-avatar.webp",
@@ -109,6 +109,29 @@
     }
 
     .galeria-body { padding: 64px 0 80px; background: #fff; }
+
+    /* Cover image: foto do consultório como cabeçalho da página (LCP),
+       largura cheia do container, sem legenda, sem duplicar no grid abaixo. */
+    .galeria-cover {
+      margin: 0 0 56px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #f8f3e6;
+      box-shadow: var(--shadow);
+      line-height: 0;
+    }
+    .galeria-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 7;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+    @media (max-width: 720px) {
+      .galeria-cover { margin-bottom: 40px; border-radius: var(--radius-sm); }
+      .galeria-cover img { aspect-ratio: 3 / 2; object-position: center 30%; }
+    }
 
     .galeria-section { margin-bottom: 72px; }
     .galeria-section:last-child { margin-bottom: 0; }
@@ -374,6 +397,21 @@
     <div class="container">
 
       <!-- ====================================================================
+           COVER · Foto do consultório como cabeçalho/LCP da página.
+           Aparece UMA vez (aqui); foi removida do grid da seção abaixo
+           para não duplicar. Sem caption visível (consistente c/ galeria).
+           ==================================================================== -->
+      <figure class="galeria-cover">
+        <img
+          src="img/consultorio-vertice-mall.webp"
+          alt="Jessica Costa de braços abertos no consultório do Vertice Mall, Recreio dos Bandeirantes — brinquedos coloridos no tapete (personagens Divertida Mente), cozinha de brinquedo à esquerda e ampla janela ao fundo"
+          width="800" height="1200"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async">
+      </figure>
+
+      <!-- ====================================================================
            SEÇÃO 1 · Consultório / ambiente
            ==================================================================== -->
       <section class="galeria-section" aria-labelledby="cat-consultorio">
@@ -392,17 +430,8 @@
           </div>
         </header>
 
-        <div class="galeria-grid">
-          <figure class="galeria-figure galeria-figure--landscape" data-lightbox="img/consultorio-vertice-mall.webp" data-caption="Sala de atendimento — Vertice Mall, Recreio dos Bandeirantes (RJ).">
-            <a href="img/consultorio-vertice-mall.webp" target="_blank" rel="noopener noreferrer" aria-label="Abrir imagem em tamanho real">
-              <img
-                src="img/consultorio-vertice-mall.webp"
-                alt="Sala do consultório de Jessica Costa Psi no Vertice Mall, Recreio dos Bandeirantes — ambiente lúdico e acolhedor para atendimento infantojuvenil"
-                loading="lazy"
-                decoding="async"
-                width="1200" height="900">
-            </a>
-          </figure>
+        <div class="galeria-empty">
+          A foto do consultório aparece no <strong>cabeçalho desta página</strong> — sala lúdica no Vertice Mall, com tapete de atividades, cozinha de brinquedo e janelas amplas. Em breve, mais ângulos do espaço.
         </div>
       </section>
 
