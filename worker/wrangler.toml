@@ -72,7 +72,7 @@ id = "ee669de930c645e4b7a7622798eaee8c"
 [vars]
 SITE_ORIGIN = "https://jessicacostapsi.com"
 OTIMIZA_CHECKOUT_BASE = "https://otimizapro.com/checkout/jessica"
-CRP_PROFISSIONAL = "05/56789"
+CRP_PROFISSIONAL = "05/79764"
 NOME_PROFISSIONAL = "Jessica Costa"
 SENDER_EMAIL = "contato@jessicacostapsi.com"
 ENV = "production"

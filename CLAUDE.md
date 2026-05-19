@@ -1,7 +1,7 @@
 # Jessica Costa PSI — Site institucional
 
 ## Resumo
-Site estático da psicóloga infantojuvenil **Jessica Costa** (CRP 05/56789, Recreio dos Bandeirantes — RJ). HTML/CSS/JS vanilla, **sem build step**, deploy em **Cloudflare Pages** (projeto `jessicacostapsi`) servindo o domínio **jessicacostapsi.com**. Repo: [AndersonOtimiza/jessicacostapsi.com](https://github.com/AndersonOtimiza/jessicacostapsi.com). Status: em produção; CTAs principais via WhatsApp (`5521978082882`).
+Site estático da psicóloga infantojuvenil **Jessica Costa** (CRP 05/79764, Recreio dos Bandeirantes — RJ). HTML/CSS/JS vanilla, **sem build step**, deploy em **Cloudflare Pages** (projeto `jessicacostapsi`) servindo o domínio **jessicacostapsi.com**. Repo: [AndersonOtimiza/jessicacostapsi.com](https://github.com/AndersonOtimiza/jessicacostapsi.com). Status: em produção; CTAs principais via WhatsApp (`5521978082882`).
 
 ## Estrutura
 - [index.html](index.html) — landing principal, 10 seções (hero, especialidades, biografia, depoimentos, blog preview, contato, etc.)

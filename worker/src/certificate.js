@@ -69,7 +69,7 @@ export async function renderCertificatePage(env, hash) {
   const dataFmt = Number.isFinite(emitidoEm.getTime())
     ? emitidoEm.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
     : '—';
-  const crp = env.CRP_PROFISSIONAL || '05/56789';
+  const crp = env.CRP_PROFISSIONAL || '05/79764';
   const nomeProf = env.NOME_PROFISSIONAL || 'Jessica Costa';
 
   // Página com layout próprio (sem header/footer do site) — A4 paisagem print-friendly

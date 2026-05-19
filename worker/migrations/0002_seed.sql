@@ -13,7 +13,7 @@ INSERT OR IGNORE INTO courses (
   'criancas-com-tea-guia-para-pais',
   'Crianças com TEA: guia para pais',
   'Um percurso prático em 2 módulos para entender, acolher e apoiar o desenvolvimento do seu filho.',
-  'Curso prático com a psicóloga Jessica Costa (CRP 05/56789) sobre como acolher, apoiar e desenvolver crianças com Transtorno do Espectro Autista no dia a dia.',
+  'Curso prático com a psicóloga Jessica Costa (CRP 05/79764) sobre como acolher, apoiar e desenvolver crianças com Transtorno do Espectro Autista no dia a dia.',
   '<p>Este curso foi pensado para pais, cuidadores e educadores que convivem com crianças com TEA e querem ferramentas práticas baseadas em evidências (TCC + ABA).</p><p>Em ~2 horas de conteúdo, você vai aprender a identificar sinais, montar rotinas previsíveis, lidar com crises e construir uma comunicação afetiva eficaz.</p><h3>O que você vai aprender</h3><ul><li>Entender o que é (e o que <em>não</em> é) TEA</li><li>Adaptar a rotina da casa para reduzir sobrecarga sensorial</li><li>Estratégias de comunicação afetiva</li><li>O papel da escola e da equipe terapêutica</li></ul>',
   NULL,
   19700,

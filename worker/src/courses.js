@@ -106,7 +106,7 @@ export async function renderCourseDetail(env, request, user, slug) {
       <div class="meta-row">
         <span>📚 ${totalAulas} aula${totalAulas === 1 ? '' : 's'}</span>
         ${course.duracao_min ? `<span>⏱️ ${course.duracao_min} min</span>` : ''}
-        <span>💛 Conteúdo da Jessica Costa (CRP 05/56789)</span>
+        <span>💛 Conteúdo da Jessica Costa (CRP 05/79764)</span>
       </div>
       <div style="margin: 24px 0;">${ctaHtml}</div>
       <div>${course.descricao_html || `<p>${escapeHtml(course.descricao_curta || '')}</p>`}</div>

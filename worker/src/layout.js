@@ -30,7 +30,7 @@ export function renderLayout(opts) {
     content,
     user = null,
     currentPath = '/',
-    description = 'Cursos online da psicóloga infantojuvenil Jessica Costa (CRP 05/56789).',
+    description = 'Cursos online da psicóloga infantojuvenil Jessica Costa (CRP 05/79764).',
     canonical,
     noindex = false,
     extraHead = '',
@@ -117,7 +117,7 @@ export function renderLayout(opts) {
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Jessica Costa PSI. Todos os direitos reservados. | CRP 05/56789</p>
+        <p>&copy; 2026 Jessica Costa PSI. Todos os direitos reservados. | CRP 05/79764</p>
         <p class="footer-legal"><a href="/privacidade.html">Política de Privacidade</a> · <a href="mailto:psiporjessica@gmail.com">Encarregado de Dados (DPO)</a></p>
       </div>
     </div>

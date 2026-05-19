@@ -1,6 +1,6 @@
 # Jessica Costa PSI — Site Institucional
 
-Site profissional da psicóloga infantojuvenil **Jessica Costa** (CRP 05/56789), com foco em
+Site profissional da psicóloga infantojuvenil **Jessica Costa** (CRP 05/79764), com foco em
 acompanhamento de crianças e adolescentes típicos e neuroatípicos, baseado em **TCC** (Terapia
 Cognitivo-Comportamental) e **ABA** (Análise do Comportamento Aplicada).
 
