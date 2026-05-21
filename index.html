@@ -69,7 +69,31 @@
           "Habilidades Sociais"
         ],
         "alumniOf": [
-          { "@type": "EducationalOrganization", "name": "PUC Goiás" }
+          { "@type": "EducationalOrganization", "name": "PUC Goiás", "address": { "@type": "PostalAddress", "addressLocality": "Goiânia", "addressRegion": "GO" } },
+          { "@type": "EducationalOrganization", "name": "Hospital Albert Einstein", "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP" } }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Registro Profissional em Psicologia",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Conselho Regional de Psicologia — 5ª Região (CRP-05/RJ)"
+            },
+            "identifier": "CRP 05/79764"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Pós-graduação em Análise do Comportamento Aplicada",
+            "credentialCategory": "Especialização",
+            "recognizedBy": { "@type": "EducationalOrganization", "name": "PUC Goiás" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Pós-graduação em Neuropsicologia",
+            "credentialCategory": "Especialização",
+            "recognizedBy": { "@type": "EducationalOrganization", "name": "Hospital Albert Einstein", "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP" } }
+          }
         ]
       },
       {
@@ -94,6 +118,11 @@
           "addressRegion": "RJ",
           "postalCode": "22790-671",
           "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -23.0089,
+          "longitude": -43.4645
         },
         "areaServed": [
           { "@type": "Place", "name": "Recreio dos Bandeirantes, Rio de Janeiro" },
@@ -474,7 +503,7 @@
           <input class="lcta-input" type="email" name="email" placeholder="Seu e-mail" required autocomplete="email">
           <input class="lcta-input" type="text" name="crianca_idade" placeholder="Idade da criança" required>
         </div>
-        <select class="lcta-input lcta-select" name="motivo" required>
+        <select class="lcta-input lcta-select" name="motivo" required aria-label="Motivo do contato">
           <option value="" disabled selected>Qual o motivo do contato?</option>
           <option value="primeira-consulta">Quero agendar primeira consulta</option>
           <option value="avaliacao-neuropsicologica">Quero avaliação neuropsicológica</option>
@@ -570,7 +599,7 @@
               <li><a href="#" data-placeholder="true">Zona Oeste RJ</a></li>
               <li><a href="psicologa-infantojuvenil-goiania.html">Goiânia (GO)</a></li>
               <li><a href="#" data-placeholder="true">Atendimento Online (Brasil)</a></li>
-              <li><a href="#" data-placeholder="true">Convênios e Reembolso</a></li>
+              <li><a href="artigos/reembolso-plano-de-saude-psicologo.html">Convênios e Reembolso</a></li>
             </ul>
           </div>
 
