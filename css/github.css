@@ -187,6 +187,8 @@
   --line-strong: #4a525c;
   --glass-bg:    rgba(22, 27, 34, 0.72);
   --glass-border: rgba(255, 255, 255, 0.10);
+  --text-light:  #9198a1;                    /* muted legível no dark (era #666 fixo) */
+  --primary-light: rgba(245, 166, 35, 0.15); /* chip accent honey no dark (era creme #FFF8E7) */
 }
 
 /* Respeitar preferência do sistema quando data-theme não estiver setado */
