@@ -148,13 +148,17 @@ Objetivo: rankear top-3 para queries "psicóloga infantojuvenil Recreio", "psic�
 - ✅ Sitemap atualizado (20 URLs com nova landing prioridade 0.9)
 
 ### Off-page (DEPENDE Jessica/Anderson — alto impacto, fora do site)
-- [ ] **Google Business Profile** — CRÍTICO para Local Pack. Sem GBP a Jessica não aparece no "Map Pack" do Google (3 resultados de mapa que aparecem antes do orgânico). Cadastrar:
+- [x] **Google Business Profile — CRIADO há +7 dias** (anterior a ~2026-06-03; data exata a confirmar). Destrava o Local Pack (3 resultados de mapa antes do orgânico). Cadastrado com:
   - Nome: "Jessica Costa Psi - Psicóloga Infantojuvenil"
   - Categoria: Psicóloga (primária) + Psicóloga Infantil (secundária)
   - Endereço Vertice Mall + horário
   - 5+ fotos (consultório, retrato, fachada)
-  - Solicitar **verificação por cartão postal** ou telefone
-- [ ] **Reviews ativos** — pedir 10 primeiros reviews para pais de pacientes ativos (template de mensagem WhatsApp + link direto pro GBP). Reviews são o sinal #1 de local ranking.
+  - 🔴 **CAUSA-RAIZ CONFIRMADA (2026-06-10): a ficha NÃO está na conta `anderson@otimiza.pro`.** `business.google.com/locations` dessa conta mostra **1 empresa, 100% verificada = só "Otimiza Benefícios"** (São Paulo). A ficha da Jessica não existe lá → está **em outra conta Google (provável `psiporjessica@gmail.com`, email do site) OU nunca foi criada**. Explica a invisibilidade pública e a ausência no painel do Anderson.
+  - **Próximo passo:** (1) logar em `psiporjessica@gmail.com` em `business.google.com/locations` OU perguntar à Jessica com qual email criou; (2) achar a ficha → checar status (Confirmado/Verifique agora/Suspenso); (3) **Jessica adiciona `anderson@otimiza.pro` como gerente** (Configurações → Usuários) p/ centralizar e habilitar o MCP `gbp-otimiza`; (4) se não existir em conta nenhuma → criar do zero já com Anderson como proprietário.
+  - **MCP `gbp-otimiza`** (self-hosted, instalado 2026-06-10 em `C:\Users\AndersonBelem\mcp-servers\gbp-mcp-server`, autentica como anderson@otimiza.pro) **só verá a ficha da Jessica se Anderson for gerente dela**. Ver `OTIMIZA-SETUP.md` no repo do MCP (Fases B/C: OAuth GCP + form de acesso à API, gate 3-10 dias).
+- [ ] **Reviews ativos** — pedir 10 primeiros reviews para pais de pacientes ativos. Reviews são o sinal #1 de local ranking. **Template pronto (draft 2026-06-10) — GATED: só disparar depois do GBP verificado e visível** (review feito em perfil não-publicado não fixa + ainda não há link de avaliação). Como obter o link: painel GBP → "Peça avaliações" / "Compartilhe seu perfil" → link curto `g.page/r/XXXX/review` (ou `https://search.google.com/local/writereview?placeid=PLACE_ID`).
+  - **Msg WhatsApp (pais):** "Oi, [nome]! 😊 Que bom poder acompanhar o(a) [nome da criança]. Se você sente que o trabalho tem feito diferença, uma avaliação no Google ajuda muito outras famílias da Barra/Recreio a me encontrarem. Leva 1 minutinho neste link: [LINK]. Obrigada de coração! — Jessica 🐝"
+  - Boas práticas: pedir 2-3 dias após uma sessão positiva; nunca incentivar com brinde (viola política Google); pais escrevem com as próprias palavras; **não** mencionar diagnóstico/dado de saúde da criança na resposta pública (LGPD).
 - [ ] **Cadastro em diretórios profissionais**:
   - [ ] ABDA — cadastro de psicólogos RJ (tdah.org.br)
   - [ ] AMA-RJ (autismo)

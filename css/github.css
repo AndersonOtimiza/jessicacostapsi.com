@@ -172,6 +172,20 @@
   /* Code */
   --gh-code-bg:           rgba(101,108,118,0.4);
   --gh-code-block-bg:     #151b23;
+
+  /* Tokens legados do v2.css remapeados p/ dark (2026-06-11) — corrige seções e
+     caixas que usam var(--bg)/--bg-alt/--ink via inline style e ficavam CREME no
+     dark mode (ex.: título "Leitura recomendada" branco sobre creme = invisível). */
+  --bg:          #0d1117;
+  --bg-alt:      #151b23;
+  --bg-dark:     #010409;
+  --ink:         #f0f6fc;
+  --ink-soft:    #9198a1;
+  --ink-muted:   #6e7681;
+  --line:        #3d444d;
+  --line-strong: #4a525c;
+  --glass-bg:    rgba(22, 27, 34, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.10);
 }
 
 /* Respeitar preferência do sistema quando data-theme não estiver setado */
@@ -1104,6 +1118,20 @@ button.lcta-btn,
   border: 1px solid var(--gh-border-default);
   border-radius: var(--gh-radius);
   margin-bottom: 16px;
+}
+
+/* Fix contraste (2026-06-11): nos specialty-cards o chip do ícone ficava pastel
+   claro (v2.css `.specialty-card .icon-wrap` vencia por especificidade) enquanto o
+   ícone seguia gh-fg-default — claro no dark = traço claro sobre fundo claro =
+   invisível. Alinha o chip ao token do sistema (subtle, coordenado por tema) e dá
+   ao ícone a cor accent (honey), legível em light e dark. */
+.specialty-card .icon-wrap,
+.specialty-card.ocean-tint .icon-wrap {
+  background: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+}
+.specialty-card .icon-wrap > .icon {
+  color: var(--gh-accent-fg);
 }
 
 .feature-link {
