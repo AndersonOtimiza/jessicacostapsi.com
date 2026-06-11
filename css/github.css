@@ -178,6 +178,7 @@
      dark mode (ex.: título "Leitura recomendada" branco sobre creme = invisível). */
   --bg:          #0d1117;
   --bg-alt:      #151b23;
+  --card:        #151b23;
   --bg-dark:     #010409;
   --ink:         #f0f6fc;
   --ink-soft:    #9198a1;

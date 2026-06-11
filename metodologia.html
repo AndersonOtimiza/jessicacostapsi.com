@@ -122,7 +122,7 @@
     .metodo-hero .eyebrow {
       display: inline-block;
       padding: 6px 16px;
-      background: #fff;
+      background: var(--card);
       border-radius: var(--radius-pill);
       color: var(--primary);
       font-weight: 600;
@@ -142,14 +142,14 @@
       font-size: 1.15rem;
       line-height: 1.7;
       max-width: 720px;
-      color: #444;
+      color: var(--ink-soft);
       margin: 0 0 28px;
     }
 
     /* Pilares (mini cards) */
     .metodo-pilares {
       padding: 72px 0;
-      background: #fff;
+      background: var(--card);
     }
     .metodo-pilares .pilares-grid {
       display: grid;
@@ -158,8 +158,8 @@
       margin-top: 36px;
     }
     .metodo-pilar {
-      background: #fefcf7;
-      border: 1px solid #f0e6d2;
+      background: var(--bg);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 28px 24px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -191,19 +191,19 @@
     .metodo-pilar h3 {
       font-size: 1.15rem;
       margin: 0 0 8px;
-      color: #1a1a1a;
+      color: var(--ink);
     }
     .metodo-pilar p {
       font-size: 0.98rem;
       line-height: 1.65;
-      color: #555;
+      color: var(--ink-soft);
       margin: 0;
     }
 
     /* Abordagens: TCC + ABA */
     .metodo-abordagens {
       padding: 72px 0;
-      background: #fefcf7;
+      background: var(--bg);
     }
     .abordagens-grid {
       display: grid;
@@ -212,10 +212,10 @@
       margin-top: 36px;
     }
     .abordagem-card {
-      background: #fff;
+      background: var(--card);
       border-radius: var(--radius);
       padding: 32px;
-      border: 1px solid #f0e6d2;
+      border: 1px solid var(--line);
     }
     .abordagem-card .sigla {
       display: inline-block;
@@ -232,11 +232,11 @@
       font-size: 1.35rem;
       margin: 0 0 14px;
     }
-    .abordagem-card p { line-height: 1.7; color: #444; margin: 0 0 12px; }
+    .abordagem-card p { line-height: 1.7; color: var(--ink-soft); margin: 0 0 12px; }
     .abordagem-card ul { margin: 12px 0 0; padding-left: 22px; }
     .abordagem-card ul li {
       line-height: 1.65;
-      color: #444;
+      color: var(--ink-soft);
       margin-bottom: 6px;
     }
     @media (max-width: 720px) {
@@ -246,7 +246,7 @@
     /* Ecossistema em camadas */
     .metodo-ecossistema {
       padding: 72px 0;
-      background: #fff;
+      background: var(--card);
     }
     .camadas {
       display: grid;
@@ -261,7 +261,7 @@
       grid-template-columns: 72px 1fr;
       gap: 22px;
       align-items: start;
-      background: #fefcf7;
+      background: var(--bg);
       border-left: 4px solid var(--primary);
       border-radius: var(--radius);
       padding: 24px 26px;
@@ -282,7 +282,7 @@
     .camada h3 {
       font-size: 1.2rem;
       margin: 4px 0 8px;
-      color: #1a1a1a;
+      color: var(--ink);
     }
     .camada h3 .camada-meta {
       font-weight: 500;
@@ -294,7 +294,7 @@
     }
     .camada p {
       line-height: 1.7;
-      color: #444;
+      color: var(--ink-soft);
       margin: 0;
     }
     @media (max-width: 600px) {
@@ -305,13 +305,13 @@
     /* Como vira sessão (steps) */
     .metodo-sessao {
       padding: 72px 0;
-      background: #fefcf7;
+      background: var(--bg);
     }
 
     /* O que recuso (anti-padroes) */
     .metodo-recuso {
       padding: 72px 0;
-      background: #fff;
+      background: var(--card);
     }
     .recuso-grid {
       display: grid;
@@ -320,15 +320,15 @@
       margin-top: 32px;
     }
     .recuso-item {
-      background: #fefcf7;
+      background: var(--bg);
       border-radius: var(--radius);
       padding: 22px 24px;
-      border: 1px dashed #e6d8b8;
+      border: 1px dashed var(--line);
     }
     .recuso-item h4 {
       font-size: 1.02rem;
       margin: 0 0 8px;
-      color: #1a1a1a;
+      color: var(--ink);
       display: flex;
       gap: 10px;
       align-items: center;
@@ -346,7 +346,7 @@
     .recuso-item p {
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #555;
+      color: var(--ink-soft);
       margin: 0;
     }
 
@@ -361,7 +361,7 @@
       margin: 0 0 12px;
     }
     .metodo-bridge p {
-      color: #444;
+      color: var(--ink-soft);
       max-width: 620px;
       margin: 0 auto 24px;
       line-height: 1.7;
@@ -538,7 +538,7 @@
         </article>
       </div>
 
-      <p style="text-align:center; margin-top:32px; color:#666; font-size:0.95rem;">
+      <p style="text-align:center; margin-top:32px; color:var(--ink-muted); font-size:0.95rem;">
         Também integro <strong>Ludoterapia</strong>, <strong>Psicoeducação</strong> e ferramentas de <strong>Neuropsicologia</strong> quando o caso indica.
       </p>
     </div>
@@ -675,10 +675,10 @@
         </div>
       </div>
 
-      <div style="max-width:760px; margin:40px auto 0; background:#fefcf7; border-radius:var(--radius); padding:28px 32px; border:1px solid #f0e6d2;">
+      <div style="max-width:760px; margin:40px auto 0; background:var(--bg); border-radius:var(--radius); padding:28px 32px; border:1px solid var(--line);">
         <h3 style="font-size:1.15rem; margin:0 0 12px;">Os recursos dentro da sessão</h3>
-        <p style="line-height:1.7; color:#444; margin:0 0 10px;">O <strong>fantoche</strong> do tubarão e da abelhinha costuma ser o primeiro recurso — quando viram personagens nas minhas mãos, deixam de ser conceito e passam a ser alguém com quem a criança conversa. A partir daí, outros materiais entram conforme o caso: <strong>desenho</strong>, <strong>jogos</strong>, <strong>histórias</strong>, <strong>cenas montadas</strong>, <strong>bichinhos de pelúcia</strong> entrando e saindo da colmeia.</p>
-        <p style="line-height:1.7; color:#444; margin:0;">Não existe caminho único: existe a leitura do que aquela criança, naquela semana, está pronta para brincar. Com adolescentes, a conversa ganha mais espaço — e a metáfora aparece em outra chave (relações, escolhas, conflitos de turma, planos de vida).</p>
+        <p style="line-height:1.7; color:var(--ink-soft); margin:0 0 10px;">O <strong>fantoche</strong> do tubarão e da abelhinha costuma ser o primeiro recurso — quando viram personagens nas minhas mãos, deixam de ser conceito e passam a ser alguém com quem a criança conversa. A partir daí, outros materiais entram conforme o caso: <strong>desenho</strong>, <strong>jogos</strong>, <strong>histórias</strong>, <strong>cenas montadas</strong>, <strong>bichinhos de pelúcia</strong> entrando e saindo da colmeia.</p>
+        <p style="line-height:1.7; color:var(--ink-soft); margin:0;">Não existe caminho único: existe a leitura do que aquela criança, naquela semana, está pronta para brincar. Com adolescentes, a conversa ganha mais espaço — e a metáfora aparece em outra chave (relações, escolhas, conflitos de turma, planos de vida).</p>
       </div>
     </div>
   </section>
@@ -742,42 +742,42 @@
   </section>
 
   <!-- FAQ -->
-  <section class="bio-hero" style="background:#fefcf7;" id="faq">
+  <section class="bio-hero" style="background:var(--bg);" id="faq">
     <div class="container">
       <h2 style="text-align:center; margin-bottom:12px;">Perguntas frequentes sobre a metodologia</h2>
       <p class="section-subtitle" style="text-align:center; margin-bottom:32px;">Dúvidas comuns de pais e responsáveis antes de marcar a primeira conversa.</p>
       <div style="max-width:800px; margin:0 auto;">
-        <details style="background:#fff; padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid #f0e8d8;">
+        <details style="background:var(--card); padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid var(--line);">
           <summary style="font-weight:600; cursor:pointer; font-size:1.05rem;">O que diferencia a sua metodologia de outras abordagens?</summary>
           <p style="margin-top:12px; line-height:1.7;">TCC e ABA são a base científica — abordagens reconhecidas internacionalmente. O que torna o meu trabalho autoral é a <strong>metáfora Tubarão × Abelhinha</strong> como linguagem (para criança, família e escola) e a leitura em <strong>quatro camadas</strong> do ecossistema (criança, família, escola, mundo). Não trato a criança como um caso isolado; cuido das condições que permitem que ela se desenvolva.</p>
         </details>
 
-        <details style="background:#fff; padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid #f0e8d8;">
+        <details style="background:var(--card); padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid var(--line);">
           <summary style="font-weight:600; cursor:pointer; font-size:1.05rem;">A partir de qual idade essa metodologia se aplica?</summary>
           <p style="margin-top:12px; line-height:1.7;">De 2 a 18 anos. A linguagem e os recursos se adaptam ao perfil — para os menores, fantoche, brincadeira e cenas; para adolescentes, conversa estruturada, desenho ou escrita, e a metáfora em outra chave (relações, escolhas, conflitos de turma).</p>
         </details>
 
-        <details style="background:#fff; padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid #f0e8d8;">
+        <details style="background:var(--card); padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid var(--line);">
           <summary style="font-weight:600; cursor:pointer; font-size:1.05rem;">É preciso ter diagnóstico antes de começar?</summary>
           <p style="margin-top:12px; line-height:1.7;">Não. O atendimento pode iniciar com investigação clínica. Se já houver laudo de neuropediatra ou neuropsicólogo, ele é integrado ao plano terapêutico desde a primeira sessão. Se não houver, posso indicar avaliação neuropsicológica quando o caso pedir.</p>
         </details>
 
-        <details style="background:#fff; padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid #f0e8d8;">
+        <details style="background:var(--card); padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid var(--line);">
           <summary style="font-weight:600; cursor:pointer; font-size:1.05rem;">Como os pais participam do processo?</summary>
           <p style="margin-top:12px; line-height:1.7;">A criança tem suas sessões individuais — para construir vínculo e poder se expressar livremente. Em paralelo, há devolutivas regulares aos responsáveis, sessões específicas de orientação parental e, sempre que algo relevante acontece (escola, crise, evolução), chamo a família. <strong>Orientação parental é parte do método, não um adicional.</strong></p>
         </details>
 
-        <details style="background:#fff; padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid #f0e8d8;">
+        <details style="background:var(--card); padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid var(--line);">
           <summary style="font-weight:600; cursor:pointer; font-size:1.05rem;">A metáfora Tubarão × Abelhinha entra em toda sessão?</summary>
           <p style="margin-top:12px; line-height:1.7;">Não obrigatoriamente. Ela é introduzida no momento que faz sentido para aquela criança — costuma começar com o <strong>fantoche</strong>. A partir daí, vira repertório que a criança pode usar quando quiser nomear o próprio estado. Não é roteiro fixo: é uma linguagem disponível.</p>
         </details>
 
-        <details style="background:#fff; padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid #f0e8d8;">
+        <details style="background:var(--card); padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid var(--line);">
           <summary style="font-weight:600; cursor:pointer; font-size:1.05rem;">Funciona em atendimento online?</summary>
           <p style="margin-top:12px; line-height:1.7;">Sim. A mesma metodologia se aplica em modalidade online, com adaptações: recursos digitais para os mais novos, vínculo construído por vídeo, e sessões parentais por chamada. Atendo crianças, adolescentes e famílias em todo o Brasil.</p>
         </details>
 
-        <details style="background:#fff; padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid #f0e8d8;">
+        <details style="background:var(--card); padding:20px; border-radius:var(--radius); margin-bottom:12px; border:1px solid var(--line);">
           <summary style="font-weight:600; cursor:pointer; font-size:1.05rem;">Quanto tempo dura o tratamento?</summary>
           <p style="margin-top:12px; line-height:1.7;">Varia. Demandas pontuais (uma fase difícil, orientação parental específica) podem ser breves — 3 a 6 meses. Acompanhamentos de TEA e TDAH costumam ser de médio a longo prazo, com revisão periódica dos objetivos. O tempo é discutido transparentemente com a família, sem promessa de resultado por número de sessões.</p>
         </details>

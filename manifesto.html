@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>(function(){try{var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
-  <meta name="description" content="Manifesto clínico de Jessica Costa, psicóloga infantojuvenil: como enxergo a criança, o silêncio, o tempo da terapia e o lugar da família. TCC, ABA e conexão antes de correção.">
+  <meta name="description" content="Manifesto clínico de Jessica Costa, psicóloga infantojuvenil: como enxergo a criança, o silêncio, o tempo da terapia e o lugar da família. TCC e ABA.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jessicacostapsi.com/manifesto">
   <meta name="theme-color" content="#FFD93D">
@@ -70,7 +70,7 @@
     .manifesto-hero .eyebrow {
       display: inline-block;
       padding: 6px 16px;
-      background: #fff;
+      background: var(--card);
       border-radius: var(--radius-pill);
       color: var(--primary);
       font-weight: 600;
@@ -91,19 +91,19 @@
       line-height: 1.6;
       max-width: 720px;
       margin: 0 auto;
-      color: #444;
+      color: var(--ink-soft);
     }
 
-    .manifesto-body { padding: 80px 0; background: #fff; }
+    .manifesto-body { padding: 80px 0; background: var(--card); }
     .manifesto-body .container { max-width: 880px; }
 
     .manifesto-intro {
       font-size: 1.1rem;
       line-height: 1.8;
-      color: #333;
+      color: var(--ink);
       margin-bottom: 56px;
       padding-bottom: 40px;
-      border-bottom: 1px solid #f0e6d2;
+      border-bottom: 1px solid var(--line);
     }
     .manifesto-intro p + p { margin-top: 18px; }
 
@@ -126,12 +126,12 @@
       font-size: 1.5rem;
       line-height: 1.3;
       margin: 6px 0 12px;
-      color: #1a1a1a;
+      color: var(--ink);
     }
     .principio p {
       font-size: 1.05rem;
       line-height: 1.75;
-      color: #444;
+      color: var(--ink-soft);
       margin: 0;
     }
     .principio p strong { color: var(--accent); font-weight: 600; }
@@ -144,7 +144,7 @@
       border-radius: var(--radius);
       font-size: 1.1rem;
       line-height: 1.7;
-      color: #333;
+      color: var(--ink);
     }
     .manifesto-fechamento p { margin: 0 0 12px; }
     .manifesto-fechamento p:last-child { margin: 0; }
@@ -158,7 +158,7 @@
 
     .manifesto-cta {
       padding: 64px 0 80px;
-      background: #fefcf7;
+      background: var(--bg);
       text-align: center;
     }
     .manifesto-cta h3 {
@@ -166,7 +166,7 @@
       margin: 0 0 12px;
     }
     .manifesto-cta p {
-      color: #555;
+      color: var(--ink-soft);
       max-width: 560px;
       margin: 0 auto 24px;
     }

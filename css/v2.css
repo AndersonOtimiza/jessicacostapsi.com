@@ -39,6 +39,7 @@
   /* Background */
   --bg:        #FFFBF1;  /* creme suave */
   --bg-alt:    #FFF8E7;  /* card subtle */
+  --card:      #FFFFFF;  /* cartão branco puro (claro) → elevado no dark via github.css */
   --bg-dark:   #0C1F35;  /* oceano profundo para sections dark */
 
   /* Glass */
