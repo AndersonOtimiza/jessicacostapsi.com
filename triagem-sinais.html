@@ -215,7 +215,7 @@
 
         <p style="text-align:center; margin-top:24px;">
           <a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Fiz%20o%20checklist%20de%20sinais%20no%20site%20e%20gostaria%20de%20conversar%20sobre%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.5A8 8 0 1 1 21 12Z"/></svg> Falar com Especialista no WhatsApp
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.5A8 8 0 1 1 21 12Z"/></svg> Falar com a Jessica no WhatsApp
           </a>
         </p>
       </div>
@@ -425,7 +425,7 @@
               <li>Crianças e adolescentes de 2 a 18 anos</li>
               <li>Atendimento para todas as regiões do país</li>
               <li><span data-placeholder="true">Reembolso por plano de saúde</span></li>
-              <li><a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Quero%20agendar%20atendimento%20online." target="_blank" rel="noopener noreferrer" class="footer-mega-strong-link">Falar com Especialista</a></li>
+              <li><a href="https://wa.me/5521978082882?text=Ol%C3%A1%2C%20Jessica.%20Quero%20agendar%20atendimento%20online." target="_blank" rel="noopener noreferrer" class="footer-mega-strong-link">Falar com a Jessica</a></li>
             </ul>
           </div>
 
@@ -511,7 +511,8 @@
   <script>
     /* Checklist de triagem — NÃO-diagnóstico.
        Conta marcações apenas para SUAVIZAR o texto de orientação.
-       Nunca dá score, veredito ou "está tudo bem". Sempre termina em "agende avaliação". */
+       Nunca dá score, veredito ou "está tudo bem". Sempre termina em "agende avaliação".
+       A idade é opcional e usada só para uma observação contextual neutra — nunca para classificar. */
     (function () {
       var form = document.getElementById('triagemForm');
       if (!form) return;
@@ -527,7 +528,7 @@
         if (marcados === 0) {
           titulo.textContent = 'Vale uma conversa, mesmo sem marcações';
           msg = 'Você não marcou nenhum item agora — e isso é ótimo. Ainda assim, se você chegou até aqui é porque algo chamou sua atenção. Confiar na própria percepção como mãe, pai ou responsável faz toda a diferença. Se a dúvida continuar, uma conversa rápida com a Jessica ajuda a entender o que observar e quando uma avaliação faz sentido.';
-        } else if (marcados <= 3) {
+        } else if (marcados <= 4) {
           titulo.textContent = 'Você notou alguns pontos — vale acompanhar de perto';
           msg = 'Você marcou alguns sinais que merecem atenção. Isto não é diagnóstico, e sinais isolados nem sempre indicam algo a tratar. Mas observar com cuidado e conversar com uma profissional é sempre o caminho mais seguro. Uma avaliação com a Jessica esclarece o que está acontecendo e qual o melhor próximo passo.';
         } else {
@@ -535,7 +536,21 @@
           msg = 'Você reconheceu vários sinais que, juntos, costumam fazer as famílias buscarem orientação. Isto continua não sendo um diagnóstico — só uma avaliação com a criança pode dizer o que está realmente acontecendo. O bom é que você não precisa decidir nada sozinho(a): uma avaliação com a Jessica organiza essas observações e mostra o melhor caminho a seguir.';
         }
 
+        // Observação contextual neutra por idade (opcional) — sem interpretação clínica
+        var idadeEl = document.getElementById('triagemIdade');
+        var idade = idadeEl && idadeEl.value ? idadeEl.value.replace(/\D/g, '') : '';
+        if (idade && marcados > 0) {
+          msg += ' Você indicou que a criança tem ' + idade + ' ano(s) — lembre que vários desses comportamentos podem ser próprios da idade, e é justamente isso que um olhar profissional sabe diferenciar.';
+        }
+
         texto.textContent = msg;
+
+        // Conveniência: leva a idade ao formulário de contato (nenhuma resposta da triagem é enviada)
+        if (idade) {
+          var leadAge = document.querySelector('.lcta-form[data-lead-source="jessica-triagem"] input[name="crianca_idade"]');
+          if (leadAge && !leadAge.value) leadAge.value = idade + ' anos';
+        }
+
         resultado.style.display = 'block';
 
         // Rola suavemente até o desfecho

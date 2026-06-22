@@ -13,6 +13,12 @@
 /colunistas.html  /                  301
 /whatsapp      https://wa.me/5521978082882  302
 
+# Contencao compliance CFP/CRP (2026-06-22): titulo de especialista em
+# Neuropsicologia NAO registrado (Res. CFP 23/2022). Pagina afirmava credencial
+# falsa -> noindex + 301 para biografia (enquadra a credencial honestamente).
+/neuropsicologista       /biografia  301
+/neuropsicologista.html  /biografia  301
+
 # Docs internos (.md) — NUNCA servir publicamente (vazam account/zone IDs,
 # framework de compliance, notas de SEO). O deploy publica a pasta toda.
 /CLAUDE.md                        /404.html  404
@@ -20,6 +26,7 @@
 /metodologia.md                   /404.html  404
 /KEYWORDS-PSICOLOGIA-INFANTIL.md  /404.html  404
 /COMPLIANCE-PRODUTOS-DIGITAIS.md  /404.html  404
+/AUDITORIA-NEUROPSICO-2026-06-22.md  /404.html  404
 
 # (Sem catch-all 404: Cloudflare Pages serve 404.html automaticamente para
 # qualquer 404, e o catch-all anterior estava engolindo recursos legítimos
